@@ -1,7 +1,7 @@
 * {
-  /*
+
   border:1px solid rgb(110, 141, 252);
-  */
+
 }
 
 body {
@@ -33,7 +33,7 @@ a {
 
 .large-card {
   height: 60vh;
-  background-image: url('https://source.unsplash.com/1920x1080/?virtualreality');
+  background-image: url('https://source.unsplash.com/1920x1080/?dogs');
   background-position: center center;
   display: flex;
   justify-content: center;
@@ -77,4 +77,31 @@ a {
 .round-transparent-button:hover {
   color: rgb(180, 191, 223);
   padding: 15px;
+}
+
+.grid-container {
+  margin: 8px;
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+  border: 1px solid rgb(33, 33, 33);
+  margin-bottom: 10px;
+  min-height: 35vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content:center;
+  text-align: center;
+}
+
+.photo-one {
+  background-image: url('https://source.unsplash.com/1920x1081/?astronomy');
+  background-position: center center;
+  background-size: cover;
+}
+
+.card-text {
+  max-width: 200px;
 }
