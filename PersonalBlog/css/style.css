@@ -1,0 +1,80 @@
+* {
+  /*
+  border:1px solid rgb(110, 141, 252);
+  */
+}
+
+body {
+  margin: 0px;
+}
+
+header{
+  border: 1px solid rgb(89, 139, 134);
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+#site-title {
+  margin: 35px auto;
+}
+
+.sticky-nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 30px;
+}
+
+.sticky-nav a:hover {
+  color: rgb(33, 34, 87);
+}
+
+.large-card {
+  height: 60vh;
+  background-image: url('https://source.unsplash.com/1920x1080/?virtualreality');
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+}
+
+.transparent-layer {
+  align-self: flex-end;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-bottom: 5%;
+}
+
+.large-card-body {
+
+  border: 1px solid rgb(60, 30, 180);
+  color: #fff;
+  height: 30vh;
+  width: 40vw;
+  max-width: 450px;
+  margin: 8px;
+}
+
+.large-card-title {
+  margin-top: 30%;
+}
+
+.large-card-text {
+  max-width: 300px;
+  margin: 0 auto 25px;
+}
+
+.round-transparent-button {
+  border: 1px solid rgb(105, 105, 105);
+  border-radius: 20px;
+  font-weight: bold;
+  color: rgb(232, 232, 232);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+}
+
+.round-transparent-button:hover {
+  color: rgb(180, 191, 223);
+  padding: 15px;
+}
