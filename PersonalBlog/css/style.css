@@ -17,23 +17,39 @@ a {
   text-decoration: none;
 }
 
+footer {
+ text-align: center;
+}
+
 #site-title {
   margin: 35px auto;
 }
 
 .sticky-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
   display: flex;
-  justify-content: space-around;
+  justify-content:center;
+}
+
+.sticky-nav a {
   padding: 20px 30px;
+  /*  MAYBEEE use this, looks pretty cool. maybe not though.
+  margin: 0% 1%;
+  */
 }
 
 .sticky-nav a:hover {
   color: rgb(33, 34, 87);
+  background-color: rgb(196, 210, 228);
 }
 
 .large-card {
   height: 60vh;
-  background-image: url('https://source.unsplash.com/1920x1080/?dogs');
+  background-image: url('https://source.unsplash.com/1920x1080/?cats');
+  background-attachment: fixed;
   background-position: center center;
   display: flex;
   justify-content: center;
@@ -57,7 +73,7 @@ a {
 }
 
 .large-card-title {
-  margin-top: 30%;
+  margin-top: 15%;
 }
 
 .large-card-text {
@@ -96,12 +112,39 @@ a {
   text-align: center;
 }
 
+.grid-item:hover {
+    box-shadow: 0px 0px 27px 1px #000;
+}
+
 .photo-one {
-  background-image: url('https://source.unsplash.com/1920x1081/?astronomy');
+  background-image: url('https://source.unsplash.com/1920x1079/?cat');
+  background-position: center center;
+  background-size: cover;
+}
+
+.photo-two {
+  background-image: url('https://source.unsplash.com/1921x1081/?cat');
+  background-position: center center;
+  background-size: cover;
+}
+
+.photo-three {
+  background-image: url('https://source.unsplash.com/1920x1082/?cat');
   background-position: center center;
   background-size: cover;
 }
 
 .card-text {
-  max-width: 200px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  padding: 0px 20%;
+}
+
+.grid-item:hover .card-text {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card-text p {
+  min-width: 190px;
 }
