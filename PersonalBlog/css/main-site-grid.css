@@ -1,0 +1,106 @@
+
+
+
+.grid-container {
+  margin: 8px;
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: auto auto auto;
+
+}
+
+.grid-item {
+  border: 1px solid rgb(33, 33, 33);
+  margin-bottom: 10px;
+  min-height: 45vh;
+  display: flex;
+  align-items: flex-end;
+  /* justify-content:center;  */
+  text-align: center;
+}
+
+.grid-item:hover {
+    box-shadow: 0px 0px 27px 1px #000;
+}
+
+.photo-1 {
+  background-image: url('../img/vr-in-museums.jpeg');
+  background-position: center center;
+  background-size: cover;
+  
+}
+
+.photo-2 {
+  background-image: url('../img/hand-reaching.jpeg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.photo-3 {
+  background-image: url('../img/controllers.jpeg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.photo-4 {
+  background-image: url('../img/couch-vr.jpeg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.photo-5 {
+  background-image: url('../img/facing-friend.jpeg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.photo-6 {
+  background-image: url('../img/girl-smiling.jpeg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.photo-7 {
+  background-image: url('../img/kid-play.jpeg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.photo-8 {
+  background-image: url('../img/painting.jpeg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.photo-9 {
+  background-image: url('../img/play-public.jpeg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.photo-9 {
+  background-image: url('../img/psvr-play.jpeg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.photo-10 {
+  background-image: url('../img/vr-in-museums.jpeg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.card-text {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  padding: 0px 20%;
+}
+
+.grid-item:hover .card-text {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card-text p {
+  min-width: 190px;
+}
