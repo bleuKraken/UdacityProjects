@@ -1,0 +1,24 @@
+/*
+* File is for anything related to the navigation of the page.
+*/
+
+.sticky-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  display: flex;
+  justify-content:center;
+}
+
+.sticky-nav a {
+  padding: 20px 30px;
+  /*  MAYBEEE use this, looks pretty cool. maybe not though.
+  margin: 0% 1%;
+  */
+}
+
+.sticky-nav a:hover {
+  color: rgb(33, 34, 87);
+  background-color: rgb(196, 210, 228);
+}
