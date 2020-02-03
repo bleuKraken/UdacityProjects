@@ -1,0 +1,54 @@
+@import "header.css";
+@import "style.css";
+
+* {
+  border: 1px solid rgb(113, 204, 194);
+}
+
+.body {
+  margin: 0;
+font-size: 1.2em;
+}
+
+.blog-article {
+  background-color: rgb(161, 190, 199);
+  width: 60%;
+  padding: 0 30px;
+
+}
+
+.blog-photo {
+  background-image: url('../img/ChrisMilk.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: 400px;
+  max-width: 650px;
+  display: flex;
+  align-items: flex-end;
+  color: rgb(255, 255, 255);
+  margin: 30px auto;
+}
+
+.blog-title, .blog-paragraphs {
+
+}
+
+/* ########################### GRID START ############################## */
+.grid-container {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-areas:
+  "header header header"
+  "sidebar main aside"
+  "sidebar footer footer";
+}
+
+
+.grid-item {
+  border: 1px solid rgb(33, 33, 33);
+  background-color: rgb(197, 180, 201);
+}
+
+/* ########################### GRID END ############################## */

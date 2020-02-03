@@ -38,6 +38,7 @@
   height: 60vh;
   background-image: url('../img/ChrisMilk.jpg');
   background-attachment: fixed;
+  
   background-position: center center;
   display: flex;
   justify-content: center;
