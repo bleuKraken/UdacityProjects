@@ -29,23 +29,20 @@
   background-color: rgba(14, 29, 232, 0.9);
 }
 
-
-
-
 .large-card {
   height: 60vh;
   background-image: url('../img/ChrisMilk.jpg');
   background-attachment: fixed;
-
   background-position: center center;
   display: flex;
   justify-content: center;
 }
 
 .transparent-layer {
+  height: auto;
   align-self: flex-end;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   margin-bottom: 5%;
 }
 
@@ -53,9 +50,9 @@
 
   border: 1px solid rgb(60, 30, 180);
   color: #fff;
-  height: 30vh;
-  width: 400px;
-  max-width: 450px;
+  height: 280px;
+  width: 380px;
+  padding: 10px;
   margin: 8px;
 }
 
@@ -65,6 +62,5 @@
 
 .large-card-text {
   padding: 0 10px;
-
   margin: 0 auto 25px;
 }

@@ -2,7 +2,6 @@
 @import "main-blog.css";
 @import "main-site-grid.css";
 
-
 /* TODO:
 
 - Look for and download images. Main large blog post, blog post, blog site.
@@ -58,41 +57,162 @@ TODO: COMPLETED
 - Add atleast 2 more imports above. Maybe the grid-css? Second html page of thhe blog post? Header? queries?
 
 */
-* {
-}
+* {}
 
 .body {
   margin: 0px;
   font-size: 1.15em;
-
 }
-
 
 .footer {
   text-align: center;
-  padding-top: 1em;
 }
-
 
 .link {
   text-decoration: none;
+  outline: none;
 }
 
 .light-button {
-  padding: 1em;
+  padding: 10px;
   color: #000;
   background-color: #fff;
   border: 1px solid #000;
 }
 
 .light-button:hover {
-  padding: 1em;
+  padding: 15px;
   color: #fff;
   background-color: #000;
   border: 1px solid #fff;
 }
 
 .author {
-  padding-top: 2em;
   display: block;
+  background-color: rgb(33, 33, 33);
+  color: rgb(255, 255, 255);
+}
+
+.newsletter {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(33, 33, 33);
+  padding: 15px;
+  color: rgb(237, 237, 237);
+}
+
+.newsletter-form {
+  margin: 18px 0;
+}
+
+.email-input {
+  padding: 10px;
+}
+
+.button-row {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.subscribe-button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(33, 33, 33);
+  padding: 8px 8px 10px;
+}
+
+.subscribe-button:hover {
+  background-color: rgb(32, 31, 32);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(241, 241, 241);
+  padding: 8px;
+}
+
+
+
+.grid-item {
+  border: 1px solid rgb(33, 33, 33);
+  margin-bottom: 10px;
+  min-height: 400px;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+}
+
+.grid-item:hover {
+  box-shadow: 0px 0px 27px 1px #000;
+}
+
+.photo-1 {
+  background-image: url('../img/vr-in-museums.jpeg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.photo-2 {
+  background-image: url('../img/hand-reaching.jpeg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.photo-3 {
+  background-image: url('../img/controllers.jpeg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.photo-4 {
+  background-image: url('../img/couch-vr.jpeg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.photo-5 {
+  background-image: url('../img/facing-friend.jpeg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.photo-6 {
+  background-image: url('../img/girl-smiling.jpeg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.photo-7 {
+  background-image: url('../img/kid-play.jpeg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.photo-8 {
+  background-image: url('../img/painting.jpeg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.photo-9 {
+  background-image: url('../img/play-public.jpeg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.photo-10 {
+  background-image: url('../img/vr-in-museums.jpeg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.card-text {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 0px 5%;
+}
+
+.grid-item:hover .card-text {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card-text p {
+  min-width: 190px;
 }
