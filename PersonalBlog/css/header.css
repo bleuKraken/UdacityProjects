@@ -3,16 +3,10 @@
   text-align: center;
   background-color: rgb(33, 33, 33);
   padding: 30px 0;
-  color: rgb(255, 255, 255);
 }
 
 .site-title {
   margin: 0 auto;
-  color: rgb(66, 80, 221);
-}
-
-.title-letter {
-  color: rgb(212, 28, 16);
 }
 
 .sticky-nav {
@@ -36,4 +30,11 @@
 
 .sticky-nav a:visited {
   color: rgb(69, 87, 255);
+}
+
+
+@media only screen and (max-width: 700px) {
+  .sticky-nav a {
+    padding: 10px 15px;
+  }
 }

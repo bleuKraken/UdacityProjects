@@ -1,0 +1,32 @@
+/*
+*  Colors are used throught the site for text colors and background colors. The only ones NOT listed here
+*  are colors related to :hover, and :visited - Those can be found in other .css files.
+*/
+
+.color-primary {
+  color: rgb(255, 255, 255);
+}
+
+.color-secondary {
+  color: rgb(24, 24, 24);
+}
+
+.color-info {
+  color: rgb(66, 80, 221);
+}
+
+.bg-primary {
+  background-color: rgb(255, 255, 255);
+}
+
+.bg-secondary {
+  background-color: rgb(24, 24, 24);
+}
+
+.bg-secondary-transparent {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.title-letter {
+  color: rgb(212, 28, 16);
+}

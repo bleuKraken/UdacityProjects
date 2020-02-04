@@ -1,6 +1,6 @@
 @import "header.css";
 @import "main-blog.css";
-@import "main-site-grid.css";
+@import "colors.css";
 
 /* TODO:
 
@@ -57,7 +57,9 @@ TODO: COMPLETED
 - Add atleast 2 more imports above. Maybe the grid-css? Second html page of thhe blog post? Header? queries?
 
 */
-* {}
+* {
+  border: 1px solid rgb(62, 197, 238);
+}
 
 .body {
   margin: 0px;
@@ -66,6 +68,7 @@ TODO: COMPLETED
 
 .footer {
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .link {
@@ -75,8 +78,6 @@ TODO: COMPLETED
 
 .light-button {
   padding: 10px;
-  color: #000;
-  background-color: #fff;
   border: 1px solid #000;
 }
 
@@ -87,36 +88,28 @@ TODO: COMPLETED
   border: 1px solid #fff;
 }
 
-.author {
-  display: block;
-  background-color: rgb(33, 33, 33);
-  color: rgb(255, 255, 255);
-}
-
-.newsletter {
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(33, 33, 33);
-  padding: 15px;
-  color: rgb(237, 237, 237);
-}
-
-.newsletter-form {
-  margin: 18px 0;
-}
-
-.email-input {
-  padding: 10px;
-}
-
 .button-row {
   text-align: center;
   margin-bottom: 18px;
 }
 
+.newsletter {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 5px;
+}
+
+.newsletter-quote, .newsletter-form {
+  display: inline;
+  margin: 18px 5px;
+}
+
+.email-input {
+  padding: 10px;
+  max-width: 200px;
+}
+
 .subscribe-button {
-  background-color: rgb(255, 255, 255);
-  color: rgb(33, 33, 33);
   padding: 8px 8px 10px;
 }
 
@@ -127,6 +120,23 @@ TODO: COMPLETED
   padding: 8px;
 }
 
+.author {
+  display: block;
+}
+
+.grid-container {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: auto auto auto;
+  max-width: 1500px;
+  margin: 25px auto;
+  padding: 0 20px;
+}
+
+.blog-column {
+  max-width: 450px;
+  min-width: 200px;
+}
 
 
 .grid-item {
@@ -204,8 +214,6 @@ TODO: COMPLETED
 
 .card-text {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #fff;
   padding: 0px 5%;
 }
 
@@ -215,4 +223,28 @@ TODO: COMPLETED
 
 .card-text p {
   min-width: 190px;
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    background-color: lightblue;
+  }
+
+  .grid-container {
+    grid-template-columns: auto auto;
+  }
+
+  .blog-column:nth-child(3) {
+    display: none;
+  }
+
+  .newsletter {
+    display:block;
+    padding: 15px 5px;
+  }
+
+  .newsletter-quote, .newsletter-form {
+    display: block;
+  }
+
 }
