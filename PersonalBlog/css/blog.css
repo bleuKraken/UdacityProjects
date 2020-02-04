@@ -2,17 +2,14 @@
 @import "style.css";
 
 * {
-  border: 1px solid rgb(113, 204, 194);
 }
 
 .body {
   margin: 0;
-font-size: 1.2em;
 }
 
 .blog-article {
   background-color: rgb(161, 190, 199);
-  width: 60%;
   padding: 0 30px;
 
 }
@@ -20,29 +17,59 @@ font-size: 1.2em;
 .blog-photo {
   background-image: url('../img/ChrisMilk.jpg');
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+
   height: 400px;
-  max-width: 650px;
   display: flex;
   align-items: flex-end;
   color: rgb(255, 255, 255);
-  margin: 30px auto;
+  margin: 30px auto 0;
 }
 
-.blog-title, .blog-paragraphs {
-
+.grid-blog {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: auto auto;
 }
 
-/* ########################### GRID START ############################## */
+.side-container {
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(159, 246, 212);
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  margin: auto 0;
+}
+
+.side-photo {
+  background-image: url('https://source.unsplash.com/random/1920x1080');
+  background-position: center center;
+  background-size: cover;
+  min-height: 350px;
+  display: flex;
+  align-items: flex-end;
+  color: rgb(255, 255, 255);
+  margin: 10px 0;
+}
+
+.photo-caption {
+  padding: 5px;
+}
+
+/* ########################### GRID START ##############################
 .grid-container {
+
   display: grid;
   grid-gap: 1em;
-  grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-columns: 4fr 1fr;
   grid-template-areas:
-  "header header header"
+  "main  side"
   "sidebar main aside"
   "sidebar footer footer";
+
+  grid-template-rows: 1fr 5fr 1fr;
+
 }
 
 
@@ -50,5 +77,6 @@ font-size: 1.2em;
   border: 1px solid rgb(33, 33, 33);
   background-color: rgb(197, 180, 201);
 }
+*/
 
 /* ########################### GRID END ############################## */

@@ -1,6 +1,5 @@
 @import "header.css";
 @import "main-blog.css";
-@import "blog.css";
 @import "main-site-grid.css";
 
 
@@ -60,11 +59,12 @@ TODO: COMPLETED
 
 */
 * {
-  border: 1px solid rgb(110, 141, 252);
 }
 
 .body {
   margin: 0px;
+  font-size: 1.15em;
+
 }
 
 

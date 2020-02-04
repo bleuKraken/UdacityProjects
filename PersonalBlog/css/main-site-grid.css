@@ -14,10 +14,8 @@
   border: 1px solid rgb(33, 33, 33);
   margin-bottom: 10px;
   min-height: 400px;
-  /* min-height: 45vh; */
   display: flex;
   align-items: flex-end;
-  /* justify-content:center;  */
   text-align: center;
 }
 
@@ -87,9 +85,9 @@
 
 .card-text {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
-  padding: 0px 20%;
+  padding: 0px 5%;
 }
 
 .grid-item:hover .card-text {

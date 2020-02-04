@@ -5,14 +5,13 @@
   border-radius: 20px;
   font-weight: bold;
   color: rgb(232, 232, 232);
-  background-color: rgba(227, 8, 8, 0.5);
+  background-color: rgba(227, 8, 8, 0.7);
   padding: 10px;
   margin: 0px 10px;
 }
 
 .view-ted-video:hover {
   background-color: rgba(227, 8, 8, 0.9);
-  padding: 15px;
 }
 
 .view-blog-button {
@@ -20,7 +19,7 @@
   border-radius: 20px;
   font-weight: bold;
   color: rgb(232, 232, 232);
-  background-color: rgba(14, 29, 232, 0.5);
+  background-color: rgba(14, 29, 232, 0.7);
   padding: 10px;
   margin: 0px 10px;
 
@@ -28,7 +27,6 @@
 
 .view-blog-button:hover {
   background-color: rgba(14, 29, 232, 0.9);
-  padding: 15px;
 }
 
 
@@ -38,7 +36,7 @@
   height: 60vh;
   background-image: url('../img/ChrisMilk.jpg');
   background-attachment: fixed;
-  
+
   background-position: center center;
   display: flex;
   justify-content: center;
@@ -56,7 +54,7 @@
   border: 1px solid rgb(60, 30, 180);
   color: #fff;
   height: 30vh;
-  width: 40vw;
+  width: 400px;
   max-width: 450px;
   margin: 8px;
 }
@@ -66,6 +64,7 @@
 }
 
 .large-card-text {
-  max-width: 300px;
+  padding: 0 10px;
+
   margin: 0 auto 25px;
 }
