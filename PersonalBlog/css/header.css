@@ -19,22 +19,20 @@
   justify-content:center;
 }
 
-.sticky-nav a {
+.sticky-nav .link {
   padding: 20px 30px;
 }
 
-.sticky-nav a:hover {
+.sticky-nav .link:hover {
   color: rgb(33, 34, 87);
   background-color: rgb(196, 210, 228);
 }
 
-.sticky-nav a:visited {
-  color: rgb(69, 87, 255);
+.sticky-nav .link:visited {
+  color: rgb(66, 80, 221);
 }
 
 
-@media only screen and (max-width: 700px) {
-  .sticky-nav a {
-    padding: 10px 15px;
-  }
+.mobile-nav-item {
+  display: none;
 }

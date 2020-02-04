@@ -58,7 +58,6 @@ TODO: COMPLETED
 
 */
 * {
-  border: 1px solid rgb(62, 197, 238);
 }
 
 .body {
@@ -90,7 +89,7 @@ TODO: COMPLETED
 
 .button-row {
   text-align: center;
-  margin-bottom: 18px;
+  margin-bottom: 50px;
 }
 
 .newsletter {
@@ -122,6 +121,11 @@ TODO: COMPLETED
 
 .author {
   display: block;
+}
+
+.quote {
+  padding: 20px 40px;
+  text-align: center;
 }
 
 .grid-container {
@@ -222,12 +226,12 @@ TODO: COMPLETED
 }
 
 .card-text p {
-  min-width: 190px;
+  min-width: 180px;
 }
 
 @media only screen and (max-width: 700px) {
-  body {
-    background-color: lightblue;
+  .body {
+    font-size: 1rem;
   }
 
   .grid-container {
@@ -245,6 +249,36 @@ TODO: COMPLETED
 
   .newsletter-quote, .newsletter-form {
     display: block;
+  }
+
+  .sticky-nav .link {
+    display: none;
+  }
+
+  .mobile-nav-item {
+    visibility: visible;
+    display: block;
+    text-align: right;
+    text-align: center;
+  }
+
+  .mobile-nav {
+    padding-bottom: 20px;
+  }
+
+  .mobile-nav-item .link {
+    margin: 0 15px;
+
+  }
+
+  .mobile-nav .link:visited {
+    color: rgb(66, 80, 221);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .blog-column:nth-child(3), .blog-column:nth-child(2) {
+    display: none;
   }
 
 }
