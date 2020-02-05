@@ -1,4 +1,4 @@
-@import "header.css";
+@import "top.css";
 @import "blog-image.css";
 @import "colors.css";
 
@@ -6,80 +6,14 @@
 * Main CSS file.
 *
 */
-
 /* TODO:
 - Add google fonts?
 - there is a card using a duplicate image, fix it. :)
 - use only ' ' or " " throughout css files!
 */
-
-/* TODO:
-
-- Look for and download images. Main large blog post, blog post, blog site.
-- Add some  a. Bold
-            b. Italic
-            c. Underlined
-  to the <p> elements for some fancyness!
-- add a Quote
-- have atleast 3 diffrent Colours
-- add an image caption. Or rename something that i already have to an image caption.
-- google what a card is, is the one I'm currently using the same? tweak?
-- add link to homepage on homepage. Redundent?
-- start on blog post! :D
-
-- Blog Post
-
-    Header
-    Author Info
-        Name
-        Title
-        Current Company/School
-        Short Bio
-        Avatar
-    Social Sharing
-        Twitter
-        Facebook
-        LinkedIn
-- make sure im using flex at least twice
-- make sure im using grid at least twice
-- make responsive for tablet. landscape, and mobile. Aww yeah!
-- HTML5 semantic tags such as <header>, <footer>, <article>, <section> , etc. are used to add meaning to the code.
-- No div or section selectors are without a CSS class or id.
-- The code does not have trailing white spaces. (Smoosh everything together)
-- when quoting , stay consistant with  '' or " "
-(CSS STUFF)
--Code always uses a space after a property name's colon, but no space between property and colon, for consistency reasons.
-- Use atom beautify at the end of submission! it removes trailing white space.
-- Code always uses a single space between the last selector and the opening brace that begins the declaration block. Code always start a new line for each selector and declaration.
-Code always put a blank line (two line breaks) between rules.
-Pattern - Related Articles: Add 2 to 3 fake blog post references after the blog post ends (i.e. to older blog posts)
-Pattern - Subscribe Form: Instead of a fake subscribe link on the blog, there is an actual form area with name and email input fields and a subscribe button.
-Project URL: Project is fully deployed on GitHub Pages, Netlify or another hosting provider that is free of charge.
-
-
-
-TODO: COMPLETED
-- Remove these elements/Change from attribute to class or div
-- grid might be able to make a body {
-                              margin: 0px;
-                            }
-                            effect!
-}
-- Add atleast 2 more imports above. Maybe the grid-css? Second html page of thhe blog post? Header? queries?
-
-*/
-
-
-
-
-.body {
+.page {
   margin: 0px;
   font-size: 1.1em;
-}
-
-.footer {
-  text-align: center;
-  padding: 100px 0 5px;
 }
 
 .link {
@@ -104,8 +38,7 @@ TODO: COMPLETED
   margin-bottom: 50px;
 }
 
-
- .newsletter-form {
+.newsletter-form {
   text-align: center;
   margin: 10px 0 50px;
 }
@@ -141,6 +74,10 @@ TODO: COMPLETED
   text-decoration: underline;
 }
 
+.quote-literal {
+  font-style: italic;
+}
+
 .grid-container {
   display: grid;
   grid-column-gap: 10px;
@@ -154,7 +91,6 @@ TODO: COMPLETED
   max-width: 450px;
   min-width: 200px;
 }
-
 
 .grid-item {
   border: 1px solid rgb(33, 33, 33);
@@ -242,8 +178,16 @@ TODO: COMPLETED
   min-width: 180px;
 }
 
+.page-bottom {
+  text-align: center;
+  padding: 100px 0 5px;
+}
+
+/*
+*  Mobile View
+*/
 @media only screen and (max-width: 700px) {
-  .body {
+  .page {
     font-size: 1rem;
   }
 
@@ -254,21 +198,6 @@ TODO: COMPLETED
   .blog-column:nth-child(3) {
     display: none;
   }
-/*
-  .newsletter {
-    padding: 15px 5px;
-    margin: 0 auto;
-  }
-
-
-    .newsletter-quote {
-      padding: 0 20px;
-    }
-
-  .newsletter-quote{
-    display: block;
-  }
-  */
 
   .sticky-nav .link {
     display: none;
@@ -282,12 +211,11 @@ TODO: COMPLETED
   }
 
   .mobile-nav {
-    padding-bottom: 20px;
+    padding: 30px 0;
   }
 
   .mobile-nav-item .link {
     margin: 0 15px;
-
   }
 
   .mobile-nav .link:visited {
@@ -295,22 +223,11 @@ TODO: COMPLETED
   }
 }
 
-.icon-row {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 100px;
-}
-
-.icon-row .fab {
-  padding: 15px;
-}
-
 /*
-*  Mobile Display
+*  Mobile View with 2 Columns Removed
 */
 @media only screen and (max-width: 500px) {
   .blog-column:nth-child(3), .blog-column:nth-child(2) {
     display: none;
   }
-
 }

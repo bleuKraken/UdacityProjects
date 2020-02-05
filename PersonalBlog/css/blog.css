@@ -1,9 +1,8 @@
-@import "header.css";
+@import "top.css";
 @import "style.css";
 @import "colors.css";
 
-
-.body {
+.page {
   margin: 0;
 }
 
@@ -31,6 +30,10 @@
   margin: 0 auto;
 }
 
+.blog-author {
+  font-size: 0.9rem;
+}
+
 .side-container {
   max-width: 280px;
   padding: 160px 10px 0;
@@ -40,12 +43,17 @@
   padding: 5px;
 }
 
-
-.blog-author {
-  font-size: 0.9rem;
+.icon-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
 }
 
+.icon-row .fab {
+  padding: 15px;
+}
 
+/* Mobile */
 @media only screen and (max-width: 800px) {
   .grid-blog {
     grid-template-columns: auto;
@@ -58,5 +66,4 @@
   .side-container {
     max-width: 100%;
   }
-
 }

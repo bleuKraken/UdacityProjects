@@ -2,7 +2,6 @@
 *  Colors are used throught the site for text colors and background colors. The only ones NOT listed here
 *  are colors related to :hover, and :visited - Those can be found in other .css files.
 */
-
 .color-author {
   color: rgb(252, 0, 0);
 }
@@ -16,8 +15,7 @@
 }
 
 .color-info {
-color: rgb(0, 101, 252);
-
+  color: rgb(0, 101, 252);
 }
 
 .bg-primary {

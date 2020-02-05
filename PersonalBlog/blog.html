@@ -12,9 +12,9 @@
 
 <!-- Story Begins -->
 
-<body class="body">
+<body class="page">
   <!-- Title -->
-  <header class="header">
+  <header class="page-title">
     <h1 class="site-title color-info"><span class="color-author">C</span>yber<span class="color-author">M</span>ind</h1>
   </header>
 
@@ -38,7 +38,8 @@
 
   <!-- Grid Container -->
   <main class="grid-blog">
-    <section class="blog-article">
+    <!-- Article Post -->
+    <article class="blog-article">
       <div class="blog-title">
         <h2 class="large-card-title">The Birth of Virtual Reality as an Art Form</h2>
         <p class="blog-author"><strong>Author:</strong> John Smith</p>
@@ -49,11 +50,10 @@
       <div class="blog-paragraphs">
         <p>
           Chris Milk is a director, photographer, and known by many as a innovator and immersive artist.
-           Accompanied by Joshua Roman on cello and McKenzie Stubbert on piano, in this Ted Talk given on February 2016 Milk discusses how virtual reality is the next medium to share stories with others.
-           He begins his story from the first moment he
-           remembers putting on headphones to his current work with creating breakthrough virtual reality projects. <q><i>VR is the last medium for storytelling</i></q>, he says, because it closes the gap between audience and storyteller.
+          Accompanied by Joshua Roman on cello and McKenzie Stubbert on piano, in this Ted Talk given on February 2016 Milk discusses how virtual reality is the next medium to share stories with others.
+          He begins his story from the first moment he
+          remembers putting on headphones to his current work with creating breakthrough virtual reality projects. <q><i>VR is the last medium for storytelling</i></q>, he says, because it closes the gap between audience and storyteller.
         </p>
-
         <h3>
           The Power of Music
         </h3>
@@ -81,7 +81,7 @@
           because even if you turn your head to left or right, even behind you, the sound will rotate accordingly. It can also be used to direct your attention to where you should be looking as a story or experience unfolds.
         </p>
 
-<!-- TODO: update below
+        <!-- TODO: update below
         <h3>
           Bridging the Gap
         </h3>
@@ -108,10 +108,10 @@
         </p>
       -->
       </div>
-    </section>
+    </article>
 
     <!-- Side Links to other (Fake) Blog Post -->
-    <aside class="side-container">
+    <section class="side-container">
       <div class="grid-item card-1">
         <div class="card-text bg-secondary-transparent color-primary">
           <h3>How Virtual Reality is Being Used in Museums</h3>
@@ -136,24 +136,20 @@
           <p class="card-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, architecto!</p>
         </div>
       </div>
-    </aside>
+    </section>
   </main>
 
-
-    <!-- Hidden on desktop screen, Shrink to show. -->
-    <nav class="mobile-nav">
-      <div class="mobile-nav-item">
-        <a href="#0" class="link">ABOUT</a>
-        <a href="#0" class="link">CONTACT</a>
-        <a href="#top" class="link">TOP</a>
-      </div>
-    </nav>
-
-
+  <!-- Hidden on desktop screen, Shrink to show. -->
+  <nav class="mobile-nav">
+    <div class="mobile-nav-item">
+      <a href="#0" class="link">ABOUT</a>
+      <a href="#0" class="link">CONTACT</a>
+      <a href="#top" class="link color-warning"><strong>TOP</strong></a>
+    </div>
+  </nav>
 
   <!-- Footer with Newsletter -->
-  <footer class="footer color-primary bg-secondary">
-
+  <footer class="page-bottom color-primary bg-secondary">
     <span class="color-info">Follow us to view our activity</span>
     <!-- Icons -->
     <div class="icon-row">
@@ -161,15 +157,11 @@
       <a href="#0"><i class="fab fa-facebook-square fa-2x color-primary"></i></a>
       <a href="#0"><i class="fab fa-linkedin fa-2x color-primary"></i></a>
     </div>
-
-
-      <h3 class="newsletter-quote color-info">Subscribe to hear about our latest post!</h3>
-      <form class="newsletter-form">
-        <input type="email" placeholder="youremail@gmail.com" class="email-input">
-        <a href="#0" class="subscribe-button color-secondary bg-primary link">Subscribe</a>
-      </form>
-
-
+    <h3 class="newsletter-quote color-info">Subscribe to hear about our latest post!</h3>
+    <form class="newsletter-form">
+      <input type="email" placeholder="youremail@gmail.com" class="email-input">
+      <a href="#0" class="subscribe-button color-secondary bg-primary link">Subscribe</a>
+    </form>
     <span class="dev-name color-primary bg-secondary">Created by: <a href="#" target="_blank" class="link">John Smith</a></span>
   </footer>
 

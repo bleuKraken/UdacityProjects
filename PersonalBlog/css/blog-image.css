@@ -1,6 +1,4 @@
-
-
-.view-ted-video {
+.button-danger {
   border: 1px solid rgb(105, 105, 105);
   font-weight: bold;
   color: rgb(232, 232, 232);
@@ -9,37 +7,33 @@
   margin-right: 7px;
 }
 
-.view-ted-video:hover {
+.button-danger:hover {
   background-color: rgba(227, 8, 8, 0.9);
 }
 
-.view-blog-button {
+.button-info {
   border: 1px solid rgb(105, 105, 105);
   font-weight: bold;
   color: rgb(232, 232, 232);
   background-color: rgba(14, 29, 232, 0.7);
   padding: 10px;
   margin-left: 7px;
-
 }
 
-.view-blog-button:hover {
+.button-info:hover {
   background-color: rgba(14, 29, 232, 0.9);
 }
 
 .main-card-image {
+  padding-top: 60px;
   min-height: 440px;
-  height: 60vh;
+  height: 100%;
   background-image: url('../img/ChrisMilk.jpg');
-  background-attachment:fixed;
-
-  background-size:cover;
-
-
+  background-attachment: fixed;
+  background-size: cover;
   background-position: center center;
   display: flex;
   justify-content: center;
-  padding-top: 100px;
 }
 
 .transparent-layer {
