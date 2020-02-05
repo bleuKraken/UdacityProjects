@@ -3,6 +3,10 @@
 *  are colors related to :hover, and :visited - Those can be found in other .css files.
 */
 
+.color-author {
+  color: rgb(252, 0, 0);
+}
+
 .color-primary {
   color: rgb(255, 255, 255);
 }
@@ -12,7 +16,8 @@
 }
 
 .color-info {
-  color: rgb(66, 80, 221);
+color: rgb(0, 101, 252);
+
 }
 
 .bg-primary {
@@ -27,6 +32,6 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.title-letter {
-  color: rgb(212, 28, 16);
+.color-warning {
+  color: rgb(242, 129, 12);
 }

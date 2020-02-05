@@ -2,7 +2,6 @@
 
 .view-ted-video {
   border: 1px solid rgb(105, 105, 105);
-  border-radius: 20px;
   font-weight: bold;
   color: rgb(232, 232, 232);
   background-color: rgba(227, 8, 8, 0.7);
@@ -16,7 +15,6 @@
 
 .view-blog-button {
   border: 1px solid rgb(105, 105, 105);
-  border-radius: 20px;
   font-weight: bold;
   color: rgb(232, 232, 232);
   background-color: rgba(14, 29, 232, 0.7);
@@ -53,7 +51,6 @@
 }
 
 .main-card-body {
-
   border: 1px solid rgb(60, 30, 180);
   color: #fff;
   height: 300px;

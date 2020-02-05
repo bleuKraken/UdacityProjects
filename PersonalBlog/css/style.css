@@ -71,6 +71,7 @@ TODO: COMPLETED
 
 
 
+
 .body {
   margin: 0px;
   font-size: 1.1em;
@@ -78,7 +79,7 @@ TODO: COMPLETED
 
 .footer {
   text-align: center;
-  padding: 15px 0 20px;
+  padding: 100px 0 5px;
 }
 
 .link {
@@ -103,24 +104,19 @@ TODO: COMPLETED
   margin-bottom: 50px;
 }
 
-.newsletter {
-  display: block;
-  padding: 15px 0;
-
-}
 
  .newsletter-form {
   text-align: center;
-
+  margin: 10px 0 50px;
 }
 
 .email-input {
-  padding: 10px;
-  max-width: 170px;
+  display: inline-block;
+  width: 180px;
 }
 
 .subscribe-button {
-  padding: 8px 8px 10px;
+  padding: 5px 5px 7px;
   font-size: 1rem;
 }
 
@@ -131,8 +127,9 @@ TODO: COMPLETED
   padding: 8px;
 }
 
-.author {
+.dev-name {
   display: block;
+  font-size: 0.8rem;
 }
 
 .quote-container {
@@ -257,19 +254,21 @@ TODO: COMPLETED
   .blog-column:nth-child(3) {
     display: none;
   }
-
+/*
   .newsletter {
     padding: 15px 5px;
     margin: 0 auto;
   }
 
+
     .newsletter-quote {
       padding: 0 20px;
     }
 
-  .newsletter-quote, .newsletter-form {
+  .newsletter-quote{
     display: block;
   }
+  */
 
   .sticky-nav .link {
     display: none;
@@ -292,11 +291,23 @@ TODO: COMPLETED
   }
 
   .mobile-nav .link:visited {
-    color: rgb(66, 80, 221);
+    color: rgb(0, 101, 252);
   }
 }
 
+.icon-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
 
+.icon-row .fab {
+  padding: 15px;
+}
+
+/*
+*  Mobile Display
+*/
 @media only screen and (max-width: 500px) {
   .blog-column:nth-child(3), .blog-column:nth-child(2) {
     display: none;

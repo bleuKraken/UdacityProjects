@@ -40,10 +40,9 @@
   padding: 5px;
 }
 
-.icon-row {
-  display: flex;
-  justify-content: space-around;
-  margin: 0 20%;
+
+.blog-author {
+  font-size: 0.9rem;
 }
 
 
