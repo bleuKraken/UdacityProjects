@@ -27,30 +27,33 @@
     <a href="#0" class="link">CONTACT</a>
   </nav>
 
+  <!-- Hidden on desktop. Shirnk width to view -->
   <div class="mobile-nav">
     <div class="mobile-nav-item">
-      <a href="main.html" class="link">HOME</a>
+      <a name="top" href="main.html" class="link">HOME</a>
       <a href="#0" class="link">BLOGS</a>
       <a href="#0" class="link">GALLERY</a>
     </div>
   </div>
 
   <!-- Large Card to Blog Post -->
-  <section class="large-card">
+  <section class="main-card-image">
     <div class="transparent-layer">
-      <div class="large-card-body">
-        <h2 class="large-card-title">The Birth of Virtual Reality as an Art Form</h2>
-        <p class="large-card-text">Working at the frontiers of interactive technology, Chris Milk stretches virtual reality into a new canvas for storytelling.</p>
-        <a href="https://www.ted.com/talks/chris_milk_the_birth_of_virtual_reality_as_an_art_form/transcript" target="_blank" class="view-ted-video link">View Ted Talk</a>
+      <div class="main-card-body">
+        <h2 class="main-card-title">The Birth of Virtual Reality as an Art Form</h2>
+        <p class="main-card-text">Working at the frontiers of interactive technology, Chris Milk stretches virtual reality into a new canvas for storytelling.</p>
+        <a href="https://www.ted.com/talks/chris_milk_the_birth_of_virtual_reality_as_an_art_form/transcript" target="_blank" class="view-ted-video link">View Talk</a>
         <a href="blog.html" class="view-blog-button link">Read Blog</a>
       </div>
     </div>
   </section>
 
-  <div class="quote bg-secondary color-primary">
-    <h3>Quote Of The Day</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore non, blanditiis sint possimus, voluptates id iste et neque nam cum ipsam nobis vel sequi.</p>
-    <span>- Alb.</span>
+  <div class="quote-container bg-secondary color-primary">
+    <h3 class="quote-title">Quote Of The Day</h3>
+    <p>
+      <q><i>You must see your goals clearly and specifically before you can set out for them. Hold them in your mind until they become second nature.</i></q>
+      <span>- Les Brown</span>
+    </p>
   </div>
 
   <!-- Grid Containing other (Fake) BLog Post -->
@@ -58,19 +61,19 @@
     <div class="grid-container">
       <!-- Column -->
       <div class="blog-column">
-        <div class="grid-item photo-1">
+        <div class="grid-item card-1">
           <div class="card-text bg-secondary-transparent color-primary">
             <h3>Interactive Art Work</h3>
             <p class="card-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, architecto!</p>
           </div>
         </div>
-        <div class="grid-item photo-2">
+        <div class="grid-item card-2">
           <div class="card-text bg-secondary-transparent color-primary">
             <h3>Why Touch is the Next Important Step</h3>
             <p class="card-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, architecto!</p>
           </div>
         </div>
-        <div class="grid-item photo-3">
+        <div class="grid-item card-3">
           <div class="card-text bg-secondary-transparent color-primary">
             <h3>VR Controllers: Explained</h3>
             <p class="card-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, architecto!</p>
@@ -79,19 +82,19 @@
       </div>
       <!-- Column -->
       <div class="blog-column">
-        <div class="grid-item photo-4">
+        <div class="grid-item card-4">
           <div class="card-text bg-secondary-transparent color-primary">
             <h3>12 Amazing Uses of Virtual Reality</h3>
             <p class="card-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, architecto!</p>
           </div>
         </div>
-        <div class="grid-item photo-5">
+        <div class="grid-item card-5">
           <div class="card-text bg-secondary-transparent color-primary">
             <h3>Socializing Through Virtual Enviornments</h3>
             <p class="card-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, architecto!</p>
           </div>
         </div>
-        <div class="grid-item photo-6">
+        <div class="grid-item card-6">
           <div class="card-text bg-secondary-transparent color-primary">
             <h3>7 Must Try Games For Beginners</h3>
             <p class="card-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, architecto!</p>
@@ -100,19 +103,19 @@
       </div>
       <!-- Column. Hides on Landscape and Mobile. -->
       <div class="blog-column">
-        <div class="grid-item photo-8">
+        <div class="grid-item card-8">
           <div class="card-text bg-secondary-transparent color-primary">
             <h3>Painting From a New Perspective</h3>
             <p class="card-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, architecto!</p>
           </div>
         </div>
-        <div class="grid-item photo-9">
+        <div class="grid-item card-9">
           <div class="card-text bg-secondary-transparent color-primary">
             <h3>Top Experiences to Try Anywhere</h3>
             <p class="card-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, architecto!</p>
           </div>
         </div>
-        <div class="grid-item photo-10">
+        <div class="grid-item card-10">
           <div class="card-text bg-secondary-transparent color-primary">
             <h3>Passive and Interactive Storytelling</h3>
             <p class="card-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, architecto!</p>
@@ -120,19 +123,21 @@
         </div>
       </div>
     </div>
+    <!-- Button -->
+    <div class="button-row">
+      <a href="#0" class="light-button link color-secondary">Load More</a>
+    </div>
   </main>
 
-  <!-- Button -->
-  <div class="button-row">
-    <a href="#0" class="light-button link color-secondary">Load More</a>
-  </div>
 
-<div class="mobile-nav">
-  <div class="mobile-nav-item">
-    <a href="#0" class="link">ABOUT</a>
-    <a href="#0" class="link">CONTACT</a>
-  </div>
-</div>
+  <!-- Hidden on desktop screen, Shrink to show. -->
+  <nav class="mobile-nav">
+    <div class="mobile-nav-item">
+      <a href="#0" class="link">ABOUT</a>
+      <a href="#0" class="link">CONTACT</a>
+      <a href="#top" class="link">TOP</a>
+    </div>
+  </nav>
 
 
   <!-- Footer with Newsletter -->
@@ -140,7 +145,7 @@
     <div class="newsletter">
       <h3 class="newsletter-quote">Subscribe to hear about our latest post!</h3>
       <form class="newsletter-form">
-        <input type="email" placeholder="email@gmail.com" class="email-input">
+        <input type="email" placeholder="youremail@gmail.com" class="email-input">
         <a href="#0" class="subscribe-button color-secondary bg-primary link">Subscribe</a>
       </form>
     </div>

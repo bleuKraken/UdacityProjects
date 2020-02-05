@@ -1,6 +1,17 @@
 @import "header.css";
-@import "main-blog.css";
+@import "blog-image.css";
 @import "colors.css";
+
+/*
+* Main CSS file.
+*
+*/
+
+/* TODO:
+- Add google fonts?
+- there is a card using a duplicate image, fix it. :)
+- use only ' ' or " " throughout css files!
+*/
 
 /* TODO:
 
@@ -57,17 +68,16 @@ TODO: COMPLETED
 - Add atleast 2 more imports above. Maybe the grid-css? Second html page of thhe blog post? Header? queries?
 
 */
-* {
-}
+
 
 .body {
   margin: 0px;
-  font-size: 1.15em;
+  font-size: 1.1em;
 }
 
 .footer {
   text-align: center;
-  padding-bottom: 20px;
+  padding: 15px 0 20px;
 }
 
 .link {
@@ -94,22 +104,24 @@ TODO: COMPLETED
 
 .newsletter {
   display: flex;
-  justify-content: space-around;
-  padding: 15px 5px;
+  justify-content: space-between;
+  padding: 15px 10px;
 }
 
-.newsletter-quote, .newsletter-form {
-  display: inline;
-  margin: 18px 5px;
+ .newsletter-form {
+  margin: auto auto;
+  min-width: 300px;
+  max-width: 305px;
 }
 
 .email-input {
   padding: 10px;
-  max-width: 200px;
+  max-width: 160px;
 }
 
 .subscribe-button {
   padding: 8px 8px 10px;
+  font-size: 1rem;
 }
 
 .subscribe-button:hover {
@@ -123,9 +135,13 @@ TODO: COMPLETED
   display: block;
 }
 
-.quote {
-  padding: 20px 40px;
+.quote-container {
+  padding: 3% 15%;
   text-align: center;
+}
+
+.quote-title {
+  text-decoration: underline;
 }
 
 .grid-container {
@@ -156,61 +172,61 @@ TODO: COMPLETED
   box-shadow: 0px 0px 27px 1px #000;
 }
 
-.photo-1 {
+.card-1 {
   background-image: url('../img/vr-in-museums.jpeg');
   background-position: center center;
   background-size: cover;
 }
 
-.photo-2 {
+.card-2 {
   background-image: url('../img/hand-reaching.jpeg');
   background-position: center center;
   background-size: cover;
 }
 
-.photo-3 {
+.card-3 {
   background-image: url('../img/controllers.jpeg');
   background-position: center center;
   background-size: cover;
 }
 
-.photo-4 {
+.card-4 {
   background-image: url('../img/couch-vr.jpeg');
   background-position: center center;
   background-size: cover;
 }
 
-.photo-5 {
+.card-5 {
   background-image: url('../img/facing-friend.jpeg');
   background-position: center center;
   background-size: cover;
 }
 
-.photo-6 {
+.card-6 {
   background-image: url('../img/girl-smiling.jpeg');
   background-position: center center;
   background-size: cover;
 }
 
-.photo-7 {
+.card-7 {
   background-image: url('../img/kid-play.jpeg');
   background-position: center center;
   background-size: cover;
 }
 
-.photo-8 {
+.card-8 {
   background-image: url('../img/painting.jpeg');
   background-position: center center;
   background-size: cover;
 }
 
-.photo-9 {
+.card-9 {
   background-image: url('../img/play-public.jpeg');
   background-position: center center;
   background-size: cover;
 }
 
-.photo-10 {
+.card-10 {
   background-image: url('../img/vr-in-museums.jpeg');
   background-position: center center;
   background-size: cover;
@@ -247,6 +263,10 @@ TODO: COMPLETED
     padding: 15px 5px;
   }
 
+    .newsletter-quote {
+      padding: 0 20px;
+    }
+
   .newsletter-quote, .newsletter-form {
     display: block;
   }
@@ -275,6 +295,7 @@ TODO: COMPLETED
     color: rgb(66, 80, 221);
   }
 }
+
 
 @media only screen and (max-width: 500px) {
   .blog-column:nth-child(3), .blog-column:nth-child(2) {

@@ -2,8 +2,6 @@
 @import "style.css";
 @import "colors.css";
 
-* {
-}
 
 .body {
   margin: 0;
@@ -40,4 +38,26 @@
 
 .photo-caption {
   padding: 5px;
+}
+
+.icon-row {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 20%;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .grid-blog {
+    grid-template-columns: auto;
+  }
+
+  .blog-photo {
+    background-size: cover;
+  }
+
+  .side-container {
+    max-width: 100%;
+  }
+
 }

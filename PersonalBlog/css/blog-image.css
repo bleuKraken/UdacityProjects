@@ -7,7 +7,7 @@
   color: rgb(232, 232, 232);
   background-color: rgba(227, 8, 8, 0.7);
   padding: 10px;
-  margin: 0px 10px;
+  margin-right: 7px;
 }
 
 .view-ted-video:hover {
@@ -21,7 +21,7 @@
   color: rgb(232, 232, 232);
   background-color: rgba(14, 29, 232, 0.7);
   padding: 10px;
-  margin: 0px 10px;
+  margin-left: 7px;
 
 }
 
@@ -29,14 +29,19 @@
   background-color: rgba(14, 29, 232, 0.9);
 }
 
-.large-card {
-  min-height: 400px;
+.main-card-image {
+  min-height: 440px;
   height: 60vh;
   background-image: url('../img/ChrisMilk.jpg');
-  background-attachment: fixed;
+  background-attachment:fixed;
+
+  background-size:cover;
+
+
   background-position: center center;
   display: flex;
   justify-content: center;
+  padding-top: 100px;
 }
 
 .transparent-layer {
@@ -44,24 +49,25 @@
   align-self: flex-end;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
-  margin-bottom: 5%;
+  margin-bottom: 10%;
 }
 
-.large-card-body {
+.main-card-body {
 
   border: 1px solid rgb(60, 30, 180);
   color: #fff;
-  height: 280px;
-  width: 380px;
+  height: 300px;
+  min-width: 200px;
+  max-width: 380px;
   padding: 10px;
   margin: 8px;
 }
 
-.large-card-title {
+.main-card-title {
   margin-top: 8%;
 }
 
-.large-card-text {
+.main-card-text {
   padding: 0 10px;
   margin: 0 auto 25px;
 }
