@@ -70,6 +70,7 @@ TODO: COMPLETED
 */
 
 
+
 .body {
   margin: 0px;
   font-size: 1.1em;
@@ -103,20 +104,19 @@ TODO: COMPLETED
 }
 
 .newsletter {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 10px;
+  display: block;
+  padding: 15px 0;
+
 }
 
  .newsletter-form {
-  margin: auto auto;
-  min-width: 300px;
-  max-width: 305px;
+  text-align: center;
+
 }
 
 .email-input {
   padding: 10px;
-  max-width: 160px;
+  max-width: 170px;
 }
 
 .subscribe-button {
@@ -259,8 +259,8 @@ TODO: COMPLETED
   }
 
   .newsletter {
-    display:block;
     padding: 15px 5px;
+    margin: 0 auto;
   }
 
     .newsletter-quote {
