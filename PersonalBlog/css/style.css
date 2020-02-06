@@ -11,6 +11,12 @@
 - there is a card using a duplicate image, fix it. :)
 - use only ' ' or " " throughout css files!
 */
+
+/*  Fonts Below */
+.page {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
 .page {
   margin: 0px;
   font-size: 1.1em;
@@ -46,6 +52,7 @@
 .email-input {
   display: inline-block;
   width: 180px;
+  padding: 5px 0;
 }
 
 .subscribe-button {
@@ -142,25 +149,19 @@
 }
 
 .card-7 {
-  background-image: url('../img/kid-play.jpeg');
-  background-position: center center;
-  background-size: cover;
-}
-
-.card-8 {
   background-image: url('../img/painting.jpeg');
   background-position: center center;
   background-size: cover;
 }
 
-.card-9 {
+.card-8 {
   background-image: url('../img/play-public.jpeg');
   background-position: center center;
   background-size: cover;
 }
 
-.card-10 {
-  background-image: url('../img/vr-in-museums.jpeg');
+.card-9 {
+  background-image: url('../img/psvr-play.jpeg');
   background-position: center center;
   background-size: cover;
 }
@@ -181,6 +182,10 @@
 .page-bottom {
   text-align: center;
   padding: 100px 0 5px;
+}
+
+.dev-name .link:visited {
+  color: rgb(0, 101, 252);
 }
 
 /*
@@ -206,7 +211,6 @@
   .mobile-nav-item {
     visibility: visible;
     display: block;
-    text-align: right;
     text-align: center;
   }
 

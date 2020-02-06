@@ -32,7 +32,7 @@
   color: rgb(66, 80, 221);
 }
 
-
+/* Gets removed when width shrinks to mobile view */
 .mobile-nav-item {
   display: none;
 }

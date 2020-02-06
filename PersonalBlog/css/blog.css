@@ -34,6 +34,10 @@
   font-size: 0.9rem;
 }
 
+.blog-paragraphs {
+  margin-bottom: 50px;
+}
+
 .side-container {
   max-width: 280px;
   padding: 160px 10px 0;
