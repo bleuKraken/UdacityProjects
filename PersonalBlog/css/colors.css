@@ -1,13 +1,16 @@
 /*
-*  Colors are used throught the site for text colors and background colors. The only ones NOT listed here
+*  Colors are used throught the site for text colors and background colors. The only colors NOT listed here
 *  are colors related to :hover, and :visited - Those can be found in other .css files.
+*
+*  Buttons are found towards the bottom.
 */
+/** Text Colos **/
 .color-author {
-  color: rgb(252, 0, 0);
+  color: #fc0000;
 }
 
 .color-primary {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
 .color-secondary {
@@ -15,21 +18,60 @@
 }
 
 .color-info {
-  color: rgb(0, 101, 252);
-}
-
-.bg-primary {
-  background-color: rgb(255, 255, 255);
-}
-
-.bg-secondary {
-  background-color: rgb(24, 24, 24);
-}
-
-.bg-secondary-transparent {
-  background-color: rgba(0, 0, 0, 0.4);
+  color: #0065fc;
 }
 
 .color-warning {
-  color: rgb(242, 129, 12);
+  color: #f2810c;
+}
+
+/** Background Colors **/
+.bg-primary {
+  background-color: #ffffff;
+}
+
+.bg-secondary {
+  background-color: #181818;
+}
+
+.bg-secondary-transparent {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/** Buttons **/
+.light-button {
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+.light-button:hover {
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #fff;
+}
+
+.button-danger {
+  border: 1px solid #696969;
+  font-weight: bold;
+  color: #e8e8e8;
+  background-color: rgba(227, 8, 8, 0.7);
+  padding: 10px;
+  margin-right: 7px;
+}
+
+.button-danger:hover {
+  background-color: rgba(227, 8, 8, 0.9);
+}
+
+.button-info {
+  border: 1px solid #696969;
+  font-weight: bold;
+  color: #e8e8e8;
+  background-color: rgba(14, 29, 232, 0.7);
+  padding: 10px;
+  margin-left: 7px;
+}
+
+.button-info:hover {
+  background-color: rgba(14, 29, 232, 0.9);
 }

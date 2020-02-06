@@ -1,7 +1,9 @@
-
+/*
+* Everything shown above the nav bar on homepage and blog page.
+*/
 .page-title {
   text-align: center;
-  background-color: rgb(33, 33, 33);
+  background-color: #212121;
   padding: 30px 0;
 }
 
@@ -16,7 +18,7 @@
   top: 0;
   background-color: #fff;
   display: flex;
-  justify-content:center;
+  justify-content: center;
 }
 
 .sticky-nav .link {
@@ -24,15 +26,15 @@
 }
 
 .sticky-nav .link:hover {
-  color: rgb(33, 34, 87);
-  background-color: rgb(196, 210, 228);
+  color: #212257;
+  background-color: #c4d2e4;
 }
 
 .sticky-nav .link:visited {
-  color: rgb(66, 80, 221);
+  color: #4250dd;
 }
 
-/* Gets removed when width shrinks to mobile view */
-.mobile-nav-item {
+/* Gets removed when width shrinks to mobile view. In style.css  */
+.mobile-nav {
   display: none;
 }

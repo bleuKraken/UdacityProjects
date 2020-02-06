@@ -1,42 +1,17 @@
-@import "top.css";
-@import "blog-image.css";
-@import "colors.css";
+@import 'top.css';
+@import 'main-card.css';
+@import 'colors.css';
 
-/*
-* Main CSS file.
-*
-*/
-/* TODO:
-- Add google fonts?
-- there is a card using a duplicate image, fix it. :)
-- use only ' ' or " " throughout css files!
-*/
-
-/*  Fonts Below */
+/**  Main CSS file. Used homepage and blog page.  **/
 .page {
-  font-family: Verdana, Geneva, sans-serif;
-}
-
-.page {
-  margin: 0px;
+  margin: 0;
   font-size: 1.1em;
+  font-family: Verdana, Geneva, sans-serif;
 }
 
 .link {
   text-decoration: none;
   outline: none;
-}
-
-.light-button {
-  padding: 10px;
-  border: 1px solid #000;
-}
-
-.light-button:hover {
-  padding: 15px;
-  color: #fff;
-  background-color: #000;
-  border: 1px solid #fff;
 }
 
 .button-row {
@@ -62,16 +37,11 @@
 
 .subscribe-button:hover {
   background-color: rgb(32, 31, 32);
-  color: rgb(255, 255, 255);
-  border: 1px solid rgb(241, 241, 241);
-  padding: 8px;
+  color: #ffffff;
+  border: 1px solid #f1f1f1;
 }
 
-.dev-name {
-  display: block;
-  font-size: 0.8rem;
-}
-
+/**  Quote  **/
 .quote-container {
   padding: 3% 15%;
   text-align: center;
@@ -85,6 +55,7 @@
   font-style: italic;
 }
 
+/**  Grid  **/
 .grid-container {
   display: grid;
   grid-column-gap: 10px;
@@ -109,9 +80,33 @@
 }
 
 .grid-item:hover {
-  box-shadow: 0px 0px 27px 1px #000;
+  box-shadow: 0 0 27px 1px #000;
 }
 
+.card-text {
+  width: 100%;
+  padding: 0 5%;
+}
+
+.card-text p {
+  min-width: 180px;
+}
+
+.page-bottom {
+  text-align: center;
+  padding: 100px 0 5px;
+}
+
+.dev-name {
+  display: block;
+  font-size: 0.8rem;
+}
+
+.dev-name .link:visited {
+  color: #0065fc;
+}
+
+/**  Images for fake posts on homepage and blog page  **/
 .card-1 {
   background-image: url('../img/vr-in-museums.jpeg');
   background-position: center center;
@@ -166,31 +161,7 @@
   background-size: cover;
 }
 
-.card-text {
-  width: 100%;
-  padding: 0px 5%;
-}
-
-.grid-item:hover .card-text {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.card-text p {
-  min-width: 180px;
-}
-
-.page-bottom {
-  text-align: center;
-  padding: 100px 0 5px;
-}
-
-.dev-name .link:visited {
-  color: rgb(0, 101, 252);
-}
-
-/*
-*  Mobile View
-*/
+/**  Mobile View  **/
 @media only screen and (max-width: 700px) {
   .page {
     font-size: 1rem;
@@ -208,28 +179,23 @@
     display: none;
   }
 
-  .mobile-nav-item {
+  .mobile-nav {
     visibility: visible;
     display: block;
     text-align: center;
-  }
-
-  .mobile-nav {
     padding: 30px 0;
   }
 
-  .mobile-nav-item .link {
+  .mobile-nav .link {
     margin: 0 15px;
   }
 
   .mobile-nav .link:visited {
-    color: rgb(0, 101, 252);
+    color: #0065fc;
   }
 }
 
-/*
-*  Mobile View with 2 Columns Removed
-*/
+/**  Mobile View with 2 Columns Removed **/
 @media only screen and (max-width: 500px) {
   .blog-column:nth-child(3), .blog-column:nth-child(2) {
     display: none;
