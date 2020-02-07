@@ -25,12 +25,13 @@
 .blog-photo {
   background-image: url('../img/ChrisMilk.jpg');
   background-position: center center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 400px;
   display: flex;
   align-items: flex-end;
   margin: 0 auto;
+  padding-left: 10px;
 }
 
 .blog-author {
@@ -39,6 +40,7 @@
 
 .blog-paragraphs {
   margin-bottom: 50px;
+  padding-left: 15px;
 }
 
 .side-container {

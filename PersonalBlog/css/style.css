@@ -5,7 +5,7 @@
 /**  Main CSS file. Used homepage and blog page.  **/
 .page {
   margin: 0;
-  font-size: 1.1em;
+  font-size: 1.05em;
   font-family: Verdana, Geneva, sans-serif;
 }
 
@@ -72,24 +72,26 @@
 
 .grid-item {
   border: 1px solid rgb(33, 33, 33);
-  margin-bottom: 10px;
   min-height: 400px;
   display: flex;
   align-items: flex-end;
+  flex-direction: column;
   text-align: center;
+  margin: 0 0 10px;
 }
 
 .grid-item:hover {
   box-shadow: 0 0 27px 1px #000;
 }
 
-.card-text {
+.card-title {
   width: 100%;
-  padding: 0 5%;
+  margin: auto 0 0;
+  padding: 20px 0 0;
 }
 
-.card-text p {
-  min-width: 180px;
+.card-caption {
+  padding: 20px 15px 15px;
 }
 
 .page-bottom {
