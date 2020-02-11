@@ -1,16 +1,10 @@
+/* Variadic functions
 
-prompt("Hello");
+ functions that take in an unlimited number of arguments
+*/
+console.log(sum(1, 2));
+console.log(sum(10, 36, 7, 84, 90, 110));
 
-let testTwo = getClothing(false);
+const mainHeading = document.querySelector('#main-heading');
 
-document.getElementById('text').innerHtml = getClothing(true);
-
-
-function getClothing(isCold) {
-  if (isCold) {
-    const freezing = 'Grab a jacket!';
-  } else {
-    const hot = 'It’s a shorts kind of day.';
-    console.log(freezing);
-  }
-}
+mainHeading.classList.toggle('richard');
