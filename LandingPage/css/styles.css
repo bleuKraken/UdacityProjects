@@ -1,0 +1,60 @@
+* {
+  border: 1px solid rgb(152, 255, 50);
+}
+
+.page {
+  margin: 0;
+}
+
+/**** Nav Bar ****/
+.nav-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+
+}
+.nav-container .ul {
+  display: flex;
+  justify-content:flex-end;
+}
+
+.nav-container .ul .li {
+  margin: 0 5px;
+}
+
+/**** Background Image ****/
+.main-background-image {
+  background-image: url('https://source.unsplash.com/1920x1080/?product');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 300px;
+  max-height: 550px;
+  color: #fff;
+}
+
+.main-card-info {
+  margin: 70px;
+}
+
+.title-text {
+  margin: 0;
+}
+
+/**** Universal  ****/
+/* Can be used anywhere */
+.link {
+  text-decoration: none;
+}
+
+
+.btn-primary {
+  background-color: rgb(67, 89, 238);
+  color: rgb(255, 255, 255);
+  padding: 5px;
+}
+
+.btn-success {
+  background-color: rgb(77, 217, 49);
+  color: rgb(0, 0, 0);
+  padding: 5px;
+}
