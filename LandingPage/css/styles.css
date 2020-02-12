@@ -1,6 +1,13 @@
-* {
-  border: 1px solid rgb(152, 255, 50);
-}
+@import 'colors.css';
+
+/*   Notes
+THIS MIGHT COME IN HANDY
+
+display: flex;
+align-items: flex-end;
+flex-direction: column;
+
+*/
 
 .page {
   margin: 0;
@@ -8,17 +15,17 @@
 
 /**** Nav Bar ****/
 .nav-container {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-
-}
-.nav-container .ul {
   display: flex;
   justify-content:flex-end;
+  background-color: rgba(91, 91, 91, 0.4);
+  list-style: none;
+  margin: 0 0 0;
+  padding-right: 15px;
 }
 
-.nav-container .ul .li {
-  margin: 0 5px;
+.nav-item {
+  padding: 15px 10px;
+  font-size: 1.3rem;
 }
 
 /**** Background Image ****/
@@ -27,18 +34,56 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  min-height: 300px;
-  max-height: 550px;
+  height: 100vh;
   color: #fff;
+  position:relative;
 }
 
 .main-card-info {
-  margin: 70px;
+  padding: 70px;
+  font-size: 1.1rem;
 }
 
 .title-text {
   margin: 0;
 }
+
+/**** Section Goal ****/
+.section-goal {
+  background-color: rgb(27, 27, 27);
+  color: rgb(232, 232, 232);
+  text-align: center;
+}
+
+.goal-title {
+  margin: 0;
+  padding: 30px 0 20px;
+}
+
+.section-row {
+  display: flex;
+}
+
+.section-row .left-col {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-row .right-col {
+  width: 60%;
+  border-left: 1px solid rgb(190, 190, 190);
+  padding-right: 20px;
+}
+
+
+
+
+
+
+
+
 
 /**** Universal  ****/
 /* Can be used anywhere */
@@ -46,15 +91,7 @@
   text-decoration: none;
 }
 
-
-.btn-primary {
-  background-color: rgb(67, 89, 238);
-  color: rgb(255, 255, 255);
-  padding: 5px;
-}
-
-.btn-success {
-  background-color: rgb(77, 217, 49);
-  color: rgb(0, 0, 0);
+.btn-container {
+  margin: 10px 0;
   padding: 5px;
 }
