@@ -1,4 +1,4 @@
-/****  Font Colors  ****/
+/* ########## Text & Font Colors ########## */
 .text-white {
   color: rgb(255, 255, 255);
 }
@@ -7,12 +7,19 @@
   color: rgb(242, 197, 38);
 }
 
+.text-primary {
+  color: rgb(67, 89, 238);
+}
 
 
-/****  background Colors  ****/
+
+/* ########## background Colors ########## */
+.bg-dark {
+  background-color: rgb(0, 0, 0);
+}
 
 
-/****  Buttons  ****/
+/* ########## Buttons ########## */
 .btn-primary {
   background-color: rgb(67, 89, 238);
   color: rgb(255, 255, 255);
@@ -37,5 +44,4 @@
   border: 1px solid rgb(77, 217, 49);
   padding: 10px;
   color: rgb(77, 217, 49);
-
 }

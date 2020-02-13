@@ -8,7 +8,6 @@ align-items: flex-end;
 flex-direction: column;
 
 */
-
 * {
   border: 1px solid rgb(64, 29, 255);
 }
@@ -17,10 +16,10 @@ flex-direction: column;
   margin: 0;
 }
 
-/**** Nav Bar ****/
+/* ########## Nav Bar ########## */
 .nav-container {
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
   background-color: rgba(91, 91, 91, 0.4);
   list-style: none;
   margin: 0 0 0;
@@ -32,15 +31,15 @@ flex-direction: column;
   font-size: 1.3rem;
 }
 
-/**** Background Image ****/
+/* ########## Background Image ########## */
 .main-background-image {
-  background-image: url('https://images.unsplash.com/photo-1580152334532-c3381d5c9273?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80');
+  background-image: url('https://source.unsplash.com/random');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   height: 100vh;
   color: #fff;
-  position:relative;
+  position: relative;
 }
 
 .main-card-info {
@@ -53,7 +52,13 @@ flex-direction: column;
   font-size: 2.5rem;
 }
 
-/**** Section Goal ****/
+.main-buttons {
+  padding-top: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* ########## Section Goal ########## */
 .section-goal {
   background-color: rgb(27, 27, 27);
   color: rgb(232, 232, 232);
@@ -63,7 +68,7 @@ flex-direction: column;
 
 .goal-title {
   margin: 0;
-  padding: 30px 0 30px;
+  padding: 30px 0 10px;
 }
 
 .section-row {
@@ -77,38 +82,85 @@ flex-direction: column;
   justify-content: center;
 }
 
+.mission-title {
+  padding: 10px;
+}
+
 .section-row .right-col {
   width: 60%;
   border-left: 1px solid rgb(190, 190, 190);
   padding-right: 20px;
 }
 
-
-/****  Section Product  ***/
-.product-picture {
-  background-image: url('https://images.unsplash.com/photo-1580152334532-c3381d5c9273?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  height: 400px;
-  color: #fff;
-}
-
+/* ########## Section Product ########## */
 .section-product {
   display: flex;
-  padding: 50px;
+  background-color: rgb(207, 207, 207);
+  color: #000;
+  padding: 25px;
+  min-height: 450px;
 }
 
 .section-product .left-col {
-  width: 60%;
+  width: 50%;
   display: block;
-
+  margin: 0;
+  padding: 20px;
 }
 
 .section-product .right-col {
-  width: 40%;
+  width: 50%;
   border-left: 1px solid rgb(190, 190, 190);
-  padding-right: 20px;
+}
+
+.product-picture {
+  background-image: url('https://source.unsplash.com/1920x1080/?random');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+}
+
+/* ########## Filler Section Reviews ########## */
+
+.section-reviews {
+  display: flex;
+  min-height: 200px;
+  padding: 20px 40px;
+  background-color: rgb(216, 202, 221);
+}
+
+.section-reviews .card {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 25px;
+  text-align: center;
+}
+
+
+/* ########## Section people ########## */
+
+.section-people {
+  padding: 30px;
+  width: 50%;
+}
+
+.section-people .row .col-half {
+  max-width: 600px;
+  min-height: 220px;
+}
+
+
+
+
+.image-person-one {
+  background-image: url('https://source.unsplash.com/1600x900/?face,male');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 100%;
 }
 
 
@@ -116,13 +168,81 @@ flex-direction: column;
 
 
 
-/**** Universal  ****/
+
+
+
+
+
+
+/* ########## Section Contact ########## */
+.section-contact {
+  display: flex;
+  padding: 10px 40px;
+  min-height: 500px;
+}
+
+.section-contact .left-col {
+  width: 50%;
+  padding-right: 10px;
+}
+
+.title-contact {
+  margin-bottom: 100px;
+}
+
+.section-contact .left-col .title {
+  margin-bottom: 5px;
+}
+
+.section-contact .right-col {
+  width: 50%;
+  padding: 2% 0;
+}
+
+.image-location {
+  background-image: url('https://source.unsplash.com/1600x900/?nature,water');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.icon-container .fab {
+  margin: 10px;
+}
+
+/* ########## Footer ########## */
+.footer {
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+}
+
+/* ########## Universal ########## */
 /* Can be used anywhere */
 .link {
   text-decoration: none;
 }
 
-.btn-container {
-  margin: 10px 0 20px;
+.text-center {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+    justify-content: space-between;
+}
+
+/* Place column items horizontally */
+.col-half {
+  display: flex;
+  justify-content: space-between;
+}
+
+.half {
+  width: 50%;
+}
+
+.p-1 {
   padding: 10px;
 }
