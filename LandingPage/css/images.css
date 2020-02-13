@@ -1,0 +1,60 @@
+/* Section 1: Main */
+.main-background-image {
+  background-image: url('https://source.unsplash.com/random');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+}
+
+/* Section 2: Product */
+.product-picture {
+  background-image: url('https://source.unsplash.com/1920x1080/?random');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+}
+
+/* Section 3: The People */
+.image-person-one {
+  background-image: url('https://source.unsplash.com/1600x901/?face');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.image-person-two {
+  background-image: url('https://source.unsplash.com/1600x902/?face');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.image-person-three {
+  background-image: url('https://source.unsplash.com/1600x899/?face');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.image-person-four {
+  background-image: url('https://source.unsplash.com/1601x900/?face');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+/* Section 4: Contact */
+.image-location {
+  background-image: url('https://source.unsplash.com/1600x900/?nature,water');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}

@@ -1,4 +1,5 @@
 @import 'colors.css';
+@import 'images.css';
 
 /*   Notes
 THIS MIGHT COME IN HANDY
@@ -7,10 +8,13 @@ display: flex;
 align-items: flex-end;
 flex-direction: column;
 
-*/
+
 * {
   border: 1px solid rgb(64, 29, 255);
 }
+*/
+
+
 
 .page {
   margin: 0;
@@ -18,12 +22,23 @@ flex-direction: column;
 
 /* ########## Nav Bar ########## */
 .nav-container {
+  /*
+  display: flex;
+  margin: 0 0 0;
+  */
+  list-style: none;
+
   display: flex;
   justify-content: flex-end;
-  background-color: rgba(91, 91, 91, 0.4);
-  list-style: none;
-  margin: 0 0 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: rgba(91, 91, 91, 0.6);
   padding-right: 15px;
+
+  margin: 0 0 -60px;
+
+
 }
 
 .nav-item {
@@ -32,16 +47,6 @@ flex-direction: column;
 }
 
 /* ########## Background Image ########## */
-.main-background-image {
-  background-image: url('https://source.unsplash.com/random');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  height: 100vh;
-  color: #fff;
-  position: relative;
-}
-
 .main-card-info {
   padding: 70px;
   font-size: 1.1rem;
@@ -113,16 +118,7 @@ flex-direction: column;
   border-left: 1px solid rgb(190, 190, 190);
 }
 
-.product-picture {
-  background-image: url('https://source.unsplash.com/1920x1080/?random');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
-}
-
 /* ########## Filler Section Reviews ########## */
-
 .section-reviews {
   display: flex;
   min-height: 200px;
@@ -138,41 +134,29 @@ flex-direction: column;
   text-align: center;
 }
 
-
 /* ########## Section people ########## */
-
 .section-people {
-  padding: 30px;
-  width: 50%;
+  padding: 40px 30px 50px;
+  background-color: rgb(86, 89, 105);
+  color: rgb(232, 232, 232);
 }
 
 .section-people .row .col-half {
   max-width: 600px;
   min-height: 220px;
+  margin-bottom: 20px;
 }
 
-
-
-
-.image-person-one {
-  background-image: url('https://source.unsplash.com/1600x900/?face,male');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  height: 100%;
+.card-title {
+  margin: 0;
+  padding: 30px 0 20px;
+  text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
+.card-body {
+  margin: 0;
+  height: 125px;
+}
 
 /* ########## Section Contact ########## */
 .section-contact {
@@ -199,14 +183,6 @@ flex-direction: column;
   padding: 2% 0;
 }
 
-.image-location {
-  background-image: url('https://source.unsplash.com/1600x900/?nature,water');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-}
-
 .icon-container .fab {
   margin: 10px;
 }
@@ -230,7 +206,8 @@ flex-direction: column;
 
 .row {
   display: flex;
-    justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 /* Place column items horizontally */
