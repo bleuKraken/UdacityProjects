@@ -1,6 +1,15 @@
+/* NOTE:
+  - Colors  and background colors are placed here.
+  - The only colors that are NOT placed in this file are transparent background.
+    Those can be found in styles.css*/
+
 /* ########## Text & Font Colors ########## */
 .color-white {
   color: rgb(255, 255, 255);
+}
+
+.color-light {
+  color: rgb(232, 232, 232);
 }
 
 .color-warning {
@@ -19,10 +28,13 @@
   color: rgb(77, 217, 49);
 }
 
-
 /* ########## background Colors ########## */
-.bg-dark {
+.bg-black {
   background-color: rgb(0, 0, 0);
+}
+
+.bg-dark {
+  background-color: rgb(26, 26, 26);
 }
 
 .bg-light {

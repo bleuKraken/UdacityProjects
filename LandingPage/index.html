@@ -14,24 +14,33 @@
   <!-- STORY BEGINS HERE -->
 
   <!--
-     Notes
+    Notes
     - Using Rick and Morty Lorem Genorator
     - using font awsome
     - images from unsplash
   -->
+
   <!-- TODO:
-    - add padding above my name in footer.
-    - try out a new color of nav background
-    - put a green (or purple to experiment) horizontal border line above footer.
     - add hex colors to the icons
+    - try to remove .section-row class from here and styles css.
+    - rename comments sections names.
+    - maybe delete some comments sections names
     - maybe change icon color to green
     - add some red colored text to Page
     - add some warning colored
     - add some green. OR maybe not.
     - try out a new color of nav background. If I like current, just delete this message.
     - make mobile responsive
-   -->
+  -->
 
+  <!-- TODO COMPLETED
+    - add padding above my name in footer.
+    -increased font size of section headers
+    - add padding on the vertical line below "Welcome".
+    - try out a new color of nav background
+    - put a green (or purple to experiment) horizontal border line above footer.
+    - moved colors from styles.css ro colors.css`
+  -->
 
   <!-- Nav Bar -->
   <ul class="nav-container">
@@ -44,7 +53,7 @@
   </ul>
 
   <!-- background Image -->
-  <header class="main-background-image">
+  <header class="main-background-image color-white">
     <!-- Background Photo -->
     <div class="main-card-info">
       <span class="warning">Hello there it's,</span>
@@ -52,16 +61,14 @@
     </div>
   </header>
 
-  <!-- Section Our Goal -->
-  <section class="section-goal">
+  <!-- Welcome Section -->
+  <section class="section-goal bg-black color-light">
     <h2 class="goal-title font-large">Welcome</h2>
     <!-- Row -->
     <div class="section-row">
-      <!-- Col -->
       <div class="left-col">
         <h3 class="mission-title"><i>Our Mission of The Lorem Ipsum</i></h3>
       </div>
-      <!-- Col -->
       <div class="right-col p-3">
         <p>It's a device Morty, that when you put it in your ear, you can enter people's dreams Morty. Its just like that movie that you keep crowing about.um_p1</p>
       </div>
@@ -69,7 +76,7 @@
   </section>
 
   <!-- Section of Product and description -->
-  <section class="section-product">
+  <section class="section-product color-white bg-dark">
     <div class="half p-2">
       <span><strong class="font-large">Section <span class="color-success">One</span></strong></span>
       <h2 class="text-center">Lorem ipsum dolor sit amet.</h2>
@@ -83,12 +90,12 @@
   </section>
 
   <!-- Section of Product and description -->
-  <section class="section-product">
+  <section class="section-product color-white bg-dark">
     <div class="half">
       <div class="product-picture"></div>
     </div>
     <div class="half p-2">
-      <span><strong>Section <span class="color-success">Two</span></strong></span>
+      <span><strong class="font-large">Section <span class="color-success">Two</span></strong></span>
       <h2 class="text-center">Lorem ipsum dolor sit amet.</h2>
       <p>Sometimes science is a lot more art, than science. A lot of people don't get that. 'Quantum carburetor'? Jesus, Morty. You can't just add a Sci-Fi word to a car word and hope it means something... Huh, looks like something's wrong with the
         microverse battery.</p>
@@ -98,9 +105,9 @@
   </section>
 
   <!-- Section of Product and description -->
-  <section class="section-product">
+  <section class="section-product color-white bg-dark">
     <div class="half p-2">
-      <span><strong>Section <span class="color-success">Three</span></strong></span>
+      <span><strong class="font-large">Section <span class="color-success">Three</span></strong></span>
       <h2 class="text-center">Lorem ipsum dolor sit amet.</h2>
       <p>Oh, we're welllll past that, Jerry!</p>
       <p>Well he roped me into this! Wow, so your origin is what? You fell into a vat of redundancy?</p>
@@ -112,12 +119,12 @@
   </section>
 
   <!-- Section of Product and description -->
-  <section class="section-product">
+  <section class="section-product color-white bg-dark">
     <div class="half">
       <div class="product-picture"></div>
     </div>
     <div class="half p-2">
-      <span><strong>Section <span class="color-success">Four</span></strong></span>
+      <span><strong class="font-large">Section <span class="color-success">Four</span></strong></span>
       <h2 class="text-center">Lorem ipsum dolor sit amet.</h2>
       <p>Sometimes science is a lot more art, than science. A lot of people don't get that. 'Quantum carburetor'? Jesus, Morty. You can't just add a Sci-Fi word to a car word and hope it means something... Huh, looks like something's wrong with the
         microverse battery.</p>
@@ -127,14 +134,14 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="section-contact bg-dark color-white">
+  <section class="section-contact bg-black color-white">
     <!-- Left Column -->
     <div class="half">
-      <h2 class="text-center color-primary title-contact"><strong>Contact</strong></h2>
-      <p> <strong><span class=" color-primary">Phone: </span></strong> <span>(123) 555-5555</span> </p>
-      <p> <strong><span class=" color-primary">Address: </span></strong> <span>4321 Cherry Ave, Los Angeles</span> </p>
+      <h2 class="text-center color-success title-contact"><strong>Contact</strong></h2>
+      <p> <strong><span class=" color-success">Phone </span></strong> <span>(123) 555-5555</span> </p>
+      <p> <strong><span class=" color-success">Address </span></strong> <span>4321 Cherry Ave, Los Angeles</span> </p>
       <span>California, USA</span>
-      <h4 class=" color-primary">Connect With Us</h4>
+      <h4 class=" color-warning">Connect With Us</h4>
       <div class="icon-container">
         <i class="fab fa-twitter fa-2x"></i>
         <i class="fab fa-instagram fa-2x"></i>
@@ -147,8 +154,11 @@
     </div>
   </section>
 
+  <!-- Horizontal Line -->
+  <div class="horizontal-line"></div>
+
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer bg-black color-white">
     <div class="row">
       <div class="half">
         <span>Icons made using <a href="#0" class="link">Font Awsome</a></span>
@@ -157,7 +167,7 @@
         <span>Made for Udacity Front End NanoDegree</span>
       </div>
     </div>
-    <span>Made by <a href="#0" class="link">Erick Gonzalez</a></span>
+    <p class="dev-row">Made by <a href="#0" class="link color-warning">Erick Gonzalez</a></p>
   </footer>
 
   <!-- Font Awsome -->
