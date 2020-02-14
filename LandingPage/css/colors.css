@@ -1,18 +1,22 @@
 /* ########## Text & Font Colors ########## */
-.text-white {
+.color-white {
   color: rgb(255, 255, 255);
 }
 
-.text-warning {
+.color-warning {
   color: rgb(242, 197, 38);
 }
 
-.text-primary {
+.color-primary {
   color: rgb(67, 89, 238);
 }
 
-.text-dark {
+.color-dark {
   color: rgb(18, 18, 18);
+}
+
+.color-success {
+  color: rgb(77, 217, 49);
 }
 
 
@@ -23,28 +27,4 @@
 
 .bg-light {
   background-color: rgb(231, 231, 231);
-}
-
-
-/* ########## Buttons ########## */
-.btn-primary {
-  background-color: rgb(67, 89, 238);
-  color: rgb(255, 255, 255);
-  padding: 5px;
-}
-
-.btn-success {
-  background-color: rgb(77, 217, 49);
-  color: rgb(0, 0, 0);
-  padding: 5px;
-}
-
-.btn-dark {
-  padding: 10px;
-  margin: 0;
-}
-
-.btn-dark-success {
-  padding: 10px;
-  color: rgb(77, 217, 49);
 }
