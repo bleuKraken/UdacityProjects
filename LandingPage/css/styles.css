@@ -24,7 +24,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color: rgba(20, 31, 182, 0.6);
+  background-color: rgba(38, 38, 38, 0.7);
   margin: 0 0 -60px;
 }
 
@@ -39,7 +39,7 @@
   padding: 15px 10px;
   font-size: 1.3rem;
   border-left: 1px solid rgba(90, 92, 116, 0.6);
-  background-color: rgba(60, 83, 142, 0.3);
+  /* background-color: rgba(60, 83, 142, 0.3); */
 }
 
 .nav-item:hover,
@@ -57,6 +57,8 @@
 .title-text {
   margin: 10px 0 30px;
   font-size: 4rem;
+  text-align: center;
+  padding-top: 50px;
 }
 
 .main-buttons {
@@ -76,11 +78,11 @@
 }
 
 /* TODO: remove class below, and use row class */
-.section-row {
+.welcome-row {
   display: flex;
 }
 
-.section-row .left-col {
+.welcome-row .left-col {
   width: 50%;
   display: flex;
   align-items: center;
@@ -91,7 +93,7 @@
   padding-bottom: 40px;
 }
 
-.section-row .right-col {
+.welcome-row .right-col {
   width: 50%;
   border-left: 1px solid rgb(190, 190, 190);
   margin: 0;
