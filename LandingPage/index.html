@@ -13,28 +13,15 @@
 <body class="page">
   <!-- STORY BEGINS HERE -->
 
-  <!--
-    Notes
-    - Using Rick and Morty Lorem Genorator
-    - using font awsome
-    - images from unsplash
-  -->
-
   <!-- TODO:
-    - begin working on navbar..
-    - get navbar icon
-    - make mobile responsive
+  - add more padding to section colomns with text
+  - re-write section area in html and css. Use display with flex or block
+   * Remake css area
+  - rename section product class names to mroe general names
+  - Maybe make left border line color green
   -->
 
   <!-- TODO COMPLETED
-    - Renamed sections
-    - add hex colors to the icons
-    - try to remove .section-row class from here and styles css.
-    - rename comments sections names.
-    - maybe delete some comments sections names
-    - delete "text-center" classes by adding it to the css area. Text center should only be used on classes with no names.
-    - maybe change nav color to green
-    - add some red colored text to Page
 
   -->
 
@@ -56,23 +43,19 @@
     </div>
   </header>
 
-  <!-- Welcome Section -->
-  <section class="section-goal bg-black color-light">
-    <h2 class="goal-title font-large">Welcome</h2>
+  <!-- Row Welcome -->
+  <section class=" bg-black color-light text-center">
+    <h2 class="welcome">Welcome</h2>
     <!-- Row -->
-    <div class="welcome-row">
-      <!-- Left Column -->
-      <div class="left-col">
-        <h3 class="mission-title"><i>Our Mission of The Lorem Ricksum</i></h3>
-      </div>
-      <!-- Right Column -->
-      <div class="right-col p-2">
+    <div class="row-welcome">
+      <h3 class="welcome-title"><i>Our Mission of The Lorem Ricksum</i></h3>
+      <!-- Horizontal Line -->
+      <div class="horizontal-line"></div>
+      <div class="welcome-text">
         <p>We are created to serve a singular purpose, for which we will go to any lengths to fulfill!</p>
       </div>
     </div>
   </section>
-
-
 
   <!-- Section One -->
   <section class="section-product color-white bg-dark text-center">
@@ -90,64 +73,24 @@
     </div>
   </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <!-- Section Two -->
-  <section class="section-product color-white bg-dark">
+  <section class="section-product color-white bg-dark text-right">
     <!-- Left Column -->
     <div class="half">
       <div class="product-picture"></div>
     </div>
-
-
     <!-- Right Column -->
     <div class="half p-2">
       <span><strong class="font-large">Section <span class="color-success">Two</span></strong></span>
       <h2 class="text-center">Lorem ipsum dolor sit amet.</h2>
-
-
       <p>- I don't like it here Morty.</p>
       <p>- Well look where being smart got you. </p>
       <p>- The shoes need to be turned on!</p>
     </div>
-
   </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <!-- Section Three -->
-  <section class="section-product color-white bg-dark">
+  <section class="section-product color-white bg-dark text-left">
     <!-- Left Column -->
     <div class="half p-2">
       <span><strong class="font-large">Section <span class="color-success">Three</span></strong></span>
@@ -163,7 +106,7 @@
   </section>
 
   <!-- Section Four -->
-  <section class="section-product color-white bg-dark">
+  <section class="section-product color-white bg-dark text-center">
     <!-- Left Column -->
     <div class="half">
       <div class="product-picture"></div>

@@ -1,3 +1,4 @@
+@import 'mobile.css';
 @import 'colors.css';
 @import 'images.css';
 
@@ -6,12 +7,10 @@
   display: flex;
   align-items: flex-end;
   flex-direction: column;
+  * {
+    border: 1px solid rgb(64, 29, 255);
+  }
 */
-
-* {
-  border: 1px solid rgb(64, 29, 255);
-}
-
 .page {
   margin: 0;
 }
@@ -51,7 +50,7 @@
 /* ########## Background Image ########## */
 .main-card-info {
   border: 1px solid red;
-  padding-top:  40vh;
+  padding-top: 40vh;
   font-size: 1.1rem;
 }
 
@@ -62,64 +61,36 @@
   padding-top: 50px;
 }
 
-.main-buttons {
-  padding-top: 200px;
-  display: flex;
-  justify-content: space-around;
-}
-
-/* ########## Section Goal ########## */
-.section-goal {
-  text-align: center;
-}
-
-.goal-title {
+/* ########## Welcome Row ########## */
+.welcome {
+  font-size: 2rem;
+  padding-top: 50px;
   margin: 0;
-  padding: 30px 0 10px;
 }
 
-/* TODO: remove class below, and use row class */
-.welcome-row {
+.row-welcome {
   display: flex;
-}
-
-.welcome-row .left-col {
-  width: 50%;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  padding: 30px;
+  text-align: center;
+  height: 150px;
 }
 
-.mission-title {
-  padding-bottom: 40px;
+.welcome-title {
+  border-right: 1px rgb(190, 190, 190);
+  padding: 20px;
 }
 
-.welcome-row .right-col {
-  width: 50%;
-  border-left: 1px solid rgb(190, 190, 190);
-  margin: 0;
-  height: 100px;
-  margin-bottom: 30px;
+.welcome-text {
+  border-left: 1px solid rgb(90, 92, 116);
+  padding: 20px;
 }
 
-/* ########## Section Product ########## */
+/* ########## Section Product and Info ########## */
 .section-product {
   display: flex;
   min-height: 450px;
   padding: 100px 0;
-}
-
-.section-product .left-col {
-  width: 50%;
-  display: block;
-  margin: 0;
-  padding: 20px;
-}
-
-.section-product .right-col {
-  width: 50%;
-  border-left: 1px solid rgb(190, 190, 190);
-  padding-left: 40px;
 }
 
 /* ########## Section Contact ########## */
@@ -129,22 +100,13 @@
   min-height: 450px;
 }
 
-.section-contact .left-col {
-  width: 50%;
-  padding-right: 10px;
-}
-
 .title-contact {
   margin-bottom: 100px;
 }
 
-.section-contact .left-col .title {
-  margin-bottom: 5px;
-}
-
-.section-contact .right-col {
-  width: 50%;
-  padding: 2% 0;
+.icon-container {
+  display: flex;
+  justify-content: space-around;
 }
 
 .icon-container .fab {
@@ -173,10 +135,19 @@
   /* flex-wrap: wrap; */
 }
 
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
 .half {
   width: 50%;
 }
 
+/* TODO: Can i delete this yet? */
 .font-large {
   font-size: 2rem;
 }
@@ -201,27 +172,48 @@
   border-top: 1px solid rgb(77, 217, 49);
 }
 
+/* ################# Mobile ################### */
 @media only screen and (max-width: 600px) {
-  .goal-title {
+  .welcome {
     /* TODO: Maybe make this perminant. */
     color: rgb(77, 217, 49);
   }
 
-  .welcome-row {
-    display: flex;
-    align-items: center;
+  .p-2 {
+    padding: 0;
   }
 
+  .half {
+    width: 100%;
+  }
+
+  /* ########## Row Welcome ########## */
+  .row-welcome {
+    display: block;
+    padding: 10px 20px 50px;
+  }
+
+  .welcome-title {
+    border-right: none;
+  }
+
+  .welcome-text {
+    border-left: 1px solid rgb(0, 0, 0);
+  }
+
+  /* ########## Section Product ########## */
+  /* Is "display: grid;" better ? */
   .section-product {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
+    display: block;
   }
 
-  .product-picture{
-    min-height: 500px;
-    max-height: 500px;
+  .product-picture {
+    min-height: 40vh;
   }
 
-
+  /* ########## Section Contact ########## */
+  .section-contact {
+    display: grid;
+    padding: 0;
+  }
 }
