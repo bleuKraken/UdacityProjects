@@ -17,23 +17,11 @@
 .page {
   margin: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 /* ########## Nav Bar ########## */
 .nav-container {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -54,19 +42,7 @@
 .active {
   background-color: rgb(77, 217, 49);
   color: rgb(0, 0, 0);
-
-
 }
-
-
-
-
-
-
-
-
-
-
 
 /* ########## Background Image ########## */
 .main-card-info {
@@ -95,13 +71,8 @@
   height: 150px;
 }
 
-.welcome-title {
-  border-right: 1px rgb(190, 190, 190);
-  padding: 20px;
-}
-
 .welcome-text {
-  border-left: 1px solid rgb(90, 92, 116);
+  border-left: 1px solid rgb(77, 217, 49);
   padding: 20px;
 }
 
@@ -173,7 +144,6 @@
   width: 50%;
 }
 
-/* TODO: Can i delete this yet? */
 .font-large {
   font-size: 2rem;
 }
