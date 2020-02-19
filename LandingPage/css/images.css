@@ -9,12 +9,12 @@
 
 /* Section 2: Product */
 .product-picture {
-  background-image: url('https://source.unsplash.com/1920x1080/?random');
+  background-image: url('https://source.unsplash.com/random');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 100%;
-  min-height: 75vh;
+  min-height: 60vh;
 }
 
 /* Section 4: Contact */

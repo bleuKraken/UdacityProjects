@@ -7,13 +7,27 @@
   display: flex;
   align-items: flex-end;
   flex-direction: column;
+
   * {
     border: 1px solid rgb(64, 29, 255);
   }
 */
+
+
 .page {
   margin: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /* ########## Nav Bar ########## */
 .nav-container {
@@ -33,23 +47,29 @@
   border-left: 1px solid rgba(90, 92, 116, 0.6);
 }
 
-.nav-login,
-.nav-sign-up {
-  padding: 15px 10px;
-  font-size: 1.3rem;
-  border-left: 1px solid rgba(90, 92, 116, 0.6);
-  /* background-color: rgba(60, 83, 142, 0.3); */
-}
-
-.nav-item:hover,
-.nav-login:hover,
-.nav-sign-up:hover {
+.nav-item:hover {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+.active {
+  background-color: rgb(77, 217, 49);
+  color: rgb(0, 0, 0);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
 /* ########## Background Image ########## */
 .main-card-info {
-  border: 1px solid red;
   padding-top: 40vh;
   font-size: 1.1rem;
 }
@@ -62,13 +82,12 @@
 }
 
 /* ########## Welcome Row ########## */
-.welcome {
-  font-size: 2rem;
-  padding-top: 50px;
-  margin: 0;
+.section-welcome {
+   text-align: center;
+   padding-top: 50px;
 }
 
-.row-welcome {
+.welcome-row {
   display: flex;
   justify-content: center;
   padding: 30px;
@@ -86,11 +105,17 @@
   padding: 20px;
 }
 
-/* ########## Section Product and Info ########## */
-.section-product {
+/* ########## Card row, picture and Info ########## */
+.card {
   display: flex;
   min-height: 450px;
-  padding: 100px 0;
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.card-text {
+  margin: 0;
+  padding: 50px 25px;
 }
 
 /* ########## Section Contact ########## */
@@ -102,6 +127,7 @@
 
 .title-contact {
   margin-bottom: 100px;
+  text-align: center;
 }
 
 .icon-container {
@@ -164,7 +190,7 @@
   padding: 30px;
 }
 
-.dev-row {
+.developer {
   padding-top: 30px;
 }
 
@@ -187,7 +213,7 @@
     width: 100%;
   }
 
-  /* ########## Row Welcome ########## */
+  /* -------------- Row Welcome --------------- */
   .row-welcome {
     display: block;
     padding: 10px 20px 50px;
@@ -201,7 +227,7 @@
     border-left: 1px solid rgb(0, 0, 0);
   }
 
-  /* ########## Section Product ########## */
+  /* -------------- Section Product --------------- */
   /* Is "display: grid;" better ? */
   .section-product {
     display: block;
@@ -211,7 +237,7 @@
     min-height: 40vh;
   }
 
-  /* ########## Section Contact ########## */
+  /* -------------- Section Contact --------------- */
   .section-contact {
     display: grid;
     padding: 0;

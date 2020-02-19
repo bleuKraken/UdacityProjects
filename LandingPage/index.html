@@ -14,11 +14,13 @@
   <!-- STORY BEGINS HERE -->
 
   <!-- TODO:
-  - add more padding to section colomns with text
   - re-write section area in html and css. Use display with flex or block
    * Remake css area
   - rename section product class names to mroe general names
   - Maybe make left border line color green
+  - refactor section products in HTML, and its classes in css. Remake it with new classes.
+  - refactor footer. Use same steps as above
+  - use js to create the sections area. (Maybe)
   -->
 
   <!-- TODO COMPLETED
@@ -27,12 +29,11 @@
 
   <!-- Nav Bar -->
   <ul class="nav-container">
-    <li class="nav-item"><a href="#0" class="link color-white">Main</a></li>
-    <li class="nav-item"><a href="#0" class="link color-white">Product</a></li>
-    <li class="nav-item"><a href="#0" class="link color-white">Info</a></li>
+    <li class="nav-item active"><a href="#0" class="link color-white">Product</a></li>
+    <li class="nav-item"><a href="#0" class="link color-white">Plan</a></li>
     <li class="nav-item"><a href="#0" class="link color-white">Contact</a></li>
-    <li class="nav-login"><a href="#0" class="link color-warning">Login</a></li>
-    <li class="nav-sign-up"><a href="#0" class="link color-success">Sign up</a></li>
+    <li class="nav-item"><a href="#0" class="link color-warning">Login</a></li>
+    <li class="nav-item"><a href="#0" class="link color-success">Sign up</a></li>
   </ul>
 
   <!-- background Image -->
@@ -44,10 +45,10 @@
   </header>
 
   <!-- Row Welcome -->
-  <section class=" bg-black color-light text-center">
-    <h2 class="welcome">Welcome</h2>
+  <section class="section-welcome bg-black color-light text-center">
+    <h2 class="font-large">Welcome</h2>
     <!-- Row -->
-    <div class="row-welcome">
+    <div class="welcome-row">
       <h3 class="welcome-title"><i>Our Mission of The Lorem Ricksum</i></h3>
       <!-- Horizontal Line -->
       <div class="horizontal-line"></div>
@@ -58,9 +59,8 @@
   </section>
 
   <!-- Section One -->
-  <section class="section-product color-white bg-dark text-center">
-    <!-- Left Column -->
-    <div class="half p-2">
+  <section class="card color-white bg-dark">
+    <div class="card-text half">
       <span><strong class="font-large">Section <span class="color-success">One</span></strong></span>
       <h2>Lorem ipsum dolor sit amet.</h2>
       <p>Oh, we're welllll past that, Jerry!</p>
@@ -74,25 +74,23 @@
   </section>
 
   <!-- Section Two -->
-  <section class="section-product color-white bg-dark text-right">
-    <!-- Left Column -->
+  <section class="card color-white bg-dark text-right">
     <div class="half">
       <div class="product-picture"></div>
     </div>
     <!-- Right Column -->
-    <div class="half p-2">
+    <div class="card-text half">
       <span><strong class="font-large">Section <span class="color-success">Two</span></strong></span>
       <h2 class="text-center">Lorem ipsum dolor sit amet.</h2>
-      <p>- I don't like it here Morty.</p>
-      <p>- Well look where being smart got you. </p>
-      <p>- The shoes need to be turned on!</p>
+      <p>Oh, we're welllll past that, Jerry!</p>
+      <p>Well he roped me into this! Wow, so your origin is what? You fell into a vat of redundancy?</p>
+      <p>You sold a gun to a murderer so you could play video games?</p>
     </div>
   </section>
 
   <!-- Section Three -->
-  <section class="section-product color-white bg-dark text-left">
-    <!-- Left Column -->
-    <div class="half p-2">
+  <section class="card color-white bg-dark text-left">
+    <div class="card-text half">
       <span><strong class="font-large">Section <span class="color-success">Three</span></strong></span>
       <h2 class="text-center">Lorem ipsum dolor sit amet.</h2>
       <p>Oh, we're welllll past that, Jerry!</p>
@@ -106,13 +104,12 @@
   </section>
 
   <!-- Section Four -->
-  <section class="section-product color-white bg-dark text-center">
-    <!-- Left Column -->
+  <section class="card color-white bg-dark text-center">
     <div class="half">
       <div class="product-picture"></div>
     </div>
     <!-- Right Column -->
-    <div class="half p-2">
+    <div class="card-text half">
       <span><strong class="font-large">Section <span class="color-success">Four</span></strong></span>
       <h2 class="text-center">Lorem ipsum dolor sit amet.</h2>
       <p>Snuffles want to be understood. </p>
@@ -123,7 +120,6 @@
 
   <!-- Section Five -->
   <section class="section-contact bg-black color-white">
-    <!-- Left Column -->
     <div class="half">
       <h2 class="text-center color-success title-contact"><strong>Contact</strong></h2>
       <p> <strong><span class=" color-success">Phone </span></strong> <span>(123) 555-5555</span> </p>
@@ -154,7 +150,7 @@
         <span>Photos by <a href="#0" class="link color-success">Unsplash</a></span>
       </div>
     </div>
-    <p class="dev-row">Made by <a href="#0" class="link color-warning">Erick Gonzalez</a></p>
+    <p class="developer">Made by <a href="#0" class="link color-warning">Erick Gonzalez</a></p>
   </footer>
 
   <!-- Font Awsome -->
