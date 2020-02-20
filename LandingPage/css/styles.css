@@ -2,7 +2,7 @@
 @import 'images.css';
 
 /*  Notes
-  THIS MIGHT COME IN HANDY
+  This might come in handy,
   display: flex;
   align-items: flex-end;
   flex-direction: column;
@@ -10,12 +10,14 @@
   * {
     border: 1px solid rgb(64, 29, 255);
   }
+
 */
 
 
 .page {
   margin: 0;
 }
+
 /* ########## Nav Bar ########## */
 .nav-container {
   list-style: none;
@@ -26,17 +28,18 @@
   top: 0;
   background-color: rgba(38, 38, 38, 0.7);
   margin: 0 0 -60px;
+  padding: 0;
 }
 
 .nav-item {
-  padding: 15px 10px;
-  font-size: 1.3rem;
+  padding: 15px 0;
+  font-size: 1.2rem;
   border-left: 1px solid rgba(90, 92, 116, 0.6);
-  min-width: 70px;
+  width: 100vw;
 }
 
 .nav-item:hover {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgb(107, 217, 85);
 }
 
 .active {
@@ -59,8 +62,8 @@
 
 /* ########## Welcome Row ########## */
 .section-welcome {
-   text-align: center;
-   padding-top: 50px;
+  text-align: center;
+  padding-top: 50px;
 }
 
 .welcome-row {
@@ -69,6 +72,10 @@
   padding: 30px;
   text-align: center;
   height: 150px;
+}
+
+.welcome-title {
+  padding: 10px 20px;
 }
 
 .welcome-text {
@@ -90,15 +97,8 @@
 }
 
 /* ########## Section Contact ########## */
-.section-contact {
-  display: flex;
-  padding: 10px 0 10px 40px;
-  min-height: 450px;
-}
-
-.title-contact {
-  margin-bottom: 100px;
-  text-align: center;
+.contact-info {
+  margin: 20px 0 40px;
 }
 
 .icon-container {
@@ -112,7 +112,7 @@
 
 /* ########## Footer ########## */
 .footer {
-  padding: 20px 0 10px;
+  padding: 20px 0 0;
   text-align: center;
 }
 
@@ -166,6 +166,7 @@
 
 .horizontal-line {
   border-top: 1px solid rgb(77, 217, 49);
+  margin: 0;
 }
 
 /* ################# Mobile ################### */
@@ -175,16 +176,19 @@
     color: rgb(77, 217, 49);
   }
 
-  .p-2 {
-    padding: 0;
+
+  /* -------------- Sections --------------- */
+  .card {
+    display: block;
   }
 
   .half {
-    width: 100%;
+    width: auto;
+
   }
 
   /* -------------- Row Welcome --------------- */
-  .row-welcome {
+  .welcome-row {
     display: block;
     padding: 10px 20px 50px;
   }
@@ -211,5 +215,9 @@
   .section-contact {
     display: grid;
     padding: 0;
+  }
+
+  .footer .row {
+    display: block;
   }
 }

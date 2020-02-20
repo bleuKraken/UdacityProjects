@@ -12,20 +12,16 @@
 
 <body class="page">
   <!-- STORY BEGINS HERE -->
-
-  <!-- Nav Bar
-  <ul id="nav" class="nav-container color-white">
-    <li id="nav-item-1" class="nav-item active"><a href="#0" class="link color-white">Product</a></li>
-    <li id="nav-item-2" class="nav-item"><a href="#0" class="link color-white">Specs</a></li>
-    <li id="nav-item-3" class="nav-item"><a href="#0" class="link color-white">Contact</a></li>
-    <li id="nav-item-4" class="nav-item"><a href="#0" class="link color-warning">Login</a></li>
-    <li id="nav-item-5" class="nav-item"><a href="#0" class="link color-success">Sign up</a></li>
+  <!-- TODO
+    - check out TODO below on grouping data
+    - adding space after nav clicks on something so the picture does not get covered.
+    - change the background of the section being hovered within app.js
+    -
+  -->
+  <ul id="nav" class="nav-container color-white text-center">
+    <!-- app.js Fills content inside here -->
   </ul>
--->
 
-<ul id="nav" class="nav-container color-white text-center">
-  <!-- app.js Fills content inside here
-</ul>
 
   <!-- background Image -->
   <header class="main-background-image color-white">
@@ -35,13 +31,23 @@
     </div>
   </header>
 
+  <!-- TODO: Test, and play aroung with grouping data -->
+  <div class="group-data-container">
+    <div class="row large-data">
+      <span class="large-text">600</span>
+      <span class="large-text">453</span>
+    </div>
+    <div class="row small-data">
+      <span class="small-text">600</span>
+      <span class="small-text">453</span>
+    </div>
+  </div>
+
   <!-- Row Welcome -->
-  <div class="section-welcome bg-black color-light text-center">
+  <div class="section-welcome bg-black color-light text-center p-2">
     <h2 class="font-large">Welcome</h2>
-    <!-- Row -->
     <div class="welcome-row">
-      <h3 class="p-2"><i>Our Mission of The Lorem Ricksum</i></h3>
-      <!-- Horizontal Line -->
+      <h3 class="welcome-title"><i>Our Mission of The Lorem Ricksum</i></h3>
       <div class="horizontal-line"></div>
       <div class="welcome-text">
         <p>We are created to serve a singular purpose, for which we will go to any lengths to fulfill!</p>
@@ -52,11 +58,12 @@
   <!-- Section One -->
   <section class="card color-white bg-dark">
     <div class="card-text half">
-      <span><strong class="font-large"> <span class="section-title color-success">Product</span></strong></span>
-      <h2>Lorem ipsum dolor sit amet.</h2>
-      <p>Oh, we're welllll past that, Jerry!</p>
-      <p>I was just killing some snaked up here like everyone else, I guess, and finishing the Christmas lights. </p>
-      <p>You sold a gun to a murderer so you could play video games?</p>
+      <span><strong class="font-large"> <span class="section-title color-success">About Us</span></strong></span>
+      <h2>Lorem Ricksum</h2>
+      <p class="p-3">Rick, is this a Saw thing? Are you seriously Sawing the Vindicators? Cool. Just stay in the driveway; the kill-bots are live, and I took you off the whitelist. You're young, you have
+        your whole life ahead of you, and your anal cavity is still taut yet malleable. Isn't it obvious Morty? I froze him. There is no god, in your face! One dot muthafucka! Honey, stop raising your
+        father's colesterol so you can take a hot funeral selfie. What is this, 90's Conan? That's because losers look stuff up while the rest of us are carp'en all them 'diems. Aids!
+      </p>
     </div>
     <!-- Right Column -->
     <div class="half">
@@ -71,7 +78,7 @@
     </div>
     <!-- Right Column -->
     <div class="card-text half">
-      <span><strong class="font-large">The <span class="section-title color-success">Specs</span></strong></span>
+      <span><strong class="font-large"> <span class="section-title color-success">Awards</span></strong></span>
       <h2 class="text-center">Lorem ipsum dolor sit amet.</h2>
       <p>Oh, we're welllll past that, Jerry!</p>
       <p>Well he roped me into this! Wow, so your origin is what? You fell into a vat of redundancy?</p>
@@ -110,12 +117,15 @@
   </section>
 
   <!-- Section Five -->
-  <section class="section-contact bg-black color-white">
-    <div class="half">
-      <strong><span class="section-title font-large text-center color-success title-contact">Contact</span></strong>
-      <p> <strong><span class=" color-success">Phone </span></strong> <span>(123) 555-5555</span> </p>
-      <p> <strong><span class=" color-success">Address </span></strong> <span>4321 Cherry Ave, Los Angeles</span> </p>
-      <h4 class=" color-warning">Connect With Us</h4>
+  <section class="card bg-dark color-white">
+    <div class="half p-2">
+      <strong><span class="section-title font-large text-center color-success">Contact</span></strong>
+      <div class="contact-info">
+        <p class="text-left"> <strong><span class="color-success">Phone </span></strong> <span>(123) 555-5555</span> </p>
+        <p class="text-left"> <strong><span class="color-success">Address </span></strong> <span>4321 Cherry Ave, Los Angeles</span> </p>
+        <p class="text-left"> <strong><span class="color-success">Email </span></strong> <span>12345@email.com</span> </p>
+      </div>
+      <h4 class=" color-warning text-center">Connect With Us</h4>
       <div class="icon-container">
         <a href="#0" class="link"><i class="fab fa-twitter-square fa-3x"></i></a>
         <a href="#0" class="link"><i class="fab fa-instagram fa-3x"></i></a>
@@ -127,9 +137,8 @@
       <div class="image-location"></div>
     </div>
   </section>
-
   <!-- Horizontal Line -->
-  <div class="horizontal-line"></div>
+  <p class="horizontal-line"></p>
 
   <!-- Footer -->
   <footer class="footer bg-black color-white">
