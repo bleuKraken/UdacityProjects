@@ -3,19 +3,30 @@ Notes
 
 // TODO:
 - remove some of the comments when the code gets cemented in my head more! :D
+
+// TODO COMPLETED:
+- Hightlight nav area when hovering cover
+  - detect mouse over div
+
 */
+console.log("Starting..");
+
+
+
 
 // ######################## Build the nav ###########################
 // get nav container
 const navContainer = document.getElementById('nav');
+let pageSections = document.querySelectorAll('section');
 // Array of section titles
 let sectionTitles = document.querySelectorAll('.section-title'); //Grab title of sections
 
 // For every section title, create a nav item with the name of that section title
-for (let index = 0; index < sectionTitles.length; index++) {
+for (let index = 0; index < pageSections.length; index++) {
   // create new list item for navigation
   const newListItem = document.createElement('li');
-  newListItem.classList.add('nav-item'); // <li class="nav-item">
+  newListItem.classList.add('nav-item'); // <li class="nav-item"> </li>
+  newListItem.id = "navItem" + index;    // <li id="navItem0" class="nav-item"> </li>
   // Create new link
   const newAnchor = document.createElement('a');
   newAnchor.classList.add('link');
@@ -27,12 +38,30 @@ for (let index = 0; index < sectionTitles.length; index++) {
   newListItem.appendChild(newAnchor);
 }
 
-// ######################## Set Section to Active ###########################
-const section1 = document.querySelector('#product-section');
+// ######################## Find out which section is being hovered ###########################
+//Grab all of sections
 
-section1.addEventListener("mouseover", function() {
-  console.log("Section 1");
-})
+// For every section that there is...
+for(let sectionIndex = 0; sectionIndex < pageSections.length; sectionIndex++){
+  // Add an event listener to each section..
+  pageSections[sectionIndex].addEventListener('mouseover', function(){
+    // Print out wich section is being hovered
+    console.log('Hovering section ' + sectionIndex);
+    unselectAll();
+    document.getElementById("navItem" + sectionIndex).classList.add('active');
+  });
+}
+
+
+
+// ######################## Set a Nav item to active ###########################
+
+function unselectAll() {
+  for(let navItems = 0; navItems < pageSections.length; navItems++) {
+    document.getElementById("navItem" + navItems).classList.remove('active');
+
+  }
+}
 
 
 /*
