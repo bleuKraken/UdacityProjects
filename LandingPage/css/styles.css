@@ -7,16 +7,23 @@
   align-items: flex-end;
   flex-direction: column;
 
-  * {
-    border: 1px solid rgb(64, 29, 255);
-  }
 
 */
+* {
+  border: 1px solid rgb(64, 29, 255);
+}
 
 
 .page {
   margin: 0;
 }
+
+
+
+
+
+
+
 
 /* ########## Nav Bar ########## */
 .nav-container {
@@ -30,6 +37,38 @@
   margin: 0 0 -60px;
   padding: 0;
 }
+
+
+.mobile-nav {
+  visibility: hidden;
+
+  text-align: right;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: rgba(38, 38, 38, 0.7);
+  margin: 0 0 -60px;
+  padding: 0;
+  min-height: 40px;
+}
+
+
+
+.icon {
+  margin: 0;
+  padding: 30px 10px 15px;
+  font-size: 1.2rem;
+  border-left: 1px solid rgba(90, 92, 116, 0.6);
+  background-color: rgb(107, 217, 85);
+}
+
+
+.mobile-list {
+  list-style: none;
+}
+
+
+
 
 .nav-item {
   padding: 15px 0;
@@ -85,10 +124,10 @@
 
 /* ########## Card row, picture and Info ########## */
 .card {
+  padding: 130px 0 20px;
   display: flex;
   min-height: 450px;
   text-align: center;
-  padding-bottom: 100px;
 }
 
 .card-text {
@@ -112,7 +151,7 @@
 
 /* ########## Footer ########## */
 .footer {
-  padding: 20px 0 0;
+  padding: 20px 0 10px;
   text-align: center;
 }
 
@@ -120,6 +159,10 @@
 /* Can be used anywhere */
 .link {
   text-decoration: none;
+}
+
+.margin-none {
+  margin: 0;
 }
 
 .text-center {
@@ -169,12 +212,64 @@
   margin: 0;
 }
 
+
+
+
+.group-data-container {
+  margin-top: 50px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+.round-container {
+  width: 100px;
+  height: 100px;
+  /*
+  border: 1px solid red;
+  border-radius: 50%;
+  */
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  padding: 10px;
+  /* background-color: rgb(158, 230, 174); */
+  margin: 10px 0 25px;
+}
+
+
+
+
+
+
+
+
 /* ################# Mobile ################### */
 @media only screen and (max-width: 600px) {
+
+
+  .mobile-nav {
+    visibility: visible;
+    justify-content: flex-end;
+
+  }
+
+
+
   .welcome {
     /* TODO: Maybe make this perminant. */
     color: rgb(77, 217, 49);
   }
+
+
+
+
+  .nav-container .nav-item {
+    visibility: hidden;
+  }
+
+
+
 
 
   /* -------------- Sections --------------- */
@@ -215,6 +310,10 @@
   .section-contact {
     display: grid;
     padding: 0;
+  }
+
+  .group-data-container {
+    margin-top: 10px;
   }
 
   .footer .row {

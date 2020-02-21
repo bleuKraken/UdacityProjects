@@ -42,7 +42,9 @@ for (let index = 0; index < pageSections.length; index++) {
   let sectionArea = document.querySelectorAll('section');
   navLink.addEventListener('click', function() {
     unselectAll();
-    sectionArea[index].scrollIntoView();
+    sectionArea[index].scrollIntoView({
+      behavior: 'smooth'
+    });
   });
 };
 
