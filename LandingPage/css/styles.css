@@ -6,12 +6,12 @@
   display: flex;
   align-items: flex-end;
   flex-direction: column;
-
+  * {
+    border: 1px solid rgb(64, 29, 255);
+  }
 
 */
-* {
-  border: 1px solid rgb(64, 29, 255);
-}
+
 
 
 .page {
@@ -26,22 +26,10 @@
 
 
 /* ########## Nav Bar ########## */
-.nav-container {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  background-color: rgba(38, 38, 38, 0.7);
-  margin: 0 0 -60px;
-  padding: 0;
-}
 
-
+/*
 .mobile-nav {
   visibility: hidden;
-
   text-align: right;
   position: -webkit-sticky;
   position: sticky;
@@ -52,8 +40,6 @@
   min-height: 40px;
 }
 
-
-
 .icon {
   margin: 0;
   padding: 30px 10px 15px;
@@ -62,13 +48,35 @@
   background-color: rgb(107, 217, 85);
 }
 
-
 .mobile-list {
   list-style: none;
 }
+*/
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+.nav-container {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: rgba(38, 38, 38, 0.7);
+  margin: 0 0 -55px;
+  padding: 0;
+}
 
 .nav-item {
   padding: 15px 0;
@@ -85,6 +93,23 @@
   background-color: rgb(77, 217, 49);
   color: rgb(0, 0, 0);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ########## Background Image ########## */
 .main-card-info {
@@ -254,8 +279,6 @@
 
   }
 
-
-
   .welcome {
     /* TODO: Maybe make this perminant. */
     color: rgb(77, 217, 49);
@@ -264,9 +287,48 @@
 
 
 
-  .nav-container .nav-item {
-    visibility: hidden;
+
+
+
+
+
+
+
+  .nav-container {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; */
+    /* position: -webkit-sticky; */
+    position: fixed;
+    top: 0;
+    background-color: rgba(38, 38, 38, 0.7);
+    margin: 0 0 -55px;
+    padding: 0;
+    z-index: 1;
   }
+
+  .nav-item {
+    visibility: visible;
+    padding: 15px 0;
+    font-size: 1.2rem;
+    border-left: 1px solid rgba(90, 92, 116, 0.6);
+    width: 100vw;
+  }
+
+  .nav-item:hover {
+    background-color: rgb(107, 217, 85);
+  }
+
+  .active {
+    background-color: rgb(77, 217, 49);
+    color: rgb(0, 0, 0);
+  }
+
+
+
+
+
 
 
 
@@ -276,6 +338,8 @@
   .card {
     display: block;
   }
+
+
 
   .half {
     width: auto;

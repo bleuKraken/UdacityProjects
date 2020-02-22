@@ -26,7 +26,7 @@ for (let index = 0; index < pageSections.length; index++) {
   newAnchor.classList.add('link');
   newAnchor.classList.add('color-white');
   newAnchor.textContent = sectionTitles[index].innerHTML;
-  // Append the children
+  // Append the two variables created above
   navContainer.appendChild(newListItem);
   newListItem.appendChild(newAnchor);
   // Result: <li id="navItem0" class="nav-item"> <a class="link color-white"> Product </a>  </li>
