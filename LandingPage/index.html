@@ -13,50 +13,21 @@
 <body class="page">
   <!-- STORY BEGINS HERE -->
   <!-- TODO
-    -
+
   -->
 
   <!-- TODO COMPLETED
-  - attempting to build mobile nav
-  - check out TODO below on grouping data
-  - adding space after nav clicks on something so the picture does not get covered.
-  - change the background of the section being hovered within app.js
+
   -->
 
 
-
-
-<!-- nobile nav
-  <div class="mobile-nav color-white">
-      <span class="icon">Icon</span>
-    <ul class="mobile-list text-white">
-      <li><a href="#0">Test</a></li>
-      <li><a href="#0">Test</a></li>
-      <li><a href="#0">Test</a></li>
-    </ul>
-  </div>
--->
-
-
-
-
-
-
-
-
-<ul id="nav" class="nav-container color-white text-center">
+  <!-- navigation bar -->
+  <ul id="nav" class="nav-container color-white text-center">
+    <li id="nav-icon" class="icon-container  color-success"><span class="nav-icon"><i class="fas fa-bars fa-2x"></i></span></li>
   <!--
-    app.js file generates data here.
-    Example: <li class="nav-item" ><a href="#0" class="link"> About </a></li>
-   -->
-</ul>
-
-
-
-
-
-
-
+    app.js file generates data here.  Example: <li class="nav-item" ><a href="#0" class="link"> About </a></li>
+  -->
+  </ul>
 
   <!-- background Image -->
   <header class="main-background-image color-white">
@@ -66,17 +37,7 @@
     </div>
   </header>
 
-  <!-- Row Welcome -->
-  <div class="section-welcome bg-black color-light text-center p-2">
-    <h2 class="greetings">Hello world</h2>
-    <div class="welcome-row">
-      <h3 class="welcome-title"><i>Our Mission of The Lorem Ricksum</i></h3>
-      <div class="horizontal-line"></div>
-      <div class="welcome-text">
-        <p>We are created to serve a singular purpose, for which we will go to any lengths to fulfill!</p>
-      </div>
-    </div>
-  </div>
+
 
   <!-- Section One -->
   <section class="card color-white bg-dark">
@@ -93,6 +54,18 @@
       <div class="product-picture"></div>
     </div>
   </section>
+
+  <!-- Row Welcome -->
+  <div class="section-welcome bg-black color-light p-2">
+    <h2 class="greetings">Hello world</h2>
+    <div class="welcome-row">
+      <h3 class="welcome-title"><i>Our Mission of The Lorem Ricksum</i></h3>
+      <div class="horizontal-line"></div>
+      <div class="welcome-text">
+        <p>We are created to serve a singular purpose, for which we will go to any lengths to fulfill!</p>
+      </div>
+    </div>
+  </div>
 
   <!-- Section Two -->
   <section class="card color-white bg-dark text-right">
@@ -120,30 +93,27 @@
     </div>
     <!-- Right Column -->
     <div class="half">
-      <!-- <div class="product-picture"></div> -->
-      <!-- TODO: Test, and play aroung with grouping data -->
+      <!-- Data grouped together -->
       <div class="group-data-container">
         <div class="row">
-          <div class="round-container">
+          <div class="data-container">
             <span class="font-large">600</span>
             <span class="small-text">Places visted</span>
           </div>
-          <div class="round-container">
+          <div class="data-container">
             <span class="font-large">27</span>
             <span class="small-text"> Cities us it</span>
           </div>
         </div>
         <div class="row">
-          <div class="round-container">
+          <div class="data-container">
             <span class="font-large">27</span>
             <span class="small-text"> Cars built </span>
           </div>
-          <div class="round-container">
-
+          <div class="data-container">
             <span class="font-large">2,745</span>
             <span class="small-text">Pizzas served</span>
           </div>
-
         </div>
       </div>
     </div>
@@ -174,7 +144,7 @@
         <p class="text-left"> <strong><span class="color-success">Email </span></strong> <span>12345@email.com</span> </p>
       </div>
       <h4 class=" color-warning text-center">Connect With Us</h4>
-      <div class="icon-container">
+      <div class="social-container">
         <a href="#0" class="link"><i class="fab fa-twitter-square fa-3x"></i></a>
         <a href="#0" class="link"><i class="fab fa-instagram fa-3x"></i></a>
         <a href="#0" class="link"><i class="fab fa-facebook-square fa-3x"></i></a>
@@ -192,10 +162,10 @@
   <footer class="footer bg-black color-white">
     <div class="row">
       <div class="half">
-        <span>Icons by <a href="#0" class="link color-success">Font Awsome</a></span>
+        <p>Icons by <a href="#0" class="link color-success">Font Awsome</a></p>
       </div>
       <div class="half">
-        <span>Photos by <a href="#0" class="link color-success">Unsplash</a></span>
+        <p>Photos by <a href="#0" class="link color-success">Unsplash</a></p>
       </div>
     </div>
     <p class="developer">Made by <a href="#0" class="link color-warning">Erick Gonzalez</a></p>

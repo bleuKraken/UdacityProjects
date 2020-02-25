@@ -6,66 +6,18 @@
   display: flex;
   align-items: flex-end;
   flex-direction: column;
+
   * {
     border: 1px solid rgb(64, 29, 255);
   }
-
 */
-
 
 
 .page {
   margin: 0;
 }
 
-
-
-
-
-
-
-
-/* ########## Nav Bar ########## */
-
-/*
-.mobile-nav {
-  visibility: hidden;
-  text-align: right;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  background-color: rgba(38, 38, 38, 0.7);
-  margin: 0 0 -60px;
-  padding: 0;
-  min-height: 40px;
-}
-
-.icon {
-  margin: 0;
-  padding: 30px 10px 15px;
-  font-size: 1.2rem;
-  border-left: 1px solid rgba(90, 92, 116, 0.6);
-  background-color: rgb(107, 217, 85);
-}
-
-.mobile-list {
-  list-style: none;
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ########## Navigation  ########## */
 .nav-container {
   list-style: none;
   display: flex;
@@ -94,24 +46,11 @@
   color: rgb(0, 0, 0);
 }
 
+.nav-icon {
+  display: none;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ########## Background Image ########## */
+/* ########## Main Background Image ########## */
 .main-card-info {
   padding-top: 40vh;
   font-size: 1.1rem;
@@ -147,7 +86,7 @@
   padding: 20px;
 }
 
-/* ########## Card row, picture and Info ########## */
+/* ########## Sections ########## */
 .card {
   padding: 130px 0 20px;
   display: flex;
@@ -160,17 +99,17 @@
   padding: 50px 25px;
 }
 
-/* ########## Section Contact ########## */
+/* ########## Contact Section ########## */
 .contact-info {
-  margin: 20px 0 40px;
+  margin: 20px 0 60px;
 }
 
-.icon-container {
+.social-container {
   display: flex;
   justify-content: space-around;
 }
 
-.icon-container .fab {
+.social-container .fab {
   margin: 10px;
 }
 
@@ -180,14 +119,14 @@
   text-align: center;
 }
 
+.developer {
+  padding-top: 30px;
+}
+
 /* ########## Universal ########## */
 /* Can be used anywhere */
 .link {
   text-decoration: none;
-}
-
-.margin-none {
-  margin: 0;
 }
 
 .text-center {
@@ -216,10 +155,6 @@
   font-size: 2rem;
 }
 
-.p-1 {
-  padding: 10px;
-}
-
 .p-2 {
   padding: 20px;
 }
@@ -228,17 +163,10 @@
   padding: 30px;
 }
 
-.developer {
-  padding-top: 30px;
-}
-
 .horizontal-line {
   border-top: 1px solid rgb(77, 217, 49);
   margin: 0;
 }
-
-
-
 
 .group-data-container {
   margin-top: 50px;
@@ -247,65 +175,36 @@
   color: rgb(255, 255, 255);
 }
 
-.round-container {
+.data-container {
   width: 100px;
   height: 100px;
-  /*
-  border: 1px solid red;
-  border-radius: 50%;
-  */
   display: flex;
-  /* align-items: center; */
   flex-direction: column;
   padding: 10px;
-  /* background-color: rgb(158, 230, 174); */
   margin: 10px 0 25px;
 }
 
-
-
-
-
-
-
-
 /* ################# Mobile ################### */
 @media only screen and (max-width: 600px) {
-
-
   .mobile-nav {
     visibility: visible;
     justify-content: flex-end;
-
   }
 
-  .welcome {
-    /* TODO: Maybe make this perminant. */
-    color: rgb(77, 217, 49);
+  .nav-item {
+    display: none;
   }
-
-
-
-
-
-
-
-
-
-
 
   .nav-container {
     list-style: none;
     display: flex;
     flex-direction: column;
-    /* justify-content: flex-end; */
-    /* position: -webkit-sticky; */
+    justify-content: flex-end;
     position: fixed;
     top: 0;
     background-color: rgba(38, 38, 38, 0.7);
     margin: 0 0 -55px;
     padding: 0;
-    z-index: 1;
   }
 
   .nav-item {
@@ -325,25 +224,33 @@
     color: rgb(0, 0, 0);
   }
 
+  .icon-container {
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+  }
 
+  .nav-icon {
+    display: block;
+    padding: 5px 40px;
+  }
 
+  .nav-icon:hover {
+    background-color: rgb(77, 217, 49);
+    color: #fff;
+  }
 
-
-
-
-
-
+  .visible {
+    display: block;
+  }
 
   /* -------------- Sections --------------- */
   .card {
     display: block;
   }
 
-
-
   .half {
     width: auto;
-
   }
 
   /* -------------- Row Welcome --------------- */
@@ -361,7 +268,6 @@
   }
 
   /* -------------- Section Product --------------- */
-  /* Is "display: grid;" better ? */
   .section-product {
     display: block;
   }
@@ -380,7 +286,7 @@
     margin-top: 10px;
   }
 
-  .footer .row {
+  .footer  {
     display: block;
   }
 }

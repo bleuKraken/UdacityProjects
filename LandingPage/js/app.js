@@ -3,14 +3,17 @@ Notes / TODO's
 - Love the process!
 - Smile :)
 
-- try to refector or shrink javascript code
+- when on mobile (through firefox settings) the some of the hover effects, and
+  background-colors do NOT take effect. Investigate more!
 */
 
 // ######################## Build the nav links ###########################
 // Global varaiables
 const navContainer = document.getElementById('nav');
+const navIcon = document.getElementById('nav-icon');
 let pageSections = document.querySelectorAll('section');
 let sectionTitles = document.querySelectorAll('.section-title');
+
 
 // For every section title, create a nav item with the name of that section title
 for (let index = 0; index < pageSections.length; index++) {
@@ -47,6 +50,15 @@ for (let index = 0; index < pageSections.length; index++) {
     });
   });
 };
+
+// Add event listener to Mobile dropdown. (Only works on small width, does not work on actual mobile. yet!)
+navIcon.addEventListener('click', function () {
+  for(let index = 0; index < pageSections.length; index++) {
+    document.getElementById('nav-item-' + index).classList.toggle('visible');
+    document.getElementById('nav-icon').classList.toggle('color-success');
+  }
+})
+
 
 // ######################## Point of No Return, Functions Below ###########################
 // Unselect all link items from having a green background
