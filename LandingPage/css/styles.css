@@ -12,12 +12,119 @@
   }
 */
 
+/* ########## Text & Font Colors ########## */
+.color-white {
+  color: rgb(255, 255, 255);
+}
 
+.color-light {
+  color: rgb(232, 232, 232);
+}
+
+.color-warning {
+  color: rgb(242, 197, 38);
+}
+
+.color-danger {
+  color: rgb(241, 33, 33);
+}
+
+.color-primary {
+  color: rgb(67, 89, 238);
+}
+
+.color-dark {
+  color: rgb(18, 18, 18);
+}
+
+.color-success {
+  color: rgb(77, 217, 49);
+}
+
+/* ~~~~~~~~~~~~~ background Colors ~~~~~~~~~~~~~ */
+.bg-black {
+  background-color: rgb(0, 0, 0);
+}
+
+.bg-dark {
+  background-color: rgb(26, 26, 26);
+}
+
+.bg-light {
+  background-color: rgb(231, 231, 231);
+}
+
+/* ~~~~~~~~~~~~~ Icon Colors ~~~~~~~~~~~~~ */
+.fa-twitter-square {
+  color: #17A3F2;
+}
+
+.fa-facebook-square {
+  color: rgb(255, 255, 255);
+  color: #1173E7;
+}
+
+.fa-instagram {
+  color: #fff;
+  background-color: #000;
+  padding: 0;
+}
+
+.page .card:nth-child(even) {
+  background-color: rgb(26, 26, 26);
+}
+
+.page .card:nth-child(odd) {
+  background-color: rgb(41, 46, 40);
+}
+
+
+/* ########### Images ############ */
+/* Section 1: Main */
+.main-background-image {
+  background-image: url('../img/RocketbookFusion.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+/* Section 2: Product */
+.product-picture {
+  background-image: url('../img/RocketbookWriting.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  min-height: 60vh;
+}
+
+.product-picture-writing {
+  background-image: url('../img/RocketbookOnDesk.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  min-height: 60vh;
+}
+
+/* Section 4: Contact */
+.image-location {
+  background-image: url('https://source.unsplash.com/1600x900/?nature,water');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  padding: 50px;
+}
+
+
+/* ########### Styles below ############ */
 .page {
   margin: 0;
 }
 
-/* ########## Navigation  ########## */
+/* ~~~~~~~~~~~~~ Navigation ~~~~~~~~~~~~~ */
 .nav-container {
   list-style: none;
   display: flex;
@@ -50,7 +157,7 @@
   display: none;
 }
 
-/* ########## Main Background Image ########## */
+/* ~~~~~~~~~~~~~ Main Background Image ~~~~~~~~~~~~~ */
 .main-card-info {
   padding-top: 40vh;
   font-size: 1.1rem;
@@ -63,7 +170,7 @@
   padding-top: 50px;
 }
 
-/* ########## Welcome Row ########## */
+/* ~~~~~~~~~~~~~ Welcome Row ~~~~~~~~~~~~~ */
 .section-welcome {
   text-align: center;
   padding-top: 50px;
@@ -86,7 +193,7 @@
   padding: 20px;
 }
 
-/* ########## Sections ########## */
+/* ~~~~~~~~~~~~~ Sections ~~~~~~~~~~~~~ */
 .card {
   padding: 130px 0 20px;
   display: flex;
@@ -99,7 +206,7 @@
   padding: 50px 25px;
 }
 
-/* ########## Contact Section ########## */
+/* ~~~~~~~~~~~~~ Contact Section ~~~~~~~~~~~~~ */
 .contact-info {
   margin: 20px 0 60px;
 }
@@ -113,7 +220,7 @@
   margin: 10px;
 }
 
-/* ########## Footer ########## */
+/* ~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~ */
 .footer {
   padding: 20px 0 10px;
   text-align: center;
