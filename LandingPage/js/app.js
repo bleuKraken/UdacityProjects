@@ -3,8 +3,6 @@ Notes / TODO's
 - Love the process!
 - Smile :)
 
-- when on mobile (through firefox settings) the some of the hover effects, and
-  background-colors do NOT take effect. Investigate more!
 */
 
 // ######################## Build the nav links ###########################
@@ -40,6 +38,8 @@ for (let index = 0; index < pageSections.length; index++) {
     document.getElementById("nav-item-" + index).classList.add('active');
   });
 
+
+
   // Scroll to section area when a nav link gets clicked on
   let navLink = document.getElementById('nav-item-' + index);
   let sectionArea = document.querySelectorAll('section');
@@ -49,15 +49,59 @@ for (let index = 0; index < pageSections.length; index++) {
       behavior: 'smooth'
     });
   });
+
+  // Make mobile nav light up when buttons get clicked
+  document.getElementById('nav-item-' + index).addEventListener('click', function() {
+    document.getElementById('nav-item-' + index).classList.toggle('active');
+  });
 };
 
-// Add event listener to Mobile dropdown. (Only works on small width, does not work on actual mobile. yet!)
-navIcon.addEventListener('click', function () {
-  for(let index = 0; index < pageSections.length; index++) {
+
+/*
+if(document.getElementById('nav-icon').classList.contains('visible')) {
+  console.log('menu is visible');
+  document.querySelectorAll('page').addEventListener('click', function() {
+    console.log('event listener added');
+    for (let index = 0; index < pageSections.length; index++) {
+
+      document.getElementById('nav-item-' + index).classList.toggle('visible');
+      document.getElementById('nav-icon').classList.toggle('color-success');
+      console.log('should be toggling');
+    }
+  });
+
+}
+*/
+
+
+// Add event listener to Mobile dropdown. (Only works on small width, does not work on actual mobile. yet)
+navIcon.addEventListener('click', function() {
+  unselectAll();
+
+  //Make nav items visible or invisible
+  for (let index = 0; index < pageSections.length; index++) {
     document.getElementById('nav-item-' + index).classList.toggle('visible');
-    document.getElementById('nav-icon').classList.toggle('color-success');
   }
-})
+
+  document.getElementById('nav-icon').classList.toggle('color-success');
+  console.log('mobile nav visible');
+
+
+
+});
+
+// Give the sections an event listener that will make the nav go away
+for (let index = 0; index < pageSections.length; index++) {
+  pageSections[index].addEventListener('click', function() {
+    for (let index = 0; index < pageSections.length; index++) {
+      document.getElementById('nav-item-' + index).classList.remove('visible');
+    }
+  });
+
+}
+
+
+
 
 
 // ######################## Point of No Return, Functions Below ###########################

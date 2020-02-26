@@ -7,11 +7,12 @@
   align-items: flex-end;
   flex-direction: column;
 
-  * {
-    border: 1px solid rgb(64, 29, 255);
-  }
+
 */
 
+* {
+  border: 1px solid rgb(64, 29, 255);
+}
 
 .page {
   margin: 0;
@@ -232,7 +233,7 @@
 
   .nav-icon {
     display: block;
-    padding: 5px 40px;
+    padding: 5px 30px;
   }
 
   .nav-icon:hover {
@@ -242,6 +243,11 @@
 
   .visible {
     display: block;
+  }
+
+  /* -------------- Main Background Image --------------- */
+  .title-text {
+    font-size: 3.5rem;
   }
 
   /* -------------- Sections --------------- */
