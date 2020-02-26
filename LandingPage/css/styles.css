@@ -7,12 +7,11 @@
   align-items: flex-end;
   flex-direction: column;
 
-
+  * {
+    border: 1px solid rgb(64, 29, 255);
+  }
 */
 
-* {
-  border: 1px solid rgb(64, 29, 255);
-}
 
 .page {
   margin: 0;
@@ -292,7 +291,7 @@
     margin-top: 10px;
   }
 
-  .footer  {
+  .footer {
     display: block;
   }
 }

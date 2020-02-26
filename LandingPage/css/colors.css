@@ -60,3 +60,11 @@
   background-color: #000;
   padding: 0;
 }
+
+.page .card:nth-child(even) {
+  background-color: rgb(26, 26, 26);
+}
+
+.page .card:nth-child(odd) {
+  background-color: rgb(41, 46, 40);
+}

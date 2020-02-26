@@ -1,6 +1,6 @@
 /* Section 1: Main */
 .main-background-image {
-  background-image: url('https://source.unsplash.com/random');
+  background-image: url('../img/RocketbookFusion.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -9,7 +9,16 @@
 
 /* Section 2: Product */
 .product-picture {
-  background-image: url('https://source.unsplash.com/random');
+  background-image: url('../img/RocketbookWriting.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  min-height: 60vh;
+}
+
+.product-picture-writing {
+  background-image: url('../img/RocketbookOnDesk.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
