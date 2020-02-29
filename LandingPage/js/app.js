@@ -62,6 +62,7 @@ for (let index = 0; index < pageSections.length; index++) {
     }
   });
 }
+// End of For Loop
 
 // ######################## Point of No Return, Functions Below ###########################
 // Unselect all link items from having a green background

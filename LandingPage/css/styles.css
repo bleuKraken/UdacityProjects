@@ -82,7 +82,7 @@
 /* ########### Images ############ */
 /* Section 1: Main */
 .main-background-image {
-  background-image: url('../img/RocketbookFusion.jpg');
+  background-image: url('../img/mainImage.jpeg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -91,7 +91,7 @@
 
 /* Section 2: Product */
 .product-picture {
-  background-image: url('../img/RocketbookWriting.jpg');
+  background-image: url('../img/productImage.jpeg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
