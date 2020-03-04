@@ -13,6 +13,10 @@
   border: 1px solid rgb(64, 29, 255);
 }
 
+.page {
+  margin: 0;
+}
+
 .section-title {
   font-size: 2rem;
   font-weight: bold;
@@ -22,31 +26,13 @@
   color: rgb(255, 255, 255);
 }
 
-/*
-.color-light {
-  color: rgb(232, 232, 232);
-}
-*/
-
 .color-warning {
   color: rgb(242, 197, 38);
 }
 
-/*
-.color-danger {
-  color: rgb(241, 33, 33);
-}
-*/
-
 .color-primary {
   color: rgb(67, 89, 238);
 }
-
-/*
-.color-dark {
-  color: rgb(18, 18, 18);
-}
-*/
 
 .color-success {
   color: rgb(77, 217, 49);
@@ -71,7 +57,6 @@
 }
 
 .fa-facebook-square {
-  color: rgb(255, 255, 255);
   color: #1173E7;
 }
 
@@ -90,6 +75,7 @@ to be a color change when the user is hover over content */
 .page .card:nth-child(odd) {
   background-color: rgb(41, 46, 40);
 }
+
 
 
 /* ########### Images ############ */
@@ -112,24 +98,8 @@ to be a color change when the user is hover over content */
   min-height: 60vh;
 }
 
-/* TODO: Try to delete this */
-/* Section 4: Contact */
-.image-location {
-  background-image: url('https://raw.githubusercontent.com/erickkg/SiteImages/master/Udacity-LandingPage/mainImage.jpeg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 400px;
-  padding: 50px;
-}
 
-
-/* ########### Styles below ############ */
-.page {
-  margin: 0;
-}
-
-/* ~~~~~~~~~~~~~ Navigation ~~~~~~~~~~~~~ */
+/* ########### Navigation ########### */
 .nav-container {
   list-style: none;
   display: flex;
@@ -185,7 +155,6 @@ to be a color change when the user is hover over content */
   display: flex;
   justify-content: center;
   padding: 30px;
-
   height: 150px;
 }
 
@@ -222,12 +191,6 @@ to be a color change when the user is hover over content */
   padding: 10px;
 }
 
-/*
-.social-container .fab {
-  margin: 10px;
-}
-*/
-
 /* ~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~ */
 .footer {
   padding: 20px 0 10px;
@@ -238,9 +201,7 @@ to be a color change when the user is hover over content */
   padding-top: 30px;
 }
 
-/* TODO Can i remove any of these below ? */
-/* ########## Universal ########## */
-/* Can be used anywhere */
+/* ########## Universal, can be used anywhere ########## */
 .link {
   text-decoration: none;
 }
@@ -252,7 +213,6 @@ to be a color change when the user is hover over content */
 .row {
   display: flex;
   justify-content: space-around;
-  /* flex-wrap: wrap; */
 }
 
 .text-right {
@@ -291,15 +251,6 @@ to be a color change when the user is hover over content */
   color: rgb(255, 255, 255);
 }
 
-.data-container {
-  width: 100px;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  margin: 10px 0 25px;
-}
-
 /* ################# Mobile ################### */
 @media only screen and (max-width: 600px) {
   .mobile-nav {
@@ -307,38 +258,21 @@ to be a color change when the user is hover over content */
     justify-content: flex-end;
   }
 
-  .nav-item {
-    display: none;
-  }
-
   .nav-container {
-    list-style: none;
-    display: flex;
     flex-direction: column;
     justify-content: flex-end;
     position: fixed;
-    top: 0;
-    background-color: rgba(38, 38, 38, 0.7);
-    margin: 0 0 -55px;
-    padding: 0;
   }
 
+/* TODO: Delte this and see what happens. if nothing, delete/ */
   .nav-item {
-    visibility: visible;
-    padding: 15px 0;
-    font-size: 1.2rem;
-    border-left: 1px solid rgba(90, 92, 116, 0.6);
-    width: 100vw;
+    display: block;
   }
 
-  .nav-item:hover {
-    background-color: rgb(107, 217, 85);
-  }
+.invisible {
+  display: none;
+}
 
-  .active {
-    background-color: rgb(77, 217, 49);
-    color: rgb(0, 0, 0);
-  }
 
   .icon-container {
     width: 100vw;
@@ -356,30 +290,21 @@ to be a color change when the user is hover over content */
     color: #fff;
   }
 
-  .visible {
-    display: block;
-  }
-
   /* -------------- Main Background Image --------------- */
   .title-text {
     font-size: 3.5rem;
-  }
-
-  /* -------------- Sections --------------- */
-  .card {
-    display: block;
   }
 
   .half {
     width: auto;
   }
 
-  /* -------------- Row Welcome --------------- */
   .welcome-row {
     display: block;
     padding: 10px 20px 50px;
   }
 
+  /* -------------- Welcome Area --------------- */
   .welcome-title {
     border-right: none;
   }
@@ -388,19 +313,22 @@ to be a color change when the user is hover over content */
     border-left: 1px solid rgb(0, 0, 0);
   }
 
-  /* -------------- Section Product --------------- */
-  .section-product {
-    display: block;
-  }
-
+  /* -------------- Section Image --------------- */
   .product-picture {
     min-height: 40vh;
   }
 
-  /* -------------- Section Contact --------------- */
+  .card {
+    display: block;
+  }
+
   .section-contact {
     display: grid;
     padding: 0;
+  }
+
+  .section-product {
+    display: block;
   }
 
   .group-data-container {
