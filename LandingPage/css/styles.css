@@ -32,17 +32,21 @@
   color: rgb(242, 197, 38);
 }
 
+/*
 .color-danger {
   color: rgb(241, 33, 33);
 }
+*/
 
 .color-primary {
   color: rgb(67, 89, 238);
 }
 
+/*
 .color-dark {
   color: rgb(18, 18, 18);
 }
+*/
 
 .color-success {
   color: rgb(77, 217, 49);
@@ -81,6 +85,8 @@
   background-color: rgb(26, 26, 26);
 }
 
+/* TODO: Maybe delete this becuase there is already going
+to be a color change when the user is hover over content */
 .page .card:nth-child(odd) {
   background-color: rgb(41, 46, 40);
 }
@@ -106,6 +112,7 @@
   min-height: 60vh;
 }
 
+/* TODO: Try to delete this */
 /* Section 4: Contact */
 .image-location {
   background-image: url('https://raw.githubusercontent.com/erickkg/SiteImages/master/Udacity-LandingPage/mainImage.jpeg');
@@ -231,6 +238,7 @@
   padding-top: 30px;
 }
 
+/* TODO Can i remove any of these below ? */
 /* ########## Universal ########## */
 /* Can be used anywhere */
 .link {
