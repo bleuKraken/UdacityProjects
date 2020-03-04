@@ -1,24 +1,15 @@
-// ######################## Build the nav links ###########################
+
+//ON PAGE LOAD
 // Global varaiables
 const navContainer = document.getElementById('nav');
 const navIcon = document.getElementById('nav-icon');
 let pageSections = document.querySelectorAll('section');
 let sectionTitles = document.querySelectorAll('.section-title');
 
-// When navbar is clicked, change to color success.
-navIcon.addEventListener('click', function() {
-  RemoveActiveBackground();
-  document.getElementById('nav-icon').classList.toggle('color-success');
-  //Make nav items visible or invisible
-  for (let index = 0; index < pageSections.length; index++) {
-    document.getElementById('nav-item-' + index).classList.toggle('visible');
-  }
-});
-
-// For every section title, create a nav item with the name of that section title
+// For every section, create a nav item with the name of that section title
 for (let index = 0; index < pageSections.length; index++) {
 
-  // Set and id to every section on page. Example: section-0
+  // Each section gets its own ID. Example: section-0
   pageSections[index].id = "section-" + index;
 
   // Creating nav bar items with links to sections
@@ -29,12 +20,13 @@ for (let index = 0; index < pageSections.length; index++) {
   newAnchor.classList.add('link');
   newAnchor.classList.add('color-white');
   newAnchor.textContent = sectionTitles[index].innerHTML;
-  // Append the two constants above
+  // Append and create nav links for navbar
   navContainer.appendChild(newListItem);
   newListItem.appendChild(newAnchor);
   // Result: <li id="navItem0" class="nav-item"> <a class="link color-white"> Product </a>  </li>
 
-  // Add Event isteners to page sections being hovered
+  // Add Event listeners to every section,
+  // affects the nav links background to active.
   pageSections[index].addEventListener('mouseover', function() {
     RemoveActiveBackground();
     document.getElementById("nav-item-" + index).classList.add('active');
@@ -64,10 +56,21 @@ for (let index = 0; index < pageSections.length; index++) {
 }
 // End of For Loop
 
-// ######################## Point of No Return, Functions Below ###########################
+// ######################## Functions Below ###########################
 // Unselect all link items from having a green background
 function RemoveActiveBackground() {
   for (let navItems = 0; navItems < pageSections.length; navItems++) {
     document.getElementById("nav-item-" + navItems).classList.remove('active');
   }
 }
+
+// ######################## Event Listeners Below ###########################
+// Listener for Mobile nav icon.
+navIcon.addEventListener('click', function() {
+  RemoveActiveBackground();
+  document.getElementById('nav-icon').classList.toggle('color-success');
+  //Make nav items visible or invisible
+  for (let index = 0; index < pageSections.length; index++) {
+    document.getElementById('nav-item-' + index).classList.toggle('visible');
+  }
+});

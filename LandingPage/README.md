@@ -10,4 +10,5 @@ Key Notes
 Credit
 - Fonts from fontawsome.com
 - images from unsplash.com
+- Title of "Pronix" was made using a random text genorator
 

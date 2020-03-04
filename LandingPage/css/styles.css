@@ -7,19 +7,26 @@
   align-items: flex-end;
   flex-direction: column;
 
-  * {
-    border: 1px solid rgb(64, 29, 255);
-  }
 */
 
+* {
+  border: 1px solid rgb(64, 29, 255);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
 /* ########## Text & Font Colors ########## */
 .color-white {
   color: rgb(255, 255, 255);
 }
 
+/*
 .color-light {
   color: rgb(232, 232, 232);
 }
+*/
 
 .color-warning {
   color: rgb(242, 197, 38);
@@ -82,7 +89,7 @@
 /* ########### Images ############ */
 /* Section 1: Main */
 .main-background-image {
-  background-image: url('../img/mainImage.jpeg');
+  background-image: url('https://raw.githubusercontent.com/erickkg/SiteImages/master/Udacity-LandingPage/mainImage.jpeg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -91,16 +98,7 @@
 
 /* Section 2: Product */
 .product-picture {
-  background-image: url('../img/productImage.jpeg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100%;
-  min-height: 60vh;
-}
-
-.product-picture-writing {
-  background-image: url('../img/RocketbookOnDesk.jpg');
+  background-image: url('https://raw.githubusercontent.com/erickkg/SiteImages/master/Udacity-LandingPage/productImage.jpeg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -110,7 +108,7 @@
 
 /* Section 4: Contact */
 .image-location {
-  background-image: url('https://source.unsplash.com/1600x900/?nature,water');
+  background-image: url('https://raw.githubusercontent.com/erickkg/SiteImages/master/Udacity-LandingPage/mainImage.jpeg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -159,7 +157,7 @@
 
 /* ~~~~~~~~~~~~~ Main Background Image ~~~~~~~~~~~~~ */
 .main-card-info {
-  padding-top: 40vh;
+  padding-top: 70vh;
   font-size: 1.1rem;
 }
 
@@ -180,7 +178,7 @@
   display: flex;
   justify-content: center;
   padding: 30px;
-  text-align: center;
+
   height: 150px;
 }
 
@@ -190,7 +188,7 @@
 
 .welcome-text {
   border-left: 1px solid rgb(77, 217, 49);
-  padding: 20px;
+  height: 20px;
 }
 
 /* ~~~~~~~~~~~~~ Sections ~~~~~~~~~~~~~ */
@@ -211,14 +209,17 @@
   margin: 20px 0 60px;
 }
 
-.social-container {
+.social-icon-container {
   display: flex;
   justify-content: space-around;
+  padding: 10px;
 }
 
+/*
 .social-container .fab {
   margin: 10px;
 }
+*/
 
 /* ~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~ */
 .footer {
