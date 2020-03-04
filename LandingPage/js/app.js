@@ -5,19 +5,36 @@ let pageSections = document.querySelectorAll('section');
 let sectionTitles = document.querySelectorAll('.section-title');
 
 GenerateNavBar();
+ToggleMobileNavbar();
 
-// Add event listeners
+// Add event listeners to every nav item
 for (let index = 0; index < pageSections.length; index++) {
+
+  // Scroll to section area when a nav link gets clicked on
+  let navLink = document.getElementById('nav-item-' + index);
+  let sectionArea = document.querySelectorAll('section');
+  navLink.addEventListener('click', function() {
+    RemoveActiveBackground();
+    sectionArea[index].scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+
   // affects the nav links background to active.
   pageSections[index].addEventListener('mouseover', function() {
     RemoveActiveBackground();
-    document.getElementById("nav-item-" + index).classList.add('active');
+    document.getElementById('nav-item-' + index).classList.add('active');
+    /* TODO .classlist.add('bg-light'); */
+    document.getElementById('section-' + index).classList.remove('bg-dark-secondary');
+     document.getElementById('section-' + index).classList.add('bg-light');
+    console.log('hovering over ' + index);
   });
 
   // Give the sections an event listener that will make the nav go away
   pageSections[index].addEventListener('click', function() {
     if (!document.getElementById('nav-item-' + index).classList.contains('invisible')) {
-      ToggleNavBar();
+      console.log("DOes NOT contain invisible");
+      ToggleMobileNavbar();
     }
   });
 
@@ -29,7 +46,7 @@ for (let index = 0; index < pageSections.length; index++) {
 
 // Toggle navbar when nav-icon is clicked
 navIcon.addEventListener('click', function() {
-  ToggleNavBar();
+  ToggleMobileNavbar();
 });
 
 
@@ -41,14 +58,15 @@ function RemoveActiveBackground() {
   }
 }
 
-function ToggleNavBar() {
+// Toggle the dropdown shown on MOBILE when the user clicks on the navbar icon
+function ToggleMobileNavbar() {
   for (let navIndex = 0; navIndex < pageSections.length; navIndex++) {
     document.getElementById('nav-item-' + navIndex).classList.toggle('invisible');
   }
 }
 
+// For every section, create a nav item with the name of that section title
 function GenerateNavBar() {
-  // For every section, create a nav item with the name of that section title
   for (let index = 0; index < pageSections.length; index++) {
 
     // Creating nav bar items with links to sections
@@ -63,16 +81,6 @@ function GenerateNavBar() {
     // Append and create nav links for navbar
     navContainer.appendChild(newListItem);
     newListItem.appendChild(newAnchor);
-    // Result: <li id="navItem0" class="nav-item"> <a class="link color-white"> Product </a>  </li>
-
-    // Scroll to section area when a nav link gets clicked on
-    let navLink = document.getElementById('nav-item-' + index);
-    let sectionArea = document.querySelectorAll('section');
-    navLink.addEventListener('click', function() {
-      RemoveActiveBackground();
-      sectionArea[index].scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
+    // Result: <li id="nav-item-0" class="nav-item"> <a class="link color-white"> Product </a>  </li>
   }
 }

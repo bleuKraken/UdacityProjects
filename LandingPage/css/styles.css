@@ -8,7 +8,6 @@
   flex-direction: column;
 
 */
-
 * {
   border: 1px solid rgb(64, 29, 255);
 }
@@ -21,6 +20,7 @@
   font-size: 2rem;
   font-weight: bold;
 }
+
 /* ########## Text & Font Colors ########## */
 .color-white {
   color: rgb(255, 255, 255);
@@ -47,9 +47,15 @@
   background-color: rgb(26, 26, 26);
 }
 
+.bg-dark-secondary {
+  background-color: rgb(41, 46, 40);
+}
+
 .bg-light {
   background-color: rgb(231, 231, 231);
 }
+
+
 
 /* ~~~~~~~~~~~~~ Icon Colors ~~~~~~~~~~~~~ */
 .fa-twitter-square {
@@ -66,17 +72,16 @@
   padding: 0;
 }
 
+/*
 .page .card:nth-child(even) {
   background-color: rgb(26, 26, 26);
 }
 
-/* TODO: Maybe delete this becuase there is already going
-to be a color change when the user is hover over content */
+
 .page .card:nth-child(odd) {
   background-color: rgb(41, 46, 40);
 }
-
-
+*/
 
 /* ########### Images ############ */
 /* Section 1: Main */
@@ -97,7 +102,6 @@ to be a color change when the user is hover over content */
   height: 100%;
   min-height: 60vh;
 }
-
 
 /* ########### Navigation ########### */
 .nav-container {
@@ -264,15 +268,14 @@ to be a color change when the user is hover over content */
     position: fixed;
   }
 
-/* TODO: Delte this and see what happens. if nothing, delete/ */
+  /* TODO: Delte this and see what happens. if nothing, delete/ */
   .nav-item {
     display: block;
   }
 
-.invisible {
-  display: none;
-}
-
+  .invisible {
+    display: none;
+  }
 
   .icon-container {
     width: 100vw;
