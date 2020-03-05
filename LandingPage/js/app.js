@@ -14,19 +14,19 @@ for (let index = 0; index < pageSections.length; index++) {
   let navLink = document.getElementById('nav-item-' + index);
   let sectionArea = document.querySelectorAll('section');
   navLink.addEventListener('click', function() {
-    RemoveActiveBackground();
+    RemoveActiveNav();
     sectionArea[index].scrollIntoView({
       behavior: 'smooth'
     });
   });
 
-  // affects the nav links background to active.
+  // Change background of section the user is hovering over with mouse
   pageSections[index].addEventListener('mouseover', function() {
-    RemoveActiveBackground();
+    RemoveActiveNav();
+    RemoveActiveSection();
     document.getElementById('nav-item-' + index).classList.add('active');
-    /* TODO .classlist.add('bg-light'); */
-    document.getElementById('section-' + index).classList.remove('bg-dark-secondary');
-     document.getElementById('section-' + index).classList.add('bg-light');
+    document.getElementById('section-' + index).classList.remove('bg-black');
+    document.getElementById('section-' + index).classList.add('bg-dark-secondary');
     console.log('hovering over ' + index);
   });
 
@@ -50,11 +50,23 @@ navIcon.addEventListener('click', function() {
 });
 
 
+
+
+
+
 // ######################## Functions Below ###########################
-// Unselect all link items from having a green background
-function RemoveActiveBackground() {
+
+function RemoveActiveNav() {
   for (let navItems = 0; navItems < pageSections.length; navItems++) {
     document.getElementById("nav-item-" + navItems).classList.remove('active');
+  }
+}
+
+// Removes background color by turning all sections back into the same color
+function RemoveActiveSection() {
+  for (let sectionsIndex = 0; sectionsIndex < pageSections.length; sectionsIndex++) {
+    document.getElementById("section-" + sectionsIndex).classList.remove('bg-dark-secondary');
+    document.getElementById("section-" + sectionsIndex).classList.add('bg-black');
   }
 }
 
@@ -65,7 +77,6 @@ function ToggleMobileNavbar() {
   }
 }
 
-// For every section, create a nav item with the name of that section title
 function GenerateNavBar() {
   for (let index = 0; index < pageSections.length; index++) {
 
