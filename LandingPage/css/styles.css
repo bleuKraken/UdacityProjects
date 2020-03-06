@@ -1,8 +1,6 @@
 @import 'colors.css';
 @import 'images.css';
 
-
-
 .page {
   margin: 0;
 }
@@ -151,7 +149,7 @@
 
 /* ~~~~~~~~~~~~~ Sections ~~~~~~~~~~~~~ */
 .card {
-  padding: 130px 0 20px;
+  padding: 130px 0 150px;
   display: flex;
   min-height: 450px;
   text-align: center;
@@ -162,9 +160,14 @@
   padding: 50px 25px;
 }
 
+.section-2,
+.card-text {
+  padding-right: 30px;
+}
+
 /* ~~~~~~~~~~~~~ Contact Section ~~~~~~~~~~~~~ */
 .contact-info {
-  margin: 20px 0 60px;
+  margin: 20px 0 100px;
 }
 
 .social-icon-container {
@@ -221,6 +224,14 @@
   padding: 30px;
 }
 
+.pr-3 {
+  padding-right: 30px;
+}
+
+.pl-3 {
+  padding-left: 30px;
+}
+
 .horizontal-line {
   border-top: 1px solid rgb(77, 217, 49);
   margin: 0;
@@ -235,7 +246,7 @@
 }
 
 .data-container {
-  margin: 20px 0 30px;
+  margin: 40px 10px 30px;
 }
 
 .data-container .font-large {
@@ -309,6 +320,11 @@
 
   .card {
     display: block;
+  }
+
+  .pr-3,
+  .pl-3 {
+    padding: 0;
   }
 
   .section-contact {
