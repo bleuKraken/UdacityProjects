@@ -10,5 +10,6 @@ Key Notes
 Credit
 - Fonts from fontawsome.com
 - images from unsplash.com
+- Text generated using lorem ricksum, an Atom package
 - Title of "Pronix" was made using a random text genorator
 

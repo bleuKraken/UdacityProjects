@@ -1,16 +1,7 @@
 @import 'colors.css';
 @import 'images.css';
 
-/*  Notes
-  This might come in handy,
-  display: flex;
-  align-items: flex-end;
-  flex-direction: column;
 
-*/
-* {
-  border: 1px solid rgb(64, 29, 255);
-}
 
 .page {
   margin: 0;
@@ -21,7 +12,7 @@
   font-weight: bold;
 }
 
-/* ########## Text & Font Colors ########## */
+/* ~~~~~~~~~~~~~ Colors ~~~~~~~~~~~~~ */
 .color-white {
   color: rgb(255, 255, 255);
 }
@@ -70,8 +61,7 @@
   padding: 0;
 }
 
-
-/* ########### Images ############ */
+/* ~~~~~~~~~~~~~ Images ~~~~~~~~~~~~~ */
 /* Section 1: Main */
 .main-background-image {
   background-image: url('https://raw.githubusercontent.com/erickkg/SiteImages/master/Udacity-LandingPage/mainImage.jpeg');
@@ -91,7 +81,7 @@
   min-height: 60vh;
 }
 
-/* ########### Navigation ########### */
+/* ~~~~~~~~~~~~~ Navigation ~~~~~~~~~~~~~ */
 .nav-container {
   list-style: none;
   display: flex;
@@ -241,6 +231,15 @@
   text-align: center;
   font-weight: bold;
   color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.data-container {
+  margin: 20px 0 30px;
+}
+
+.data-container .font-large {
+  display: block;
 }
 
 /* ################# Mobile ################### */
@@ -256,7 +255,6 @@
     position: fixed;
   }
 
-  /* TODO: Delte this and see what happens. if nothing, delete/ */
   .nav-item {
     display: block;
   }
