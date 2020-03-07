@@ -1,27 +1,27 @@
-Landing page made for Udacity Front-End Nanodegree.
+# Multisection Landing Page
 
-Description: Project contains an HTML, CSS and Javascript file.
+**Description:** Project contains an HTML, CSS and Javascript file.
 Webpage is a general multilanding section page.
 Lorem ricksum (ipsum) text is used to generate text, paragraphs, and filler data.
 
-Requirments: none.
+**Requirments:** none.
 
-Installation: Just download and drag-and-drop the HTML file into a web browser ! (:
+**Installation:** Just download and drag-and-drop the HTML file into a web browser ! (:
 
 Webpage made using html, css and javascript files.
 
-Copyright: Made by Erick Gonzalez for the purpose of a project submission towards Udacity's Front-End
-nanodegree program. 
+**Copyright:** Made by Erick Gonzalez for the purpose of a project submission towards Udacity's Front-End
+nanodegree program. Pro
 
 
-Key Notes
+**Key Notes**
 - Navigation made from javascript
 - Clicking on a nav item will scroll the viewer to that section
 - Looks good on mobile and desktop
 - the amount of <section> tags along with a section title will determine the amount of nav items 
 in the top navigation. 
 
-Credit and Acknowledgments
+**Credit and Acknowledgments**
 - Fonts from fontawsome.com
 - images from unsplash.com
 - Text generated using lorem ricksum, an Atom package
