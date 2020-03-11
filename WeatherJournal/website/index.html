@@ -8,13 +8,24 @@
   <!-- BOOTSTRAP -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <!-- LOCAL CSS -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="styles.css">
   <title>Weather Journal</title>
 </head>
 
 <body>
-<!-- STORY BEGINS HERE -->
 
+  <header class="container">
+    <div class="row d-flex justify-content-between">
+      <p>City Name</p>
+      <p>12/01/1997</p>
+    </div>
+  </header>
+<!-- STORY BEGINS HERE -->
+<div class="container p-5 bg-primary">
+  <div class="row">
+    <h1>Hello network!</h1>
+  </div>
+</div>
 
   <footer class="container-fluid">
     <hr>
@@ -28,9 +39,9 @@
   </footer>
   <!-- FONT AWSOME -->
   <script src="https://kit.fontawesome.com/10a1582225.js"></script>
-  <!-- JAVASCRIPT FOR BOOTSTRAP CLASSES -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="javascript/javascript.js"></script>
+  <!-- JAVASCRIPT FOR BOOTSTRAP CLASSES  NOTE: This causes a typeerror g is undifined on web console. TODO: remove is not needed
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+  <script src="app.js"></script>
 </body>
 
 </html>
