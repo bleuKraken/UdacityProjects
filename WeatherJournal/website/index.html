@@ -12,28 +12,55 @@
   <title>Weather Journal</title>
 </head>
 
-<body>
-
+<body class="bg-primary color-primary">
+  <!-- Header -->
   <header class="container">
     <div class="row d-flex justify-content-between">
-      <p>City Name</p>
-      <p>12/01/1997</p>
+      <p class="color-warning">Weather Journal App</p>
+      <p>12-01-1997</p>
     </div>
   </header>
-<!-- STORY BEGINS HERE -->
-<div class="container p-5 bg-primary">
-  <div class="row">
-    <h1>Hello network!</h1>
+<!--  TODO: Potential future update
+  <ul class="row d-flex justify-content-around decoration-none">
+    <li><a href="#0">Daily</a></li>
+    <li><a href="#0">Hourly</a></li>
+    <li><a href="#0">Weekly</a></li>
+    <li><a href="#0">Monthly</a></li>
+  </ul>
+-->
+  <!-- ZipCode Entry -->
+  <section class="zip container">
+    <label for="zip">Enter Zip Code</label>
+    <input type="text" id="zip" placeholder="12345">
+  </section>
+
+<!-- Journal Section
+NOTE: journal == feel -->
+<section class="journal-entry container d-flex flex-column">
+  <label for="journal" class="color-warning">Journal Entry</label>
+  <label for="journal">What's on your mind today?</label>
+  <textarea id="journal" class="my-input" cols="30" rows="10" placeholder="Write any thought, idea, TODO or quote!"></textarea>
+  <button id="generate-entry" type="submit">Save</button>
+</section>
+
+<section class="journal-list container">
+  <div class="title">Most Recent</div>
+  <div id="entryHolder">
+    <div id="date">DATE</div>
+    <div id="temp">TEMPE</div>
+    <div id="content">CONTENT</div>
+
   </div>
-</div>
+</section>
+
 
   <footer class="container-fluid">
     <hr>
     <div class="row d-flex justify-content-center my-2">
-      <a href="https://www.instagram.com/l337_pr0d16y/" target="_blank" class="text-dark"><i class="fab fa-instagram fa-2x p-2"></i></a>
-      <a href="https://www.freecodecamp.org/forum/u/erickkg/summary" target="_blank" class="text-dark"><i class="fab fa-free-code-camp fa-2x p-2"></i></a>
-      <a href="https://github.com/erickkg" target="_blank" class="text-dark"> <i class="fab fa-github fa-2x p-2"></i></a>
-      <a href="https://codepen.io/erickkg" target="_blank" class="text-dark"> <i class="fab fa-codepen fa-2x p-2"></i></a>
+      <a href="https://www.instagram.com/l337_pr0d16y/" target="_blank" class="text-light"><i class="fab fa-instagram fa-2x p-2"></i></a>
+      <a href="https://www.freecodecamp.org/forum/u/erickkg/summary" target="_blank" class="text-light"><i class="fab fa-free-code-camp fa-2x p-2"></i></a>
+      <a href="https://github.com/erickkg" target="_blank" class="text-light"> <i class="fab fa-github fa-2x p-2"></i></a>
+      <a href="https://codepen.io/erickkg" target="_blank" class="text-light"> <i class="fab fa-codepen fa-2x p-2"></i></a>
     </div>
       <p class="text-center">By: <a href="https://codepen.io/erickkg">Erick Gonzalez</a></p>
   </footer>

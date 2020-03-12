@@ -1,0 +1,30 @@
+
+* {
+  border: 1px solid rgb(235, 54, 110);
+}
+
+.bg-primary {
+  background-color: rgb(13, 46, 110) !important;
+}
+
+.color-primary {
+  color: rgb(208, 209, 219) !important;
+}
+
+.color-warning {
+  color: rgb(214, 208, 47);
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* ~~~~~~~~~~~~ Sections Below ~~~~~~~~~~~~ */
+.journal-entry {
+  padding-top: 30px;
+}
