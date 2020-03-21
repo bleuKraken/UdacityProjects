@@ -14,61 +14,63 @@
 
 <body class="bg-primary color-primary">
   <!-- Header -->
-  <header class="container">
-    <div class="row d-flex justify-content-between">
-      <p class="color-warning">Weather Journal App</p>
-      <p>12-01-1997</p>
+  <header class="header">
+    <h1 class="color-warning text-center font-weight-bold">Weather Journal App</h1>
+    <div class="container d-flex justify-content-between">
+      <span id="city-name" class="color-dark">City</span>
+      <span id="header-temp" class="color-dark">Temp</span>
+      <span id="header-date" class="color-dark text-right">DATE</span>
     </div>
   </header>
-<!--  TODO: Potential future update
-  <ul class="row d-flex justify-content-around decoration-none">
-    <li><a href="#0">Daily</a></li>
-    <li><a href="#0">Hourly</a></li>
-    <li><a href="#0">Weekly</a></li>
-    <li><a href="#0">Monthly</a></li>
-  </ul>
--->
-  <!-- ZipCode Entry -->
-  <section class="zip container">
-    <label for="zip">Enter Zip Code</label>
-    <input type="text" id="zip" placeholder="12345">
-  </section>
 
-<!-- Journal Section
-NOTE: journal == feel -->
-<section class="journal container d-flex flex-column">
-  <label for="journal-entry" class="color-warning">Journal Entry</label>
-  <label for="journal-entry">What's on your mind today?</label>
-  <textarea id="journal-entry" class="my-input" cols="30" rows="10" placeholder="Write any thought, idea, TODO or quote!"></textarea>
-  <button id="generate-entry" type="submit">Generate</button>
-</section>
+  <!-- Application -->
+  <div id="app" class="container">
+    <!-- Section: Zipcode -->
+    <div class=" zipcode">
+      <label for="zip">Enter New Zipcode:</label>
+      <input type="text" id="zip" placeholder="zipcode..">
+    </div>
 
-<section class="journal-list container">
-  <div class="title">Most Recent</div>
-  <div id="entryHolder">
-    <div id="date">DATE</div>
-    <div id="temp">TEMPE</div>
-    <div id="content">CONTENT</div>
+    <!-- Section: Questions -->
+    <div class=" journal-section text-center">
+      <h2 class="text-left">Journal Entry</h2>
+      <div class="horizontal-line"></div>
+      <label for="journal-post">How are you feeling today?</label>
+      <textarea class="question-input" id="journal-post" placeholder="Enter your feelings here"></textarea>
+      <!-- Button for Journal Section -->
+      <button id="submit-entry" class="btn btn-light" type="submit">Submit Entry</button>
+    </div>
 
+    <!-- Section: Jounral -->
+    <div class="journal-output">
+      <h2 class="journal-title">Journal Post</h2>
+      <div id="journal-container" class="bg-secondary">
+        <div id="date">DATE</div>
+        <div id="temp">TEMP</div>
+        <div id="content">CONTENT</div>
+      </div>
+    </div>
   </div>
-</section>
+  <!-- Horizontal line -->
+  <div class="horizontal-line bg-warning"></div>
 
-
+  <!-- Footer -->
   <footer class="container-fluid">
-    <hr>
     <div class="row d-flex justify-content-center my-2">
       <a href="https://www.instagram.com/l337_pr0d16y/" target="_blank" class="text-light"><i class="fab fa-instagram fa-2x p-2"></i></a>
       <a href="https://www.freecodecamp.org/forum/u/erickkg/summary" target="_blank" class="text-light"><i class="fab fa-free-code-camp fa-2x p-2"></i></a>
       <a href="https://github.com/erickkg" target="_blank" class="text-light"> <i class="fab fa-github fa-2x p-2"></i></a>
       <a href="https://codepen.io/erickkg" target="_blank" class="text-light"> <i class="fab fa-codepen fa-2x p-2"></i></a>
     </div>
-      <p class="text-center">By: <a href="https://codepen.io/erickkg">Erick Gonzalez</a></p>
+    <p class="text-center">By: <a href="https://codepen.io/erickkg">Erick Gonzalez</a></p>
   </footer>
+
+  <script src="app.js" type="text/javascript"></script>
+
   <!-- FONT AWSOME -->
   <script src="https://kit.fontawesome.com/10a1582225.js"></script>
   <!-- JAVASCRIPT FOR BOOTSTRAP CLASSES  NOTE: This causes a typeerror g is undifined on web console. TODO: remove is not needed
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
-  <script src="app.js"></script>
 </body>
 
 </html>
