@@ -27,24 +27,24 @@
   <div id="app" class="container">
     <!-- Section: Zipcode -->
     <div class=" zipcode">
-      <label for="zip">Enter New Zipcode:</label>
-      <input type="text" id="zip" placeholder="zipcode..">
+      <label for="zip">New Zipcode</label>
+      <input type="text" id="zip" placeholder="enter zip code here">
     </div>
 
     <!-- Section: Questions -->
     <div class=" journal-section text-center">
       <h2 class="text-left">Journal Entry</h2>
       <div class="horizontal-line"></div>
-      <label for="journal-post">How are you feeling today?</label>
-      <textarea class="question-input" id="journal-post" placeholder="Enter your feelings here"></textarea>
+      <label for="feelings">How are you feeling today?</label>
+      <textarea class="question-input" id="feelings" placeholder="Enter your feelings here"></textarea>
       <!-- Button for Journal Section -->
-      <button id="submit-entry" class="btn btn-light" type="submit">Submit Entry</button>
+      <button id="generate" class="btn btn-light" type="submit">Submit Entry</button>
     </div>
 
     <!-- Section: Jounral -->
     <div class="journal-output">
       <h2 class="journal-title">Journal Post</h2>
-      <div id="journal-container" class="bg-secondary">
+      <div id="entryHolder" class="bg-secondary">
         <div id="date">DATE</div>
         <div id="temp">TEMP</div>
         <div id="content">CONTENT</div>
@@ -57,7 +57,6 @@
   <!-- Footer -->
   <footer class="container-fluid">
     <div class="row d-flex justify-content-center my-2">
-      <a href="https://www.instagram.com/l337_pr0d16y/" target="_blank" class="text-light"><i class="fab fa-instagram fa-2x p-2"></i></a>
       <a href="https://www.freecodecamp.org/forum/u/erickkg/summary" target="_blank" class="text-light"><i class="fab fa-free-code-camp fa-2x p-2"></i></a>
       <a href="https://github.com/erickkg" target="_blank" class="text-light"> <i class="fab fa-github fa-2x p-2"></i></a>
       <a href="https://codepen.io/erickkg" target="_blank" class="text-light"> <i class="fab fa-codepen fa-2x p-2"></i></a>
@@ -66,11 +65,8 @@
   </footer>
 
   <script src="app.js" type="text/javascript"></script>
-
   <!-- FONT AWSOME -->
   <script src="https://kit.fontawesome.com/10a1582225.js"></script>
-  <!-- JAVASCRIPT FOR BOOTSTRAP CLASSES  NOTE: This causes a typeerror g is undifined on web console. TODO: remove is not needed
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
 </body>
 
 </html>

@@ -5,12 +5,13 @@ const projectData = [];
 const express = require('express');
 const app = express();
 
-/* Dependencies below */
+// Dependencies
 const bodyParser = require('body-parser');
 
-/* Middleware */
 // Config Express to use body-parser as middle-ware!
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 app.use(bodyParser.json());
 
 //Cors for cross origin allowance
@@ -34,12 +35,14 @@ function listening() {
 
 //GET route
 app.get('/all', sendData);
-function sendData (request, response) {
+
+function sendData(request, response) {
   response.send(projectData);
 };
 // POST route
 app.post('/add', callBack);
-function callBack (request, response) {
+
+function callBack(request, response) {
   projectData.push(request.body);
   response.send(true);
 }

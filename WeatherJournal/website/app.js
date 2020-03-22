@@ -4,39 +4,29 @@ const baseURL = 'http://api.openweathermap.org/data/2.5/weather?zip=';
 let currentDate = new Date();
 let newDate = currentDate.getMonth() + '/' + currentDate.getDate() + '/' + currentDate.getFullYear();
 document.getElementById('header-date').innerHTML = newDate;
-// Global Vars
-let journalPost = document.getElementById('journal-post').value;
-let zipValue = document.getElementById('zip').value;
-
 
 /* ################### Event listener on 'generate" button ################### */
-document.getElementById('submit-entry').addEventListener('click', performAction);
-//Function to run after clicking on "Generate" button
+document.getElementById('generate').addEventListener('click', performAction);
 function performAction(e) {
-  const journalPost = document.getElementById('journal-post').value;
+  const journalPost = document.getElementById('feelings').value;
   const zipValue = document.getElementById('zip').value;
 
-  // Validation with if's
-  if (journalPost === '') {
-    alert("Please enter something in the textbox");
-    return console.log('Missing post.');
-  }
-  if (zipValue === "") {
-    alert("Please enter a Zipcode");
-    return console.log('Missing zipcode.');
+  // Validation to make sure user inputed values
+  if (journalPost === '' || zipValue === '') {
+    alert("Please enter a Zipcode and Jounrnal Entry before clicking submit");
+    return console.log('Missing value(s). Journal post is holding: ' + journalPost + ', Zip is holding: ' + zipValue);
   }
 
-  //Get API Data
+  //Get API Data then update UI
   getApiData(baseURL, zipValue, apiKey).then(function(fahrenheitTemp) {
     postApiData('/add', {
       temperature: fahrenheitTemp + "f",
       date: newDate,
       userResponse: journalPost,
     });
-    // update UI
     updateUI();
   })
-}
+};
 
 /* ################### Get API Data ################### */
 const getApiData = async (baseURL, zip, apiKey) => {
@@ -55,7 +45,7 @@ const getApiData = async (baseURL, zip, apiKey) => {
   } catch (error) {
     console.log("Error getting API data", error);
   }
-}
+};
 
 /* ################### Post API Data ################### */
 const postApiData = async (url = '', data = {}) => {
@@ -91,4 +81,4 @@ const updateUI = async () => {
   } catch (error) {
     console.log("Error updateing UI", error);
   }
-}
+};
