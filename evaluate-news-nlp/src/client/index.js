@@ -1,9 +1,6 @@
 
-import { handleSubmit } from '../js/formHandler';
-import { checkForName} from '../js/nameChecker';
-
-//const urlChecker = require("../js/CheckValidUrl");
-
+import { formHandler } from '../js/formHandler';
+import { checkValidUrl } from '../js/checkValidUrl';
 
 import '../styles/resets.scss';
 import '../styles/base.scss';
@@ -13,8 +10,8 @@ import '../styles/header.scss';
 
 
 document.getElementById('btn-enter').addEventListener('click', () => {
-    handleSubmit(event);
+    formHandler(event);
 });
 
 
-export{checkForName, handleSubmit}
+export{formHandler, checkValidUrl}
