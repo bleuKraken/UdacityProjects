@@ -3,9 +3,9 @@
 */
 const validUrl = require('valid-url');
 
-function isValidURL(URL) {
-  console.log("From checkValidUrl, result:" +validUrl.isUri(URL));
-    return validUrl.isUri(URL); // TODO: What is url
+function checkValidUrl(url) {
+  console.log("From checkValidUrl, result:" + validUrl.isUri(url));
+    return validUrl.isUri(url); 
 }
 
-export{isValidURL}
+export{checkValidUrl}

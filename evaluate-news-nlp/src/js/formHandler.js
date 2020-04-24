@@ -1,10 +1,10 @@
-const checkValidUrl = require("./checkValidUrl");
+import{ checkValidUrl } from './checkValidUrl';
+
 /* Check if URL entered by user is valif, if it is - attempt to contact
   Aylien API anf retrieeve response. Then post data on HTML
+  //dev port: 8084
+  //prod port: 8081
 */
-
-//dev port: 8084
-//prod port: 8081
 function formHandler(event) {
   event.preventDefault();
   const baseUrl = 'http://localhost:8081/sentiment';
@@ -32,7 +32,7 @@ function formHandler(event) {
         document.getElementById('subjectivity_confidence').innerHTML = res.subjectivity_confidence;
       })
   }
-  // Nothing Entered
+  // Nothing Entered, or something went wrong!
   else if (url === "") {
     alert("Please enter a URL");
   } else {
@@ -40,7 +40,4 @@ function formHandler(event) {
   }
 }
 
-//required
-export {
-  formHandler
-}
+export { formHandler }

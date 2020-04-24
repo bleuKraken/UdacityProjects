@@ -1,4 +1,4 @@
-const checkValidUrl = require('./checkValidUrl');
+import{ checkValidUrl } from './checkValidUrl';
 
 // Uses Jest to test a real url and a false url
 test('Testing a real URL', () => {
