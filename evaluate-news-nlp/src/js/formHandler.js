@@ -3,16 +3,23 @@ const checkValidUrl = require("./checkValidUrl");
 /* Check if URL entered by user is valif, if it is - attempt to contact
   Aylien API anf retrieeve response. Then post data on HTML
 */
+
+
+//Dev port: 8084
+//Serv port: 8081
+
 function formHandler(event) {
   event.preventDefault();
 
-  const baseUrl = 'http://localhost:8081/sentiment';
+  //const baseUrl = 'http://127.0.0.1:8081/sentiment';
+  const baseUrl = '/sentiment';
   const url = document.getElementById('url-entered').value;
 
   // If user has entered a valid URL from the internet with an article
   if (checkValidUrl(url)) {
     fetch(baseUrl, {
         method: 'POST',
+              credentials: 'same-origin',
         mode: 'cors',
         headers: {
           'Content-Type': 'application/json',
@@ -22,9 +29,9 @@ function formHandler(event) {
           url: url
         })
       })
-      .then(console.log("Attempting to fetch data and populate"))
+
       .then(res => res.json())
-      .then(function(res) {
+      .then( res => {
         // Populate ID's in html with data from Aylien API :)
         document.getElementById('polarity').innerHTML = res.polarity;
         document.getElementById('subjectivity').innerHTML = res.subjectivity;
@@ -33,13 +40,15 @@ function formHandler(event) {
       })
   }
   // Nothing Entered
-  else if(url === "") {
+  else if (url === "") {
     alert("Please enter a URL");
-  }
-  else {
+  } else {
     alert("URL not found")
   }
 }
 
+
 //required
-export { formHandler }
+export {
+  formHandler
+}

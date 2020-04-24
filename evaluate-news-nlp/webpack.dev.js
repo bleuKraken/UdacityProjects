@@ -1,6 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
-const HtmlWebPackPlugin = require("html-webpack-plugin")
+const HtmlWebPackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
@@ -8,10 +8,17 @@ module.exports = {
     mode: 'development',
     devtool: 'source-map',
     stats: 'verbose',
+    devServer: {
+        // Update port to 3000 for classroom
+        port: 8084,
+    },
+
     output: {
         libraryTarget: 'var',
-        library: 'Client'
+        library: 'Client',
+
     },
+
     module: {
         rules: [
             {
