@@ -4,7 +4,6 @@
 const validUrl = require('valid-url');
 
 function checkValidUrl(url) {
-  console.log("From checkValidUrl, result:" + validUrl.isUri(url));
     return validUrl.isUri(url); 
 }
 
