@@ -8,4 +8,4 @@ function isValidURL(URL) {
     return validUrl.isUri(URL); // TODO: What is url
 }
 
-module.exports = isValidURL;
+export{isValidURL}

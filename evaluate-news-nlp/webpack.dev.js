@@ -9,16 +9,12 @@ module.exports = {
     devtool: 'source-map',
     stats: 'verbose',
     devServer: {
-        // Update port to 3000 for classroom
-        port: 8084,
+    port: 8084
     },
-
     output: {
         libraryTarget: 'var',
         library: 'Client',
-
     },
-
     module: {
         rules: [
             {
@@ -40,7 +36,6 @@ module.exports = {
         new CleanWebpackPlugin({
             // Simulate the removal of files
             dry: true,
-            // Write Logs to Console
             verbose: true,
             // Automatically remove all unused webpack assets on rebuild
             cleanStaleWebpackAssets: true,
