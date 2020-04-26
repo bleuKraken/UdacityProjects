@@ -1,5 +1,12 @@
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 40px;
+  background-color: rgb(39, 76, 134);
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 40px;
+  font-size: 1.3rem;
+}
+
+.name {
+  padding: 10px;
 }

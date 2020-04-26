@@ -3,47 +3,59 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Bonjour !</title>
+  <title>Aylien</title>
 </head>
 
 <body>
   <!-- header -->
   <header>
-    <div class="">
-      Article Sentiment Analyzer
+    <div class="name">
+      <strong>Aylien Sentiment Analyzer</strong>
     </div>
     <div class="">
-      navigation
+      <i class="fas fa-robot fa-2x"></i>
     </div>
   </header>
 
   <!-- Main hello hello-->
   <main>
+    <section class="info">
+      <p>Using the power of AI, <a href="https://aylien.com/" target="_blank">Aylien</a> can read through a tweet, string of text, review or short blog post and determine if the post written is <i>positive,</i> or maybe <i>negative</i> or even <i>neutral</i>. </p>
+      <p><strong>How to use:</strong> Find a tweet, review, or short post. Copy that URL and paste it into the bar below. Click on "Analyze Link" and Aylien will do the rest of the work and output below.</p>
+    </section>
     <section>
       <form class="">
-        <label for="url-entered">Please Enter Article URL</label>
+        <label for="url-entered">Enter Article URL</label>
         <input id="url-entered" type="text" name="input" value="" placeholder="Ex. https://www.article.co">
-        <input id="btn-enter" type="submit" name="Submit" value="submit">
+        <input id="btn-enter" type="submit" name="Submit" value="Analyze Link">
       </form>
     </section>
 
     <!-- Results -->
     <section>
-      <p class="form-result">Form Results:</p>
+      <p class="form-result"><strong>Form Results</strong></p>
       <div id="results">
-        <ul>
-          <li id="polarity"></li>
-          <li id="subjectivity"></li>
-          <li id="polarity_confidence"></li>
-          <li id="subjectivity_confidence"></li>
-        </ul>
+        <p>Polarity: <span id="polarity"></span></p>
+        <p>Subjectivity: <span id="subjectivity"></span></p>
+        <p>Polarity Confidence: <span id="polarity_confidence"></span></p>
+        <p>Subjectivity Confidence: <span id="subjectivity_confidence"></span></p>
+        <p>Text Post <span id="text"></span></p><br>
+
       </div>
+
+
+
+
+
     </section>
   </main>
 
   <footer>
-    <p>This is a footer</p>
+    <p>Webpage created by <a href="https://codepen.io/erickkg" target="_blank">Erick G</a> using <a href="https://aylien.com/" target="_blank">Aylien</a> for data processing and <a href="https://fontawesome.com/" target="_blank">Font awsome</a> for the awsome robot above in the header.</p>
+    <p> This Webpage is a submission for <a href="https://www.udacity.com/" target="blank">Udacity's</a> Front End NanoDegree <a href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011" target="_blank">program</a>.</p>
   </footer>
+  <script src="https://kit.fontawesome.com/10a1582225.js"></script>
+
 </body>
 
 </html>

@@ -30,6 +30,7 @@ function formHandler(event) {
         document.getElementById('subjectivity').innerHTML = res.subjectivity;
         document.getElementById('polarity_confidence').innerHTML = res.polarity_confidence;
         document.getElementById('subjectivity_confidence').innerHTML = res.subjectivity_confidence;
+        document.getElementById('text').innerHTML = res.text;
       })
   }
   // Nothing Entered, or something went wrong!
