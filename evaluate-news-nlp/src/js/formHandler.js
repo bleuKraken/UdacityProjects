@@ -37,7 +37,7 @@ function formHandler(event) {
   else if (url === "") {
     alert("Please enter a URL");
   } else {
-    alert("URL not found")
+    alert("URL not found");
   }
 }
 

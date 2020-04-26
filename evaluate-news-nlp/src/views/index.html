@@ -12,7 +12,7 @@
     <div class="name">
       <strong>Aylien Sentiment Analyzer</strong>
     </div>
-    <div class="">
+    <div class="robot">
       <i class="fas fa-robot fa-2x"></i>
     </div>
   </header>
@@ -24,7 +24,7 @@
       <p><strong>How to use:</strong> Find a tweet, review, or short post. Copy that URL and paste it into the bar below. Click on "Analyze Link" and Aylien will do the rest of the work and output below.</p>
     </section>
     <section>
-      <form class="">
+      <form>
         <label for="url-entered">Enter Article URL</label>
         <input id="url-entered" type="text" name="input" value="" placeholder="Ex. https://www.article.co">
         <input id="btn-enter" type="submit" name="Submit" value="Analyze Link">
@@ -39,14 +39,8 @@
         <p>Subjectivity: <span id="subjectivity"></span></p>
         <p>Polarity Confidence: <span id="polarity_confidence"></span></p>
         <p>Subjectivity Confidence: <span id="subjectivity_confidence"></span></p>
-        <p>Text Post <span id="text"></span></p><br>
-
+        <p>Text Post: <span id="text"></span></p><br>
       </div>
-
-
-
-
-
     </section>
   </main>
 
@@ -54,8 +48,16 @@
     <p>Webpage created by <a href="https://codepen.io/erickkg" target="_blank">Erick G</a> using <a href="https://aylien.com/" target="_blank">Aylien</a> for data processing and <a href="https://fontawesome.com/" target="_blank">Font awsome</a> for the awsome robot above in the header.</p>
     <p> This Webpage is a submission for <a href="https://www.udacity.com/" target="blank">Udacity's</a> Front End NanoDegree <a href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011" target="_blank">program</a>.</p>
   </footer>
+  <!-- Scripts Below -->
+  <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+        });
+    }
+</script>
   <script src="https://kit.fontawesome.com/10a1582225.js"></script>
-
 </body>
-
 </html>
