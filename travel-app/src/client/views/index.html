@@ -19,18 +19,19 @@
 
   <main>
     <section>
-      <form class="">
-        <!-- <form class="" onsubmit="return Client.handleSubmit(event)"> -->
-        <input id="name" type="text" name="input" value="ChangeMe" onblur="onBlur()" placeholder="Name">
+      <form class="form-zipcode">
+         <!-- <form class="" onsubmit="return Client.handleSubmit(event)"> -->
+           <label for="zipcode">Please enter a zip code</label>
+        <input id="zipcode" type="text" name="input" placeholder="Zipcode">
         <!-- <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)"> -->
-        <input type="submit" name="ChangeMe" value="submit">
+        <input id="submit-zip-button" type="submit" name="ChangeMe" value="submit">
       </form>
     </section>
 
-        <section>
-          <strong>Form Results:</strong>
-          <div id="results"></div>
-        </section>
+    <section>
+      <strong>Form Results:</strong>
+      <div id="results"></div>
+    </section>
   </main>
 
   <footer>

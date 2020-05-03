@@ -1,16 +1,30 @@
-function handleSubmit(event) {
+function zipFormHandler(event) {
     event.preventDefault()
 
     // check what text was put into the form field
-    let formText = document.getElementById('name').value
-    checkForName(formText)
+    let zipcode = document.getElementById('zipcode').value;
+
+    console.log("zipcode:" + zipcode);
+    //checkForName(formText)
+
+    /*
+      DOES NOT RELOAOD ON SECOND ZIP
+    */
+
 
     console.log("::: Form Submitted :::")
-    fetch('http://localhost:8080/test')
+    /*
+      postalcode_startsWith = 91790
+      country = US
+      maxRows = 10
+    */
+    fetch('http://api.geonames.org/postalCodeSearchJSON?postalcode_startsWith=91790&country=US&maxRows=10&username=bleu23')
     .then(res => res.json())
     .then(function(res) {
-        document.getElementById('results').innerHTML = res.message
+      console.log(res.postalCodes[0].placeName)
+        document.getElementById('results').innerHTML = res.postalCodes[0].placeName
+
     })
 }
 
-export { handleSubmit }
+export { zipFormHandler }
