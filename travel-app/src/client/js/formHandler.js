@@ -18,7 +18,7 @@ function zipFormHandler(event) {
       country = US
       maxRows = 10
     */
-    fetch('http://api.geonames.org/postalCodeSearchJSON?postalcode_startsWith=91790&country=US&maxRows=10&username=bleu23')
+    fetch('http://api.geonames.org/postalCodeSearchJSON?postalcode_startsWith=' + zipcode + '&country=US&maxRows=10&username=bleu23')
     .then(res => res.json())
     .then(function(res) {
       console.log(res.postalCodes[0].placeName)

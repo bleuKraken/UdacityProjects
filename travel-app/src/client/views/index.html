@@ -3,31 +3,27 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Test</title>
+  <title>Travel App</title>
 </head>
 
-<body>
-
-  <header>
-    <div class="">
-      Logo
-    </div>
-    <div class="">
-      navigation
-    </div>
+<body class="body">
+  <!-- Header -->
+  <header class="header">
+    <div class="company"> Travel App </div>
+    <div class="menu"> Restart </div>
   </header>
 
   <main>
     <section>
+      <!-- Form -->
       <form class="form-zipcode">
-         <!-- <form class="" onsubmit="return Client.handleSubmit(event)"> -->
-           <label for="zipcode">Please enter a zip code</label>
+        <label for="zipcode">Please enter a zip code</label>
         <input id="zipcode" type="text" name="input" placeholder="Zipcode">
-        <!-- <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)"> -->
-        <input id="submit-zip-button" type="submit" name="ChangeMe" value="submit">
+        <input id="submit-zip-button" class="submit-button" type="submit" name="ChangeMe" value="Submit">
       </form>
     </section>
 
+    <!-- Results -->
     <section>
       <strong>Form Results:</strong>
       <div id="results"></div>
@@ -40,6 +36,7 @@
   <!-- DELETE, not needed
   <script type="text/javascript" src="../../../dist/main.js"></script>
 -->
+
 </body>
 
 </html>

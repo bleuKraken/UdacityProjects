@@ -1,12 +1,54 @@
+
+* {
+  border: 1px solid rgb(132, 76, 133);
+}
+
+.body {
+  margin: 0;
+  /*background-image: url('../media/cloudsBackground.jpeg');*/
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: rgb(10, 10, 10);
+  color: rgb(241, 241, 241);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+.form-zipcode {
+  padding: 10px 10px;
+  margin: 20px 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  label {
+    margin: 0 10px;
+  }
+   input {
+    margin: 10px;
+  }
+
+}
+
+.submit-button {
+  width: 100px;
+  align-self: center;
+
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
-*/
+
 
 * {
     box-sizing: border-box;
 }
-
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -28,7 +70,6 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -89,3 +130,4 @@ input {
     line-height: 16px;
     margin: 10px 0;
 }
+*/

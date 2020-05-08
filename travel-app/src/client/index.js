@@ -1,7 +1,9 @@
-import { checkForName } from './js/nameChecker'
 import { zipFormHandler } from './js/formHandler'
+import { application } from './js/application.js'
 
 import './styles/style.scss'
+
+//import img from './image.png';
 
 /*
 Your index.js file inside the client folder should import the main function of your application javascript,
@@ -16,7 +18,6 @@ document.getElementById('submit-zip-button').addEventListener('click', () => {
 
 });
 
-console.log(checkForName);
 
 alert("Hello from src client undex.js");
-export { checkForName, zipFormHandler}
+export { application, zipFormHandler}
