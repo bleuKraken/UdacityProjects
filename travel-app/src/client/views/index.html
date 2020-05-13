@@ -10,23 +10,201 @@
   <!-- Header -->
   <header class="header">
     <div class="company"> Travel App </div>
-    <div class="menu"> Restart </div>
+    <div id="date-today" class="menu"> Timer </div>
+    <div id="countdown" class="menu"> Timer </div>
   </header>
 
   <main>
     <section>
       <!-- Form -->
+      <h2>Pick your date, then pick your place!</h2>
       <form class="form-zipcode">
-        <label for="zipcode">Please enter a zip code</label>
-        <input id="zipcode" type="text" name="input" placeholder="Zipcode">
-        <input id="submit-zip-button" class="submit-button" type="submit" name="ChangeMe" value="Submit">
+
+        <div class="row date-labels">
+          <label for="month">Please enter A Date</label>
+          <label for="day">Please enter A Date</label>
+          <label for="year">Please enter A Year</label>
+        </div>
+
+        <div class="row date-dropdown">
+          <!-- Month selection -->
+          <select id="month" class="dropdown" name="select1">
+            <option value="Jan">Jan</option>
+            <option value="Feb">Feb</option>
+            <option value="Mar">Mar</option>
+            <option value="Apr">Apr</option>
+            <option value="May">May</option>
+            <option value="Jun">Jun</option>
+            <option value="Jul">Jul</option>
+            <option value="Aug">Aug</option>
+            <option value="Sep">Sep</option>
+            <option value="Oct">Oct</option>
+            <option value="Nov">Nov</option>
+            <option value="Dec">Dec</option>
+          </select>
+          <!-- Day selection -->
+          <select id="day" class="dropdown" name="select1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+          </select>
+          <!-- Year selection -->
+          <select id="year" class="dropdown" name="select1">
+            <option value="1">2020</option>
+            <option value="2">2021</option>
+            <option value="3">2022</option>
+          </select>
+        </div>
+
+
+        <!-- Country Selection -->
+        <label for="dropdown-country">What Country would you like to visit?</label>
+        <select id="dropdown-country" class="row-dropdown">
+          <option value="7">Andorra</option>
+          <option value="20260">Argentina</option>
+          <option value="1">American Samoa</option>
+          <option value="18957">Austria</option>
+          <option value="16873">Australia</option>
+          <option value="35">Åland</option>
+          <option value="1186">Azerbaijan</option>
+          <option value="1349">Bangladesh</option>
+          <option value="2781">Belgium</option>
+          <option value="5304">Bulgaria</option>
+          <option value="112">Bermuda</option>
+          <option value="5525">Brazil</option>
+          <option value="3133">Belarus</option>
+          <option value="1656">Canada</option>
+          <option value="4356">Switzerland</option>
+          <option value="346">Chile</option>
+          <option value="3681">Colombia</option>
+          <option value="473">Costa Rica</option>
+          <option value="15507">Czechia</option>
+          <option value="16478">Germany</option>
+          <option value="1471">Denmark</option>
+          <option value="544">Dominican Republic</option>
+          <option value="15951">Algeria</option>
+          <option value="5398">Estonia</option>
+          <option value="37867">Spain</option>
+          <option value="3117">Finland</option>
+          <option value="4">Micronesia</option>
+          <option value="130">Faroe Islands</option>
+          <option value="51667">France</option>
+          <option value="1796412">United Kingdom</option>
+          <option value="77">French Guiana</option>
+          <option value="14">Guernsey</option>
+          <option value="33">Greenland</option>
+          <option value="105">Guadeloupe</option>
+          <option value="865">Greece</option>
+          <option value="548">Guatemala</option>
+          <option value="21">Guam</option>
+          <option value="6774">Croatia</option>
+          <option value="3571">Hungary</option>
+          <option value="138">Ireland</option>
+          <option value="87">Isle of Man</option>
+          <option value="155570">India</option>
+          <option value="147">Iceland</option>
+          <option value="18388">Italy</option>
+          <option value="4">Jersey</option>
+          <option value="123695">Japan</option>
+          <option value="35583">South Korea</option>
+          <option value="13">Liechtenstein</option>
+          <option value="1837">Sri Lanka</option>
+          <option value="21870">Lithuania</option>
+          <option value="4483">Luxembourg</option>
+          <option value="6101">Latvia</option>
+          <option value="29">Monaco</option>
+          <option value="1753">Moldova</option>
+          <option value="2">Marshall Islands</option>
+          <option value="220">North Macedonia</option>
+          <option value="3">Northern Mariana Islands</option>
+          <option value="100">Martinique</option>
+          <option value="73">Malta</option>
+          <option value="491">Malawi</option>
+          <option value="144655">Mexico</option>
+          <option value="2818">Malaysia</option>
+          <option value="52">New Caledonia</option>
+          <option value="464906">Netherlands</option>
+          <option value="5079">Norway</option>
+          <option value="1738">New Zealand</option>
+          <option value="2231">Philippines</option>
+          <option value="11844">Pakistan</option>
+          <option value="71177">Poland</option>
+          <option value="2">Saint Pierre and Miquelon</option>
+          <option value="177">Puerto Rico</option>
+          <option value="206942">Portugal</option>
+          <option value="1">Palau</option>
+          <option value="152">Réunion</option>
+          <option value="37915">Romania</option>
+          <option value="1155">Serbia</option>
+          <option value="43538">Russia</option>
+          <option value="16403">Sweden</option>
+          <option value="121154">Singapore</option>
+          <option value="556">Slovenia</option>
+          <option value="8">Svalbard and Jan Mayen</option>
+          <option value="4231">Slovakia</option>
+          <option value="26">San Marino</option>
+          <option value="903">Thailand</option>
+          <option value="36307">Turkey</option>
+          <option value="29571">Ukraine</option>
+          <option value="41469">United States</option>
+          <option value="1964">Uruguay</option>
+          <option value="1">Vatican City</option>
+          <option value="16">U.S.Virgin Islands</option>
+          <option value="3">Wallis and Futuna</option>
+          <option value="21">Mayotte</option>
+          <option value="3920">South Africa</option>
+        </select>
+        <input id="submit-country-button" class="submit-button" type="submit" value="Submit">
+        <!-- City or area selection -->
+
+        <div id="container-area" class="hidden">
+          <label for="dropdown-country">Area within that country?</label>
+          <select id="js-country-cities" class="row-dropdown">
+            <!-- JS Generates data here based on first selection -->
+          </select>
+          <input id="submit-area-button" class="submit-button" type="submit">
+
+        </div>
+
+        <!--<input id="submit-area-button" class="submit-button" type="submit" value="Submit" disabled="disabled"> -->
+
       </form>
     </section>
 
     <!-- Results -->
-    <section>
-      <strong>Form Results:</strong>
-      <div id="results"></div>
+    <section class="box-results">
+      <strong>Form Results</strong>
+      <div>Country: <span id="result-continent"></span> <span id="result-country-name">COUNTRY</span> , <span id="result-country-code">COUNTRY</span> </div>
+
+      <div class="row"> <div id="latitude">LAT</div>   <div id="longitude">LONG</div> </div>
     </section>
   </main>
 

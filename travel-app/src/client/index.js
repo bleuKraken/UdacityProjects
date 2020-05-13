@@ -1,4 +1,4 @@
-import { zipFormHandler } from './js/formHandler'
+import { countryFormHandler } from './js/formHandler'
 import { application } from './js/application.js'
 
 import './styles/style.scss'
@@ -13,11 +13,14 @@ Your index.js file inside the client folder should import the main function of y
 
 //Event listener on Submit button
 
-document.getElementById('submit-zip-button').addEventListener('click', () => {
-  zipFormHandler(event);
+document.getElementById('submit-country-button').addEventListener('click', () => {
+  countryFormHandler(event);
+});
 
+document.getElementById('submit-area-button').addEventListener('click', () => {
+  countryFormHandler(event);
 });
 
 
 alert("Hello from src client undex.js");
-export { application, zipFormHandler}
+export { application, countryFormHandler}
