@@ -2,73 +2,109 @@ function countryFormHandler(event) {
   event.preventDefault()
 
   let countryAreaContainer = document.getElementById('container-area');
-  //Get country selected
+  // For API
   let countrySelected = document.getElementById('dropdown-country');
   let countryCode = countrySelected.options[countrySelected.selectedIndex].value;
   let countryName = countrySelected.options[countrySelected.selectedIndex].text;
 
-
   // If area within a country is not show, user must select a country
   if (countryAreaContainer.classList.contains('hidden')) {
     console.log("::: Form Submitted :::")
-
-    //fetch('http://api.geonames.org/postalCodeSearchJSON?postalcode_startsWith=' + countryCode + '&cmaxRows=10&username=bleu23')
-    fetch('http://api.geonames.org/postalCodeSearchJSON?placename=' + countryName + '&cmaxRows=1000&username=bleu23')
-      .then(res => res.json())
-      .then(function(res) {
-        ClearOptions();
-        // For every dropdown option, display cities and names that belog to that country
-        for (let count = 0; count < res.postalCodes.length - 1; count++) {
-          // Removes duplicates from cities and areas
-          if (res.postalCodes[count].adminName1 == res.postalCodes[count + 1].adminName1) {
-            count++
-          } else {
-            // If the next state/city is not a duplicate, create it as an option for the dropdown
-            let newLine = document.createElement("option");
-            newLine.innerText = res.postalCodes[count].adminName1;
-            document.getElementById('js-country-cities').appendChild(newLine);
-          }
-        }
+    // async function to post form data to backend
+    async function postFormData(url = '', data = {}) {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+      return response.json();
+    }
+    // Sending to Server
+    postFormData('http://localhost:3000/travel', {
+        country: countryCode,
+        countryname: countryName
       })
+      .then((data) => {
+        populateDropdown(data);
+      });
+
+
     countryAreaContainer.classList.remove('hidden');
   } else {
     // Country selected, display option to select area within that country
-    alert("Shiit, whats next b?")
     let areaSelected = document.getElementById('js-country-cities');
     let areaCode = areaSelected.options[areaSelected.selectedIndex].value;
     let areaName = areaSelected.options[areaSelected.selectedIndex].text;
-
-    console.log('areaCode: ' + areaCode)
-    console.log('areaName: ' + areaName)
-    //TODO: add country request for lat and long. 2 approuches here.
-    // 1 -- do somethnig with the zip value of country
-    // 2 =- check doc of api if there is something i can do with areaName above
-    /*
-        console.log("::: Form 2 Submitted :::")
-        //fetch('http://api.geonames.org/postalCodeSearchJSON?postalcode_startsWith=' + countryCode + '&cmaxRows=10&username=bleu23')
-        fetch('http://api.geonames.org/postalCodeSearchJSON?placename=' + countryName + '&cmaxRows=1000&username=bleu23')
-          .then(res => res.json())
-          .then(function(res) {
-            ClearOptions();
-            // For every dropdown option, display cities and names that belog to that country
-            for (let count = 0; count < res.postalCodes.length - 1; count++) {
-              // Removes duplicates from cities and areas
-              if (res.postalCodes[count].adminName1 == res.postalCodes[count + 1].adminName1) {
-                count++;
-              } else {
-                // If the next state/city is not a duplicate, create it as an option for the dropdown
-                let newLine = document.createElement("option");
-                newLine.innerText = res.postalCodes[count].adminName1;
-                document.getElementById('js-country-cities').appendChild(newLine);
-              }
-            }
-          })
-          */
+    // async function to post form data to backend
+    async function postFormData(url = '', data = {}) {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+      return response.json();
+    }
+    // Sending to Server
+    postFormData('http://localhost:3000/travel-location', {
+        city: areaName,
+        citycode: areaCode
+      })
+      .then((data) => {
+        cityLocation(data);
+      });
   }
-
-
   StartCountdownTimer();
 }
+
+
+// Populate the dropdown based on what country the user selects
+function cityLocation(data = {}) {
+  console.log(data.weatherdate)
+  document.getElementById('valid-date').innerHTML = data.weatherdate[0];
+
+
+
+  console.log(data.description)
+  console.log(data.temperature)
+  console.log(data.mintemp)
+  console.log(data.maxtemp)
+  console.log(data.name)
+
+}
+
+
+// Populate the dropdown based on what country the user selects
+function populateDropdown(data = {}) {
+  document.getElementById('result-country-name').innerHTML = data.country;
+  //  Example - a,Liguria,Andorra la Vella,Aragon,Rajasthan,Himachal Pradesh,Bihar,Canillo,Liguria,Navarra,Encamp,Escaldes-Engordany,Navarra,Occitanie,La Massana,Ordino
+  let cityCodes = data.citycodes;
+  let cities = data.citynames;
+  let firstComma = 2;
+  let firstCityCodeComma = 2;
+  let nextComma = cities.indexOf(",", 3);
+  let nextCodeComma = cityCodes.indexOf(",", 3);
+  let commaCount = (cities.split(',').length - 1);
+  // Populate dropdown
+  for (let count = 0; count < commaCount; count++) {
+    // Pull out every name between commas
+    let city = cities.slice(firstComma, nextComma);
+    let code = cityCodes.slice(firstCityCodeComma, nextCodeComma);
+    let newLine = document.createElement("option");
+    newLine.innerText = city;
+    newLine.value = code;
+    document.getElementById('js-country-cities').appendChild(newLine);
+    firstComma = nextComma + 1;
+    firstCityCodeComma = nextCodeComma + 1;
+    nextComma = cities.indexOf(",", firstComma + 2);
+    nextCodeComma = cityCodes.indexOf(",", firstCityCodeComma + 2);
+  }
+}
+
+
 
 
 

@@ -3,19 +3,19 @@
   border: 1px solid rgb(132, 76, 133);
 }
 
-.row {
+.header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: rgb(36, 16, 128);
+  color: rgb(255, 255, 255);
 }
 
-.row-dropdown {
-  margin: 0 20px;
+.banner {
+  text-align: center;
+  padding: 0 20%;
+  background-color: rgb(188, 207, 236);
 }
-
-.hidden {
-  visibility: hidden;
-}
-
 
 .date-labels {
   padding: 5px 20px;
@@ -32,14 +32,14 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 20px;
+.calendar-input-container {
+  margin: 0 15%;
+  padding: 0;
 }
+
+
 
 .company {
   font-weight: bold;
@@ -70,7 +70,53 @@ h2 {
 
 }
 
+.country-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 30px 0 20px 0;
+}
+
 .submit-button {
   width: 100px;
   align-self: center;
+}
+
+
+/* ################### Weather Card ################### */
+.weather-card {
+  padding: 3px;
+  border: 1px solid rgb(201, 233, 55);
+  max-width: 200px;
+  text-align: center;
+}
+
+.card-header {
+  font-weight: bold;
+  padding:  5px 0;
+  border-bottom: rgb(0, 0, 0);
+}
+
+.weather-description {
+  padding: 5px 0;
+}
+
+.card-footer {
+  padding-top: 5px;
+}
+
+/* ################### Universal Below ################### */
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.row-dropdown {
+  margin: 0 20px;
+}
+
+.hidden {
+  visibility: hidden;
 }
