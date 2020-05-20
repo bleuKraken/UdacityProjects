@@ -111,6 +111,17 @@ h2 {
 .weather-description {
   padding: 5px 0;
 }
+
+/* ################### Results ################### */
+.section-trip-results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 30px 15%;
+  border: 1px solid rgb(59, 191, 80);
+
+}
 /* ################### Universal Below ################### */
 .row {
   display: flex;
@@ -134,6 +145,5 @@ h2 {
 }
 
 .display-block {
-  display: flex;
-  justify-content: center;
+  display: block;
 }

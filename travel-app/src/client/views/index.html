@@ -24,6 +24,8 @@
     <section>
       <!-- Form -->
       <form class="form-zipcode">
+
+        <!-- TODO: Go with date section in browser, delete below if not needed -->
         <!-- Row Date Dropdown
         <div class="row date-labels">
           <label for="month">Please enter A Date</label>
@@ -376,8 +378,9 @@
       </div>
     </section>
 
+<section id="final-results-container" class="display-none">
     <!-- Weather output section -->
-    <section id="section-weather" class="section-weather display-none">
+    <div class="section-weather">
       <h4 class="weather-header">Next 16-Day Forcast for <span id="city-name-weather"></span></h4>
       <!-- Card -->
       <div class="weather-card">
@@ -509,14 +512,17 @@
         <div>Temp <span id="temp-15">23.4</span></div>
         <div>Min <span id="min-temp-15">5.34</span></div>
       </div>
+    </div>
 
-    </section>
-
-    <section class="-section-trip-results">
-      <div class="">Trip to: <span id="final-city-name"></span> <span id="final-country-name"></span></div>
+    <div class="section-trip-results">
+      <div class="">Trip to: <span id="final-city-name"></span>,<span id="final-country-name"></span></div>
       <div class="timer">Departure Date: <span id="final-departue-date"></span></div>
-      <div class="image-container"></div>
-    </section>
+
+      <!-- TODO: This kinda works, need loader or something to help load image -->
+      <img src='#' id='city-photo' alt="city image">
+    </div>
+</section>
+
   </main>
 
   <footer>

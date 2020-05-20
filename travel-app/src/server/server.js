@@ -88,7 +88,6 @@ async function processTravelData(req, res) {
   return res.send(travelData);
 }
 
-
 // SECOND Post Route - Travel data form / Validation
 app.post('/travel-location',
   (req, res) => {
@@ -102,14 +101,13 @@ async function processLocationData(req, res) {
   let latitude;
   let longitude;
   // get location from Geonames API and fetch first entry
-  let cityInfoURL = 'http://api.geonames.org/postalCodeSearchJSON?placename=' + req.body.city + '&postalcode=' + req.body.citycode + '&cmaxRows=1000&username=bleu23'
+  //TODO: Change to username from dot
+  let cityInfoURL = 'http://api.geonames.org/postalCodeSearchJSON?placename=' + req.body.city + '&postalcode=' + req.body.citycode + '&cmaxRows=1000&username=' + process.env.GEONAMES_KEY
   await request(cityInfoURL, function(err, response, body) {
     let cityData = JSON.parse(body);
     latitude = cityData.postalCodes[0].lat;
     longitude = cityData.postalCodes[0].lng;
   });
-
-
 
   // Variables used for weather bit API, get weather conditions
   let cityName;
@@ -118,13 +116,13 @@ async function processLocationData(req, res) {
   let temp = [];
   let minTemp = [];
   let maxTemp = [];
+  let cityPhoto;
+
   let weatherbitURL = 'http://api.weatherbit.io/v2.0/forecast/daily?lat=' + latitude + '&lon=' + longitude + '&key=' + process.env.WEATHERBIT_KEY
   await request(weatherbitURL, function(err, response, body) {
     let weatherData = JSON.parse(body);
     // Grab vars from server, yee!
     cityName = weatherData.city_name;
-
-
 
     console.log("strarting..")
     // SENDING DATA FROM HERE TO BE POPULATED
@@ -139,6 +137,22 @@ async function processLocationData(req, res) {
     console.log("Finsihed")
     console.log("yee");
   });
+
+
+  console.log("city name is " + cityName)
+
+  // Replace every SPACE With a + sign so PixaBay API can understand
+  let cityPhotoString = cityName.replace(/ /g, "+");
+  let pixabayURL = 'https://pixabay.com/api/?key=' + process.env.PIXABAY_KEY + '&q=' + cityPhotoString + '&image_type=photo'
+  console.log("Linky:" + pixabayURL)
+  await request(pixabayURL, function(err, response, body) {
+    let pixabayData = JSON.parse(body);
+
+    //TODO: Add a loader to be able to download image from pixabay server, then load on site. Check documentation
+    cityPhoto = pixabayData.hits[0].largeImageUrl;
+
+  });
+
   // Variables that will populate page
   let weatherInfo = {
     weatherdate: weatherDate,
@@ -146,12 +160,10 @@ async function processLocationData(req, res) {
     temperature: temp,
     mintemp: minTemp,
     maxtemp: maxTemp,
-    name: cityName
+    name: cityName,
+    photo: cityPhoto
   }
 
   console.log('::: POST Data :::')
   return res.send(weatherInfo);
 }
-
-
-//Example Code: http://api.geonames.org/postalCodeSearchJSON?postalcode_startsWith=91790&maxRows=10&username=bleu23

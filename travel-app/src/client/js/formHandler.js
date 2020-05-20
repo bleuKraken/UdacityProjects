@@ -6,6 +6,7 @@ function countryFormHandler(event) {
   let countrySelected = document.getElementById('dropdown-country');
   let countryCode = countrySelected.options[countrySelected.selectedIndex].value;
   let countryName = countrySelected.options[countrySelected.selectedIndex].text;
+  document.getElementById('final-country-name').innerHTML = countryName;
 
   // If area within a country is not show, user must select a country
   if (countryAreaContainer.classList.contains('hidden')) {
@@ -60,7 +61,6 @@ function countryFormHandler(event) {
   StartCountdownTimer();
 }
 
-
 // Populate the dropdown based on what country the user selects
 function cityLocation(data = {}) {
 // Fill each weather item with information
@@ -74,9 +74,14 @@ for (let count = 0; count < 16; count++) {
   document.getElementById('temp-' + count).innerHTML = data.temperature[count];
   document.getElementById('min-temp-' + count).innerHTML = data.mintemp[count];
 }
+
+console.log('photo: ' + data.photo)
+document.getElementById('city-photo').src = data.photo;
+
+console.log(toString(data.photo))
   // Show the weather section AFTER it has been populated with data
-  document.getElementById('section-weather').classList.remove('display-none');
-  document.getElementById('section-weather').classList.add('display-block');
+  document.getElementById('final-results-container').classList.remove('display-none');
+  document.getElementById('final-results-container').classList.add('display-block');
 }
 
 
@@ -110,7 +115,7 @@ function populateDropdown(data = {}) {
 
 
 
-
+// Delete this, i can do better ! 
 // Countdown timer and time
 function StartCountdownTimer() {
   //TODO: Add date below
