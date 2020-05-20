@@ -127,7 +127,7 @@ async function processLocationData(req, res) {
 
 
     console.log("strarting..")
-
+    // SENDING DATA FROM HERE TO BE POPULATED
     for(let count = 0; count <= 15; count++){
       weatherDate[count] = weatherData.data[count].valid_date;
       weatherDiscription[count] =  weatherData.data[count].weather.description;

@@ -23,11 +23,8 @@
   <main>
     <section>
       <!-- Form -->
-
       <form class="form-zipcode">
-
         <!-- Row Date Dropdown
-
         <div class="row date-labels">
           <label for="month">Please enter A Date</label>
           <label for="day">Please enter A Date</label>
@@ -89,7 +86,6 @@
         </div>
       -->
         <label for="calendar-input">Departure Date</label>
-
         <div class="calendar-input-container">
           <input id="calendar-input" type="text" placeholder="MM/DD/YYY">
           <!-- Calendar trigger button -->
@@ -97,11 +93,7 @@
           <div id="calendar-container" class="container hidden">
             <div id="calendar"></div>
           </div>
-
         </div>
-
-
-
 
         <!-- Country Selection -->
         <label for="dropdown-country">What Country would you like to visit?</label>
@@ -385,19 +377,145 @@
     </section>
 
     <!-- Weather output section -->
-    <section class="section-weather">
-      <h4>Next 16-Day Forcast</h4>
-
+    <section id="section-weather" class="section-weather display-none">
+      <h4 class="weather-header">Next 16-Day Forcast for <span id="city-name-weather"></span></h4>
       <!-- Card -->
       <div class="weather-card">
-        <div class="card-header" id="valid-date">2020-99-99</div>
-        <div class="weather-description" id="weather-description">Moderate Rain</div>
-        <div>Temp <span id="temp">23.4</span></div>
-        <div>Max <span id="max-temp">12.4</span></div>
-        <div>Min <span id="min-temp">5.34</span></div>
-        <div class="card-footer" id="city-name">Andora</div>
+        <div class="card-header" id="valid-date-0">2020-99-99</div>
+        <div class="weather-description" id="weather-description-0">Moderate Rain</div>
+        <div>Max <span id="max-temp-0">12.4</span></div>
+        <div>Temp <span id="temp-0">23.4</span></div>
+        <div>Min <span id="min-temp-0">5.34</span></div>
       </div>
 
+      <div class="weather-card">
+        <div class="card-header" id="valid-date-1">2020-99-99</div>
+        <div class="weather-description" id="weather-description-1">Moderate Rain</div>
+        <div>Max <span id="max-temp-1">12.4</span></div>
+        <div>Temp <span id="temp-1">23.4</span></div>
+        <div>Min <span id="min-temp-1">5.34</span></div>
+      </div>
+
+      <div class="weather-card">
+        <div class="card-header" id="valid-date-2">2020-99-99</div>
+        <div class="weather-description" id="weather-description-2">Moderate Rain</div>
+        <div>Max <span id="max-temp-2">12.4</span></div>
+        <div>Temp <span id="temp-2">23.4</span></div>
+        <div>Min <span id="min-temp-2">5.34</span></div>
+      </div>
+
+      <div class="weather-card">
+        <div class="card-header" id="valid-date-3">2020-99-99</div>
+        <div class="weather-description" id="weather-description-3">Moderate Rain</div>
+        <div>Max <span id="max-temp-3">12.4</span></div>
+        <div>Temp <span id="temp-3">23.4</span></div>
+        <div>Min <span id="min-temp-3">5.34</span></div>
+      </div>
+
+      <div class="weather-card">
+        <div class="card-header" id="valid-date-4">2020-99-99</div>
+        <div class="weather-description" id="weather-description-4">Moderate Rain</div>
+        <div>Max <span id="max-temp-4">12.4</span></div>
+        <div>Temp <span id="temp-4">23.4</span></div>
+        <div>Min <span id="min-temp-4">5.34</span></div>
+        <div class="card-footer" id="city-name-4">Andora</div>
+      </div>
+
+      <div class="weather-card">
+        <div class="card-header" id="valid-date-5">2020-99-99</div>
+        <div class="weather-description" id="weather-description-5">Moderate Rain</div>
+        <div>Max <span id="max-temp-5">12.4</span></div>
+        <div>Temp <span id="temp-5">23.4</span></div>
+        <div>Min <span id="min-temp-5">5.34</span></div>
+      </div>
+
+      <div class="weather-card">
+        <div class="card-header" id="valid-date-6">2020-99-99</div>
+        <div class="weather-description" id="weather-description-6">Moderate Rain</div>
+        <div>Max <span id="max-temp-6">12.4</span></div>
+        <div>Temp <span id="temp-6">23.4</span></div>
+        <div>Min <span id="min-temp-6">5.34</span></div>
+      </div>
+
+      <div class="weather-card">
+        <div class="card-header" id="valid-date-7">2020-99-99</div>
+        <div class="weather-description" id="weather-description-7">Moderate Rain</div>
+        <div>Max <span id="max-temp-7">12.4</span></div>
+        <div>Temp <span id="temp-7">23.4</span></div>
+        <div>Min <span id="min-temp-7">5.34</span></div>
+        <div class="card-footer" id="city-name-7">Andora</div>
+      </div>
+
+      <div class="weather-card">
+        <div class="card-header" id="valid-date-8">2020-99-99</div>
+        <div class="weather-description" id="weather-description-8">Moderate Rain</div>
+        <div>Max <span id="max-temp-8">12.4</span></div>
+        <div>Temp <span id="temp-8">23.4</span></div>
+        <div>Min <span id="min-temp-8">5.34</span></div>
+      </div>
+
+      <div class="weather-card">
+        <div class="card-header" id="valid-date-9">2020-99-99</div>
+        <div class="weather-description" id="weather-description-9">Moderate Rain</div>
+        <div>Max <span id="max-temp-9">12.4</span></div>
+        <div>Temp <span id="temp-9">23.4</span></div>
+        <div>Min <span id="min-temp-9">5.34</span></div>
+      </div>
+
+      <div class="weather-card">
+        <div class="card-header" id="valid-date-10">2020-99-99</div>
+        <div class="weather-description" id="weather-description-10">Moderate Rain</div>
+        <div>Max <span id="max-temp-10">12.4</span></div>
+        <div>Temp <span id="temp-10">23.4</span></div>
+        <div>Min <span id="min-temp-10">5.34</span></div>
+      </div>
+
+      <div class="weather-card">
+        <div class="card-header" id="valid-date-11">2020-99-99</div>
+        <div class="weather-description" id="weather-description-11">Moderate Rain</div>
+        <div>Max <span id="max-temp-11">12.4</span></div>
+        <div>Temp <span id="temp-11">23.4</span></div>
+        <div>Min <span id="min-temp-11">5.34</span></div>
+      </div>
+
+      <div class="weather-card">
+        <div class="card-header" id="valid-date-12">2020-99-99</div>
+        <div class="weather-description" id="weather-description-12">Moderate Rain</div>
+        <div>Max <span id="max-temp-12">12.4</span></div>
+        <div>Temp <span id="temp-12">23.4</span></div>
+        <div>Min <span id="min-temp-12">5.34</span></div>
+      </div>
+
+      <div class="weather-card">
+        <div class="card-header" id="valid-date-13">2020-99-99</div>
+        <div class="weather-description" id="weather-description-13">Moderate Rain</div>
+        <div>Max <span id="max-temp-13">12.4</span></div>
+        <div>Temp <span id="temp-13">23.4</span></div>
+        <div>Min <span id="min-temp-13">5.34</span></div>
+      </div>
+
+      <div class="weather-card">
+        <div class="card-header" id="valid-date-14">2020-99-99</div>
+        <div class="weather-description" id="weather-description-14">Moderate Rain</div>
+        <div>Max <span id="max-temp-14">12.4</span></div>
+        <div>Temp <span id="temp-14">23.4</span></div>
+        <div>Min <span id="min-temp-14">5.34</span></div>
+      </div>
+
+      <div class="weather-card">
+        <div class="card-header" id="valid-date-15">2020-99-99</div>
+        <div class="weather-description" id="weather-description-15">Moderate Rain</div>
+        <div>Max <span id="max-temp-15">12.4</span></div>
+        <div>Temp <span id="temp-15">23.4</span></div>
+        <div>Min <span id="min-temp-15">5.34</span></div>
+      </div>
+
+    </section>
+
+    <section class="-section-trip-results">
+      <div class="">Trip to: <span id="final-city-name"></span> <span id="final-country-name"></span></div>
+      <div class="timer">Departure Date: <span id="final-departue-date"></span></div>
+      <div class="image-container"></div>
     </section>
   </main>
 

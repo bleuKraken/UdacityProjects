@@ -63,17 +63,20 @@ function countryFormHandler(event) {
 
 // Populate the dropdown based on what country the user selects
 function cityLocation(data = {}) {
-  console.log(data.weatherdate)
-  document.getElementById('valid-date').innerHTML = data.weatherdate[0];
+// Fill each weather item with information
+document.getElementById('city-name-weather').innerHTML = data.name;
+document.getElementById('final-city-name').innerHTML = data.name;
 
-
-
-  console.log(data.description)
-  console.log(data.temperature)
-  console.log(data.mintemp)
-  console.log(data.maxtemp)
-  console.log(data.name)
-
+for (let count = 0; count < 16; count++) {
+  document.getElementById('valid-date-' + count).innerHTML = data.weatherdate[count];
+  document.getElementById('weather-description-' + count).innerHTML = data.description[count];
+  document.getElementById('max-temp-' + count).innerHTML = data.maxtemp[count];
+  document.getElementById('temp-' + count).innerHTML = data.temperature[count];
+  document.getElementById('min-temp-' + count).innerHTML = data.mintemp[count];
+}
+  // Show the weather section AFTER it has been populated with data
+  document.getElementById('section-weather').classList.remove('display-none');
+  document.getElementById('section-weather').classList.add('display-block');
 }
 
 
