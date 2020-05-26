@@ -2,6 +2,14 @@
   border: 1px solid rgb(132, 76, 133);
 }
 
+.body {
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -14,28 +22,16 @@
   text-align: center;
   padding: 0 20%;
   background-color: rgb(188, 207, 236);
+  color: rgb(0, 0, 0);
 }
 
-.date-labels {
-  padding: 5px 20px;
+.date-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 15px 40px 15px;
 }
-
-.date-dropdown {
-  padding: 0 20px;
-  margin-bottom: 30px;
-}
-
-.body {
-  margin: 0;
-  /*background-image: url('../media/cloudsBackground.jpeg');*/
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.calendar-input-container {
-  margin: 0 15%;
-  padding: 0;
+.default-label {
+  font-weight: bold;
 }
 
 .company {
@@ -43,30 +39,14 @@
   font-size: 25px;
 }
 
-h2 {
-  text-align: center;
-}
+/* ################### Form Area ################### */
 
-.dropdown {
-  width: 100px;
-  text-align: center;
-}
-
-.box-results,
-.form-zipcode {
+.form {
   padding: 10px;
   margin: 20px 20%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  label {
-    margin: 0 10px;
-  }
-
-  input {
-    margin: 10px;
-  }
 }
 
 .country-area {
@@ -82,16 +62,15 @@ h2 {
   align-self: center;
 }
 /* ################### Weather Card ################### */
-.weather-header {
-  display: block;
-  width: 100%;
-  text-align: center;
-}
-
 .section-weather {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+.weather-header {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 .weather-card {
@@ -113,15 +92,34 @@ h2 {
 }
 
 /* ################### Results ################### */
+.city-info {
+  width: 100%;
+  background-size: cover;
+}
+
 .section-trip-results {
+  background-image: url('https://source.unsplash.com/random');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 400px;
+  height: 100%;
+}
+
+.results-text-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  padding: 30px 15%;
-  border: 1px solid rgb(59, 191, 80);
+  justify-content: flex-start;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color:rgb(255, 255, 255);
+  min-height: 200px;
+  padding-top: 30px;
+  font-size: 2rem;
+  font-weight: bold;
 
 }
+
 /* ################### Universal Below ################### */
 .row {
   display: flex;

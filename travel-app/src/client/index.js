@@ -1,9 +1,6 @@
-import { countryFormHandler } from './js/formHandler'
-import { application } from './js/application.js'
+import { countryFormHandler } from './js/application.js'
 
 import './styles/style.scss'
-import './styles/calender.scss'
-import './js/calender.js'
 
 
 
@@ -25,10 +22,6 @@ document.getElementById('submit-area-button').addEventListener('click', () => {
   countryFormHandler(event);
 });
 
-document.getElementById('calendar-trigger').addEventListener('click', () => {
-  document.getElementById('calendar-container').classList.toggle('hidden')
-});
-
 
 alert("Hello from src client undex.js");
-export { application, countryFormHandler}
+export { countryFormHandler}
