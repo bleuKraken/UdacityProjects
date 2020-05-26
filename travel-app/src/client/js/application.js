@@ -1,5 +1,6 @@
-function countryFormHandler(event) {
+function application(event) {
   event.preventDefault()
+  console.log("Event is " + event);
   // Get Data Selected
   let countryAreaContainer = document.getElementById('container-area');
   let countrySelected = document.getElementById('dropdown-country');
@@ -139,6 +140,7 @@ function ClearOptions() {
   }
 }
 
+
 export {
-  countryFormHandler
+  application
 }

@@ -2,7 +2,7 @@ const projectData = {}
 
 var path = require('path')
 const express = require('express')
-//const mockAPIResponse = require('./mockAPI.js')
+const mockAPIResponse = require('./mockAPI.js')
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 dotenv.config();

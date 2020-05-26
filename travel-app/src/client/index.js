@@ -1,4 +1,4 @@
-import { countryFormHandler } from './js/application.js'
+import { application } from './js/application.js'
 
 import './styles/style.scss'
 
@@ -15,13 +15,13 @@ Your index.js file inside the client folder should import the main function of y
 //Event listener on Submit button
 
 document.getElementById('submit-country-button').addEventListener('click', () => {
-  countryFormHandler(event);
+  application(event);
 });
 
 document.getElementById('submit-area-button').addEventListener('click', () => {
-  countryFormHandler(event);
+  application(event);
 });
 
 
 alert("Hello from src client undex.js");
-export { countryFormHandler}
+export { application}
