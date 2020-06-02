@@ -1,6 +1,17 @@
+/* API's */
+let baseURL = 'http://api.geonames.org/postalCodeSearchJSON?placename=';
+let userName = '&cmaxRows=1000&username=bleu23';
+let weatherbitURL = 'http://api.weatherbit.io/v2.0/forecast/daily?lat=';
+let weatherbitKEY = '&key=5f07326cea2d40b5a96c398add84355d';
+let pixabayURL = 'https://pixabay.com/api/';
+let pixabayKEY = '?key=16333422-0d109d6b922e359855596f3e8';
+// Global Vars
+let latitude, longitude;
+
+/* Event listener handleer */
 function application(event) {
   event.preventDefault()
-  console.log("Event is " + event);
+
   // Get Data Selected
   let countryAreaContainer = document.getElementById('container-area');
   let countrySelected = document.getElementById('dropdown-country');
@@ -8,139 +19,162 @@ function application(event) {
   let countryName = countrySelected.options[countrySelected.selectedIndex].text;
   document.getElementById('final-country-name').innerHTML = countryName;
 
-  // If area within a country is not show, user must select a country
+  // User is selecting a Country
   if (countryAreaContainer.classList.contains('hidden')) {
-    console.log("::: Form Submitted :::")
-    // async function to post form data to backend
-    async function postFormData(url = '', data = {}) {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      });
-      return response.json();
+    const city = countryName;
+    const code = '&country=' + countryCode;
+    let dateSelected = document.getElementById('departure-date').value;
+    // Check if date is selected
+    if (dateSelected === ""){
+      return(alert("Please select a date first."))
     }
-    // Sending to Server
-    postFormData('http://localhost:3000/travel', {
-        country: countryCode,
-        countryname: countryName
+    const tripDate = new Date(dateSelected).getTime();
+    alert("Trip date " + tripDate)
+
+    console.log("Date " + tripDate)
+    /*Calls the function which calculates how soon the trip is */
+    //UNCOMMENT BELOW LATER
+    //const days = Client.daysCountdown(tripDate);
+    /* Gets data related to the provided city*/
+    getCityInfo(baseURL, city, code, userName)
+      .then(function(data) {
+
+        let cityCodes = [],
+          cityNames = [];
+        let duplicate = false;
+        let cityPosition = 0;
+        // Look through city names from API response, and pull each unique city name.
+        for (let count = 0; count < data.postalCodes.length - 1; count++) {
+          if (data.postalCodes[count].adminName1 === data.postalCodes[count + 1].adminName1) {
+            duplicate = true;
+          }
+          if (!duplicate) {
+            cityCodes[cityPosition] = data.postalCodes[count].postalCode;
+            cityNames[cityPosition] = data.postalCodes[count].adminName1;
+            cityPosition++;
+          }
+          duplicate = false;
+        }
+        // Create multilpe elements
+        for (let count = 0; count < cityPosition; count++) {
+          let newLine = document.createElement("option");
+          newLine.innerText = cityNames[count];
+          newLine.value = cityCodes[count];
+          document.getElementById('js-country-cities').appendChild(newLine);
+        }
       })
-      .then((data) => {
-        populateDropdown(data)
-      });
     countryAreaContainer.classList.remove('hidden');
+
   } else {
+    console.log("Hello")
     // User has selected a country, and selecting a city/ area within that country
     let areaSelected = document.getElementById('js-country-cities');
     let areaCode = areaSelected.options[areaSelected.selectedIndex].value;
     let areaName = areaSelected.options[areaSelected.selectedIndex].text;
     document.getElementById('forecast-city-name').innerHTML = areaName
     document.getElementById('final-city-name').innerHTML = areaName
-    // async function to post form data to backend
-    async function postFormData(url = '', data = {}) {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
+    /*
+      imgSection.firstElementChild.remove()
+      getTripInfo()
+    */
+    let areaWithinCountryCode = '&postalcode=' + areaCode;
+    let cityNameSelected = areaName;
+    // Link = baseURL + areaName + areaWithinCountryCode + userName
+    getCityInfo(baseURL, areaName, areaWithinCountryCode, userName)
+      .then(function(data) {
+        // Get Lat and Long
+        latitude = data.postalCodes[0].lat;
+        longitude = '&lon=' + data.postalCodes[0].lng;
+
+
+        // MAKEING REQUEST RO WEATHER API
+        getCityWeather(weatherbitURL, latitude, longitude, weatherbitKEY)
+          .then(function(weatherData) {
+            for (let count = 0; count <= 15; count++) {
+              document.getElementById('valid-date-' + count).innerHTML = weatherData.data[count].valid_date;
+              document.getElementById('weather-description-' + count).innerHTML = weatherData.data[count].weather.description;
+              document.getElementById('max-temp-' + count).innerHTML = weatherData.data[count].max_temp;
+              document.getElementById('temp-' + count).innerHTML = weatherData.data[count].temp;
+              document.getElementById('min-temp-' + count).innerHTML = weatherData.data[count].min_temp;
+            }
+            // Show the weather section AFTER it has been populated with data
+            document.getElementById('final-results-container').classList.remove('display-none');
+            document.getElementById('final-results-container').classList.add('display-block');
+
+            let cityPhoto = '&q=city+of+' + areaName.replace(/ /g, "+") + '&image_type=photo';
+
+            // MAKEING REQUEST RO PIXABAY API
+            getPixabayPhoto(pixabayURL, pixabayKEY, cityPhoto, weatherbitKEY)
+              .then(function(pixabayData) {
+                let cityLink = pixabayData.hits[0].webformatURL;
+                document.getElementById('city-photo').style.backgroundImage = "url('" + cityLink + "')";
+
+              })
+          })
+
       });
-      return response.json();
-    }
-    // Sending to Server
-    postFormData('http://localhost:3000/travel-location', {
-        city: areaName,
-        citycode: areaCode
-      })
-      .then((data) => {
-        cityLocation(data)
-      });
-  }
-  StartCountdownTimer();
-}
-
-// Populate the dropdown based on what country the user selects
-function cityLocation(data = {}) {
-  // Fill each weather item with information
-  for (let count = 0; count < 16; count++) {
-    document.getElementById('valid-date-' + count).innerHTML = data.weatherdate[count];
-    document.getElementById('weather-description-' + count).innerHTML = data.description[count];
-    document.getElementById('max-temp-' + count).innerHTML = data.maxtemp[count];
-    document.getElementById('temp-' + count).innerHTML = data.temperature[count];
-    document.getElementById('min-temp-' + count).innerHTML = data.mintemp[count];
-  }
-
-  console.log('photo: ' + data.photo)
-  //document.getElementById('city-photo').src = ;
-  document.getElementById('city-photo').style.backgroundImage = "url('" + data.photo + "')";
-
-
-
-  // Show the weather section AFTER it has been populated with data
-  document.getElementById('final-results-container').classList.remove('display-none');
-  document.getElementById('final-results-container').classList.add('display-block');
-}
-
-
-// Populate the dropdown based on what country the user selects
-function populateDropdown(data = {}) {
-  let cityCodes = data.citycodes;
-  let cities = data.citynames;
-  let cityPosition = data.cityposition;
-  // Create multilpe elements
-  for (let count = 0; count < cityPosition; count++) {
-    let newLine = document.createElement("option");
-    newLine.innerText = cities[count];
-    newLine.value = cityCodes[count];
-    document.getElementById('js-country-cities').appendChild(newLine);
   }
 }
 
+// ################################ FUNCTIONS BELOW #####################
 
-// Countdown timer and time
-function StartCountdownTimer() {
-  let departureDate = document.getElementById('departure-date').value;
-  // Grab Year, Month, and Day
-  let departureYear = departureDate.slice(0, departureDate.indexOf("-"))
-  let departureMonth = departureDate.slice(departureDate.indexOf("-") + 1, departureDate.indexOf("-") + 3)
-  let departureDay = departureDate.slice(8)
-  // Removes the 0 from day
-  if (departureDay.charAt(0) === "0") departureDay = departureDay.slice(1)
-
-  // Day to count down to
-  var countDownDate = new Date(departureMonth + " " + departureDay + ", " + departureYear + " 00:00:01").getTime();
-
-  // Update the count down every 1 second
-  var x = setInterval(function() {
-    var now = new Date().getTime();
-    var distance = countDownDate - now;
-
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    // Display the result in the element with id="demo"
-    document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-    // Date is reached!!
-    if (distance < 0) {
-      clearInterval(x);
-      document.getElementById("countdown").innerHTML = "TIME TO TRAVEL";
-    }
-  }, 1000);
-}
-
-// Clears the dropdown of cities and areas when submit is pressed again
-function ClearOptions() {
-  const optionNode = document.getElementById("js-country-cities");
-  while (optionNode.firstChild) {
-    optionNode.removeChild(optionNode.lastChild);
+const getCityInfo = async (baseURL, city, code, userName) => {
+  const res = await fetch(baseURL + city + code + userName)
+  try {
+    const data = await res.json();
+    console.log(data)
+    return data;
+  } catch (error) {
+    console.log('error', error)
   }
 }
+
+const getCityWeather = async (weatherbitURL, latitude, longitude, weatherbitKEY) => {
+  const res = await fetch(weatherbitURL + latitude + longitude + weatherbitKEY)
+  try {
+    const weatherData = await res.json();
+    console.log(weatherData)
+    return weatherData;
+  } catch (error) {
+    console.log('error', error)
+  }
+}
+
+const getPixabayPhoto = async (pixabayURL, pixabayKEY, cityPhoto) => {
+  const res = await fetch(pixabayURL + pixabayKEY + cityPhoto)
+  try {
+    const pixabayData = await res.json();
+    console.log(pixabayData)
+    return pixabayData;
+  } catch (error) {
+    console.log('error', error)
+  }
+}
+
+/*
+const getCityWeather = async (url = '', data = {}) => {
+  console.log(data);
+  const response = await fetch(url, {
+    method: 'POST',
+    credentials: 'same-origin',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+
+  try {
+    const newData = await response.json();
+    console.log(newData);
+    return newData;
+  } catch (error) {
+    console.log("error", error);
+  }
+}
+*/
+
 
 
 export {
   application
-}
+};

@@ -5,8 +5,11 @@ let currentDate = new Date();
 let newDate = currentDate.getMonth() + '/' + currentDate.getDate() + '/' + currentDate.getFullYear();
 document.getElementById('header-date').innerHTML = newDate;
 
+
+
 /* ################### Event listener on 'generate" button ################### */
 document.getElementById('generate').addEventListener('click', performAction);
+
 function performAction(e) {
   const journalPost = document.getElementById('feelings').value;
   const zipValue = document.getElementById('zip').value;
@@ -17,16 +20,30 @@ function performAction(e) {
     return console.log('Missing value(s). Journal post is holding: ' + journalPost + ', Zip is holding: ' + zipValue);
   }
 
+
+
+
   //Get API Data then update UI
-  getApiData(baseURL, zipValue, apiKey).then(function(fahrenheitTemp) {
+  getApiData(baseURL, zipValue, apiKey)
+
+
+  .then(function(fahrenheitTemp) {
+
+
+    // This is a function
     postApiData('/add', {
       temperature: fahrenheitTemp + "f",
       date: newDate,
       userResponse: journalPost,
     });
+
+
+
     updateUI();
   })
 };
+
+
 
 /* ################### Get API Data ################### */
 const getApiData = async (baseURL, zip, apiKey) => {
@@ -47,6 +64,12 @@ const getApiData = async (baseURL, zip, apiKey) => {
   }
 };
 
+
+
+
+
+
+
 /* ################### Post API Data ################### */
 const postApiData = async (url = '', data = {}) => {
 
@@ -58,6 +81,8 @@ const postApiData = async (url = '', data = {}) => {
     },
     body: JSON.stringify(data),
   });
+
+
   // Trying to get new data
   try {
     const newData = await response.json();
@@ -67,7 +92,13 @@ const postApiData = async (url = '', data = {}) => {
   }
 };
 
-/* ################### Functions Below ################### */
+
+
+
+
+
+
+/* ################### Update UI ################### */
 const updateUI = async () => {
   // Attempting to input values from API
   const request = await fetch('/all');
