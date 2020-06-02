@@ -1,4 +1,6 @@
 import { application } from './js/application.js'
+import {StartCountdownTimer} from './js/countdownTimer.js'
+
 
 import './styles/style.scss'
 
