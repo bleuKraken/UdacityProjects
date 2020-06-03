@@ -12,5 +12,4 @@ document.getElementById('submit-area-button').addEventListener('click', () => {
   application(event);
 });
 
-
 export { application}

@@ -1,6 +1,6 @@
-
-// Gets departure date that user has entered and calculates how long til then
-// Countdown timer and time
+/*
+  Create a countdown timer to count the number of days left until the departure date is reached
+*/
 function StartCountdownTimer() {
   let departureDate = document.getElementById('departure-date').value;
   // Grab Year, Month, and Day

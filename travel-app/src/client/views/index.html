@@ -19,7 +19,12 @@
   </section>
 
   <main>
-    <!-- TODO: Remove calender css file and js file -->
+    <!-- TODO: Make it look nice on desktop and mobile.
+    - what happens if a user clicks on a country that has no cities within?
+    - make cards hidden by default
+    - If departure is less than 16 days, only unhide the cards needed.
+    - add default 404 page if country image is not found
+  -->
     <section>
       <!-- Form -->
       <form class="form">
@@ -448,6 +453,17 @@
   <footer>
     <p>This is a footer</p>
   </footer>
+
+  <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+        });
+    }
+</script>
+
 </body>
 
 </html>
