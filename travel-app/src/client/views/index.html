@@ -9,27 +9,22 @@
 <body class="body">
   <!-- Header -->
   <header class="header">
-    <div class="company"> Travelo </div>
+    <div class="company">Travel App</div>
   </header>
 
   <!-- Banner -->
   <section class="banner">
     <h2>EXPLORE THE WORLD</h2>
-    <p>Travelo has partnered with countries and locations around the globe to create 5-star hospitality at affordable prices</p>
+    <p>Select a departure date and a Country to visit. If the selected Country has cities from Geonames, a dropdown will
+      be generated of cities within that country.</p>
   </section>
 
   <main>
-    <!-- TODO: Make it look nice on desktop and mobile.
-    - what happens if a user clicks on a country that has no cities within?
-    - make cards hidden by default
-    - If departure is less than 16 days, only unhide the cards needed.
-    - add default 404 page if country image is not found
-  -->
     <section>
       <!-- Form -->
       <form class="form">
         <!-- Date Selection -->
-        <label class="default-label" for="departure-date">Departure Date</label>
+        <label class="default-label center" for="departure-date">Departure Date</label>
         <div class="date-container">
           <input type="date" id="departure-date" name="departure">
         </div>
@@ -292,19 +287,21 @@
 
         </select>
         <input id="submit-country-button" class="submit-button" type="submit" value="Submit">
-
+        <p><strong>Note:</strong> If Country selected has no cities from Geonames, city dropdown selection will not show.</p>
+        <span>Example Country with cities: <strong>Australia</strong></span>
+        <span>Example without cities: <strong>Albania</strong></span>
         <!-- City or area selection -->
         <div id="container-area" class="country-area hidden">
-          <label for="dropdown-country">Area within that country?</label>
+          <label class="default-label" for="dropdown-country">Area within that country?</label>
           <select id="js-country-cities" class="row-dropdown">
             <!-- JS Generates data here based on first selection -->
           </select>
-          <input id="submit-area-button" class="submit-button" type="submit">
+          <input id="submit-area-button" class="submit-button" type="submit" value="Submit City">
         </div>
       </form>
     </section>
 
-  <!-- Section of results for weaher conditions, location, and picture. -->
+    <!-- Section of results for weaher conditions, location, and picture. -->
     <section id="final-results-container" class="display-none">
       <!-- Weather output section -->
       <div class="section-weather">
@@ -439,30 +436,25 @@
         </div>
       </div>
 
-     <!-- Results section -->
+      <!-- Results section -->
       <div id="city-photo" class="section-trip-results">
         <div class="results-text-container">
-          <div><span id="final-city-name"></span>, <span id="final-country-name"></span></div>
+          <div><span id="final-city-name"></span> <span id="final-country-name"></span></div>
           <div class="timer">Departure Countdown: <span id="countdown"> Timer </span></div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>This is a footer</p>
-  </footer>
-
   <script>
     // Check that service workers are supported
     if ('serviceWorker' in navigator) {
-        // Use the window load event to keep the page load performant
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/service-worker.js');
-        });
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
     }
-</script>
+  </script>
 
 </body>
 

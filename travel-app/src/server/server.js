@@ -24,15 +24,8 @@ function listening() {
   console.log(`running on localhost: ${port}`);
 };
 
-// TODO: MAYBE DELTE IF NOT NEEDED
-/*
-app.use((req, res, next) => {
-    //res.header('Access-Control-Allow-Origin', '*');
-    next();
-});
-*/
-
 app.post('/weather', (req, res) => {
+  console.log(req.body)
   request({ url: req.body.url },
     (error, response, body) => {
       if (error || response.statusCode !== 200) {

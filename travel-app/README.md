@@ -36,6 +36,12 @@ To view in developer with webpack run
    > npm run build-dev
 
 
+## Testing App
+
+Open a terminal inside of the root directory of the project and type 
+   > npm run test
+
+
 ## Extras
 
 * Pull in an image for the country from Pixabay API when the entered location brings up no results (good for obscure localities). 

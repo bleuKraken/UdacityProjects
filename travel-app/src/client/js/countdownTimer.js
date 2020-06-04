@@ -31,4 +31,6 @@ function StartCountdownTimer() {
   }, 1000);
 }
 
-export{StartCountdownTimer}
+export {
+  StartCountdownTimer
+}
