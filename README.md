@@ -1,2 +1,0 @@
-# UdacityProjects
-My Udacity Projects
