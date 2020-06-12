@@ -4,6 +4,13 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.background-image-container {
+  background-image: url("https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size:auto;
+  padding-bottom: 20px;
+}
 .header {
   padding: 10px 20px;
   background-color: rgb(36, 16, 128);
@@ -18,12 +25,14 @@
 .banner {
   text-align: center;
   padding: 20px 40px;
-  background-color: rgb(188, 207, 236);
+  background-color: rgba(180, 190, 250, 0.8);
+
   color: rgb(0, 0, 0);
 }
 /* ################### Form Area ################### */
 .form {
   border: 2px solid rgb(29, 91, 173);
+  background-color: rgba(255, 255, 255, 0.92);
   border-radius: 25px;
   padding: 15px;
   margin: 20px auto;
@@ -63,6 +72,10 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  background-image: url("https://images.unsplash.com/photo-1530908295418-a12e326966ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .weather-header {
@@ -76,6 +89,7 @@
   padding: 5px;
   margin: 10px 3px;
   border: 1px solid rgb(36, 16, 128);
+  background-color: rgba(255, 255, 255, 0.8);
   width: 100px;
   text-align: center;
 }
@@ -142,4 +156,8 @@
 
 .display-block {
   display: block;
+}
+
+.text-lg {
+  font-size: 1.2rem;
 }

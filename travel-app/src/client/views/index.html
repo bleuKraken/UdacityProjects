@@ -7,30 +7,32 @@
 </head>
 
 <body class="body">
+
   <!-- Header -->
   <header class="header">
     <div class="company">Travel App</div>
   </header>
 
-  <!-- Banner -->
-  <section class="banner">
-    <h2>EXPLORE THE WORLD</h2>
-    <p>Select a departure date and a Country to visit. If the selected Country has cities from Geonames, a dropdown will
-      be generated of cities within that country.</p>
-  </section>
+  <!-- Background Image -->
+  <main class="background-image-container">
 
-  <main>
-    <section>
+    <!-- Banner -->
+    <div class="banner">
+      <h2>EXPLORE THE WORLD</h2>
+      <p>Select a departure date and a Country to visit. If the selected Country has cities from Geonames, a dropdown will
+        be generated of cities within that country.</p>
+    </div>
+
       <!-- Form -->
       <form class="form">
         <!-- Date Selection -->
-        <label class="default-label center" for="departure-date">Departure Date</label>
+        <label class="default-label center text-lg" for="departure-date">Departure Date</label>
         <div class="date-container">
           <input type="date" id="departure-date" name="departure">
         </div>
 
         <!-- Country Selection -->
-        <label class="default-label" for="dropdown-country">What Country would you like to visit?</label>
+        <label class="default-label text-lg" for="dropdown-country">Country to visit?</label>
         <select id="dropdown-country" class="row-dropdown">
           <option value="AD">Andorra</option>
           <option value="AE">United Arab Emirates</option>
@@ -287,25 +289,27 @@
 
         </select>
         <input id="submit-country-button" class="submit-button" type="submit" value="Submit">
-        <p><strong>Note:</strong> If Country selected has no cities from Geonames, city dropdown selection will not show.</p>
+        <p><strong>Note:</strong> Some Country will generate a dropdown if Geonames has cities registered for that Country.</p>
         <span>Example Country with cities: <strong>Australia</strong></span>
         <span>Example without cities: <strong>Albania</strong></span>
+
         <!-- City or area selection -->
         <div id="container-area" class="country-area hidden">
-          <label class="default-label" for="dropdown-country">Area within that country?</label>
+          <label class="default-label text-lg" for="dropdown-country">City within that country?</label>
           <select id="js-country-cities" class="row-dropdown">
             <!-- JS Generates data here based on first selection -->
           </select>
           <input id="submit-area-button" class="submit-button" type="submit" value="Submit City">
         </div>
       </form>
-    </section>
+  </main>
+
 
     <!-- Section of results for weaher conditions, location, and picture. -->
     <section id="final-results-container" class="display-none">
       <!-- Weather output section -->
       <div class="section-weather">
-        <h4 class="weather-header">Next 16-Day Forcast for <span id="forecast-city-name"></span></h4>
+        <h4 class="weather-header text-lg">Next 16-Day Forcast for <span id="forecast-city-name"></span></h4>
         <!-- 16 Weather Cards below  -->
         <div class="weather-card">
           <div class="card-header" id="valid-date-0">2020-99-99</div>
@@ -444,8 +448,6 @@
         </div>
       </div>
     </section>
-  </main>
-
   <script>
     // Check that service workers are supported
     if ('serviceWorker' in navigator) {
